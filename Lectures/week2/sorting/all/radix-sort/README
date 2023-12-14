@@ -1,0 +1,25 @@
+
+NOTE:
+
+This directory contains a radix sort and a merge sort for comparison.
+
+
+INSTRUCTIONS:
+
+1. Compile with make
+
+2. Use the ./gen program to generate data
+
+3. Redirect output from the ./gen program to a sorting program
+
+   For example:
+
+       ./gen 10 | ./radixSort
+
+4. Time the sorting program by adding "time" before the sorting program,
+   and redirect the output to /dev/null
+
+   For example:
+
+       ./gen 10 | time ./radixSort > /dev/null
+

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/questions -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="./COMP2521 23T3 - Extra Lab Exercise_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Extra Lab Exercise_files/bootstrap-toc.min.css">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Extra Lab Exercise_files/style.css">
+    
+    
+
+    <title>COMP2521 23T3 - 
+
+Extra Lab
+Exercise
+
+</title>
+  <script type="text/javascript" async="" src="./COMP2521 23T3 - Extra Lab Exercise_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-select__option{cursor:pointer}.ismanga .ismanga-select__control{cursor:pointer}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel-view-content__select-label{font-size:14px;font-weight:400;line-height:1.2;margin-bottom:4px;margin-top:4px}.ismanga .control-panel-view-content__btn-container{display:flex;flex-direction:column;margin-top:12px}.ismanga .control-panel-view-content__btn:first-child{margin-bottom:12px}.ismanga .control-panel-view-content__btn{border-radius:4px;padding:8px 16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel{background:#fff;border-bottom-right-radius:8px;border-top-right-radius:8px;box-shadow:0 0 5px #b4b4b4;color:#000;font-family:Helvetica;font-weight:normal;left:0;line-height:1.4;padding:16px;position:relative;transform:translateX(0);transition:transform .5s}.ismanga .control-panel--hidden{transform:translateX(-169px)}.ismanga .control-panel .control-panel__collapse-btn{background-color:#b4183d;border-top-left-radius:8px;border-top-right-radius:8px;color:#fff;cursor:pointer;font-family:"Bangers";font-size:20px;padding:8px 16px;position:absolute;right:-69px;top:56px;transform:rotate(90deg)}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-spinner{align-items:center;display:flex;flex-direction:column;position:absolute}.ismanga .ismanga-spinner__inner{animation:spin 2s linear infinite;border-color:rgba(0,0,0,.04);border-radius:50%;border-style:solid;border-top-color:#b4183d}.ismanga .ismanga-spinner__inner-text{background-color:rgba(255,255,255,.8);border-radius:4px;color:#b4183d;font-size:16px;margin-top:8px;text-align:center;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;word-break:break-word}.ismanga .ismanga-spinner__inner-text a{color:#b4183d;font-weight:bold;text-decoration:underline dotted #b4183d}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-click-translate-overlay{background-color:rgba(0,0,0,.5);border:4px solid #b4183d;height:100%;width:100%}.ismanga .ismanga-click-translate-overlay__translate-btn{border-radius:4px;display:flex;font-size:20px;justify-content:center;left:16px;padding:12px 16px;position:absolute;top:16px;width:auto}.ismanga .ismanga-click-translate-overlay__disabled-text{color:#fff;font-size:20px;padding-top:16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-screenshot-translation-content{height:100%;position:absolute;width:100%}.ismanga .ismanga-screenshot-translation-content__warning{align-items:center;background-color:#6c0e24;box-sizing:border-box;color:#fff;display:flex;font-size:22px;height:80px;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:9999}.ismanga .ismanga-screenshot-translation-content__warning .ismanga-spinner__inner{border-top-color:#fff}.ismanga .ismanga-screenshot-translation-content__spinner-container{margin-left:12px;position:relative}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-text-bubble-content__bubble{align-items:center;box-sizing:border-box;display:flex;justify-content:center;position:absolute}.ismanga .ismanga-text-bubble-content__bubble p{color:#000;line-height:1.2;margin:0;padding:4px;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;white-space:normal}.ismanga .ismanga-text-bubble-content__bubble p:hover{background-color:#fff;border-radius:4px;box-shadow:0 0 0 2px #b4183d;cursor:pointer;z-index:9999}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-interaction-content__overlay{align-items:center;background-color:rgba(255,255,255,.7);color:#b4183d;display:flex;font-size:24px;justify-content:center;position:absolute;text-align:center;z-index:1}.ismanga .ismanga-interaction-content__translate-button{background-color:#b4183d;border:0;border-radius:2px;box-shadow:none;color:#fff;font-family:"Comic Neue";outline:none;padding:6px 10px}.ismanga .ismanga-interaction-content__translate-button:hover{background-color:#901330}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga.ismanga-preloader{background-color:rgba(0,0,0,.1);color:#b4183d;font-size:16px;overflow:hidden;position:absolute;text-align:left}.ismanga.ismanga-preloader div{padding:8px}.ismanga.ismanga-preloader span{animation:slowshow 2s ease 0s infinite;color:#b4183d;font-size:28px;opacity:0}@keyframes slowshow{100%{opacity:1}}.ismanga.ismanga-control-panel-container{left:0;position:fixed;top:40%;z-index:99999 !important}</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+  <body class="d-flex flex-column" style="min-height: 100vh;"><div id="MathJax_Message" style="display: none;"></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="https://www.cse.unsw.edu.au/~cs2521/23T3/">COMP2521 23T3</a>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mr-auto">
+            <!--
+            <li class="nav-item active"><a class="nav-link" href="#">Outline</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Forum</a></li>
+            <li class="navbar-text px-2">|</li>
+            -->
+
+            
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="week-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Week 16 <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="week-selector">
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/1/questions">
+        Week 01
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/2/questions">
+        Week 02
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/questions">
+        Week 03
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/4/questions">
+        Week 04
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/questions">
+        Week 05
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/7/questions">
+        Week 07
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/8/questions">
+        Week 08
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/9/questions">
+        Week 09
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/10/questions">
+        Week 10
+        
+          (tutors only)
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/11/questions">
+        Week 11
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/12/questions">
+        Week 12
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/questions">
+        Week 13
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/14/questions">
+        Week 14
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/15/questions">
+        Week 15
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/questions">
+        Week 16
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/17/questions">
+        Week 17
+        
+      </a>
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="classtype-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Lab <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="classtype-selector">
+    
+  	  
+    
+  	  
+  	    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/questions">
+  	      Lab
+  	      
+  	    </a>
+  	  
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="qa-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+      Exercise
+    
+    
+    <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="qa-selector">
+    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/questions">
+      Exercise
+      
+      
+    </a>
+    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/answers">
+      Solution
+      
+      
+        (tutors only)
+      
+    </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/notes">
+        Tutors' Notes (tutors only)
+      </a>
+    
+  </div>
+</li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <main class="container" aria-label="Content" style="flex: 1; padding-top: 4rem;">
+      <header>
+        <h1 class="text-center">
+Extra Lab
+Exercise
+</h1>
+        <h3 class="text-center">
+Weighted Graphs and Geo Data
+</h3>
+        
+      </header>
+      <div class="text-justify mt-4">
+        
+
+
+
+
+<section class="exercise">
+<header><h3>Objectives</h3></header>
+<ul>
+	<li>To implement a variant of path finding in a weighted graph</li>
+	<li>To see how graphs might be used with real-world data</li>
+</ul>
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Admin</h3></header>
+
+
+
+<p>This lab is not marked and there is no submission for it.</p>
+
+
+
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Background</h3></header>
+<p>Geographic data is widely available, thanks to sites such as <a href="http://www.geonames.org/" target="_blank">GeoNames</a>. For this lab, we have downloaded data files from the <a href="http://people.sc.fsu.edu/~jburkardt/datasets/cities/cities.html" target="_blank">City Distance Dataset</a> by John Burkardt from the Department of Scientific Computing at Florida State University. The dataset that we will use contains information about distances between 30 prominent cities/locations around the world. These are great-circle distances; we'll assume that these are the distances that an aircraft would fly between two cities. The data that we have forms a complete graph in that there is a distance recorded for every pair of cities.</p>
+
+<p>The following diagram shows a subset of the data from the City Distance Dataset.</p>
+
+<img class="center" src="./COMP2521 23T3 - Extra Lab Exercise_files/world.png">
+<center>
+	<small>
+		Map from <a href="http://commons.wikimedia.org/wiki/File:BlankMap-World-v2.png#mediaviewer/File:BlankMap-World-v2.png">
+		"BlankMap-World-v2"</a> by original uploader: Roke <br>
+		Own work. Licensed under Creative Commons Attribution-Share Alike 3.0 via Wikimedia Commons
+	</small>
+</center>
+
+<p>The data comes in two files:</p>
+<dl>
+	<dt><b><code>ha30_dist.txt</code></b></dt>
+	<dd><p>This file contains a matrix of distances between cities. This is essentially the adjacency matrix for a weighted graph where the vertices are cities and the edge weights correspond to distances between cities. As you would expect for an adjacency matrix, the leading diagonal contains all zeroes (in this case, corresponding to the fact that a city has a distance of zero from itself).</p></dd>
+	
+	<dt><b><code>ha30_name.txt</code></b></dt>
+	<dd><p>This file contains one city name per line. If we number the lines starting from zero, then the line number corresponds to the vertex number for the city on that line. For example, the Azores is on line 0, so vertex 0 corresponds to the Azores, and the first line in the distance file gives distances from the Azores to the other 29 cities. The last line (line 29) tells us that Tokyo is vertex 29, and the last line in the distance files gives distances between Tokyo and all other cities.
+	</p></dd>
+</dl>
+
+</section>
+
+<section class="exercise">
+<header><h3>Setting Up</h3></header>
+
+<p>Set up a directory for this lab, change into that directory, and run the following command:</p>
+<pre is="tty"><kbd is="sh">unzip <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week16/downloads/files.zip">/web/cs2521/23T3/labs/week16/downloads/files.zip</a></kbd>
+</pre>
+
+<p>If you're working at home, download <code>files.zip</code> by clicking on the above link and then run the <code>unzip</code> command on the downloaded file.</p>
+
+<p>If you've done the above correctly, you should now have the following files:</p>
+
+<dl class="dl-horizontal">
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week16/files/Makefile">Makefile</a></code></dt>
+	<dd>a set of dependencies used to control compilation</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week16/files/travel.c">travel.c</a></code></dt>
+	<dd>main program to load and manipulate the graph</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week16/files/Graph.h">Graph.h</a></code></dt>
+	<dd>the interface for the Graph ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week16/files/Graph.c">Graph.c</a></code></dt>
+	<dd>an incomplete implementation of the Graph ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week16/files/Queue.h">Queue.h</a></code></dt>
+	<dd>the interface for the Queue ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week16/files/Queue.c">Queue.c</a></code></dt>
+	<dd>a complete implementation of the Queue ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week16/files/ha30_name.txt">ha30_name.txt</a></code></dt>
+	<dd>the city name file described above</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week16/files/ha30_dist.txt">ha30_dist.txt</a></code></dt>
+	<dd>the distance matrix file described above</dd>
+</dl>
+<p>The <code>Makefile</code> produces a file called <code>travel</code> based on the main program in <code>travel.c</code> and the functions in <code>Graph.c</code>. The <code>travel</code> program takes either zero or two command line arguments:</p>
+
+<pre is="tty"><kbd is="sh">./travel</kbd>
+<span class="comment">... displays the entire graph ...</span>
+<span class="comment">... produces lots of output, so either redirect to a file or use less ...</span>
+<kbd is="sh">./travel <var>from-city</var> <var>to-city</var></kbd>
+<span class="comment">... display a route to fly between specified cities ...</span>
+</pre>
+
+<p>If given zero arguments, it simply displays the graph. If given two arguments, it treats the first city as a starting point and the second city as a destination, and determines a route between the two cities, based on "hops" between cities with direct flights.</p>
+
+<p>Read the <code>main()</code> function so that you understand how it works, and, in particular, how it invokes the functions that you need to implement.</p>
+
+<p>The <code>Graph</code> ADT in this week's lab has a <code>GraphRep</code> data structure that is a standard adjacency matrix representation of the kind we looked at in lectures. However, some aspects of it are different to the <code>GraphRep</code> from lectures.</p>
+
+<p>Note that city names are not stored as part of the <code>GraphRep</code> data structure. The <code>Graph</code> ADT deals with vertices using their numeric ID. The <code>main</code> program maintains the list of city names and passes this list to the <code>showGraph()</code> function when it is called to display the graph. This means that the calling interface for the <code>showGraph()</code> function is different to the <code>showGraph()</code> function from the <code>Graph</code> ADT in lectures.</p>
+
+<p>Another difference between this <code>Graph</code> ADT and the one used in lectures is that the values stored in the matrix are not simply zero and one, but represent the distances between vertices. In other words, we're dealing with a <em>weighted</em> graph. A weight value of zero indicates that there is no edge between two vertices, while a non-zero weight indicates that there is an edge.</p>
+
+<p>The main program makes some changes to the edges implied by the distance matrix as it copies them into the <code>Graph</code>. The values in the <code>ha30_dist.txt</code> file are given in units of "hundreds of miles"; we want them in units of kilometres so each distance is converted before it is added to the graph as the weight of an edge. Since every city has a distance to every other city (except itself), this gives us a <em>complete graph</em>.</p>
+
+<p>As supplied, <code>Graph.c</code> has an incomplete implementation of the <code>findPath()</code> function. If you compile the <code>travel</code> program and try to find any route, it will simply tell you that there isn't one. Your task will be to implement this function.</p>
+
+</section>
+
+<section class="exercise with-self">
+<header><h3>Exercise</h3></header>
+
+<p>Implement the <code>findPath(g, src, dest, max, path)</code> function. This function takes a graph <code>g</code>, two vertex numbers <code>src</code> and <code>dest</code>, a maximum flight distance <code>max</code>, and fills the <code>path</code> array with a sequence of vertex numbers giving the "shortest" path from <code>src</code> to <code>dest</code> such that no edge on the path has weight larger than <code>max</code>. The function returns the number of vertices stored in the <code>path</code> array; if it cannot find a path, it returns zero. The <code>path</code> array is assumed to have enough space to hold the longest possible path (which would include all vertices).</p>
+
+<p>This could be solved with a standard BFS graph traversal algorithm, but there are two twists for this application:</p>
+
+<ul>
+	<li><p>The edges in the graph represent real distances, but the user of the <code>travel</code> program (the traveller) isn't necessarily worried about real distances. They are more worried about the number of take-offs and landings (which they find scary), so the length of a path is measured in terms of the number of edges, <em>not</em> the sum of the edge weights. Thus, the "shortest" path is the one with the minimum number of edges.</p></li>
+	<li><p>While the traveller isn't concerned about how far a single flight goes, aircrafts <em>are</em> affected by this (because they hold a limited amount of fuel). The <code>max</code> parameter for <code>findPath()</code> allows a user to specify that they only want to consider flights whose length is at most <code>max</code> kilometres (i.e. only edges whose weight is not more than <code>max</code>).</p></li>
+</ul>
+
+<p>Your implementation of <code>findPath()</code> must satisfy both of the above.</p>
+
+<p>In implementing <code>findPath()</code>, you can make use of the <code>Queue</code> ADT that we've supplied.</p><p>
+
+</p><p>Note that the default value for <code>max</code>, set in the <code>main</code> function, is 10000km. Making the maximum flight distance smaller produces more interesting paths (see below), but if you make it too small (e.g., 5000km) you will end up isolating Australia from the rest of the world. With a maximum flight distance of 6000km, the only way out of Australia is via Guam. If you make the maximum flight distance large enough (e.g., possibly reflecting an improvement in aircraft technology), every city will be reachable from every other city in a single hop.</p>
+
+<p>Here are some example routes (don't expect them to closely match reality):</p>
+
+<pre is="tty"><span class="comment"># when no max distance is given on the command line,</span>
+<span class="comment"># we assume that planes can fly up to 10000km before refuelling</span>
+<kbd is="sh">./travel Berlin Chicago</kbd>
+Least-hops route:
+Berlin
+-&gt; Chicago
+<kbd is="sh">./travel Sydney Chicago</kbd>
+Least-hops route:
+Sydney
+-&gt; Honolulu
+-&gt; Chicago
+<kbd is="sh">./travel Sydney London</kbd>
+Least-hops route:
+Sydney
+-&gt; Shanghai
+-&gt; London
+<kbd is="sh">./travel London Sydney</kbd>
+Least-hops route:
+London
+-&gt; Shanghai
+-&gt; Sydney
+<kbd is="sh">./travel Sydney 'Buenos Aires'</kbd>
+Least-hops route:
+Sydney
+-&gt; Honolulu
+-&gt; Chicago
+-&gt; Buenos Aires
+<span class="comment"># if planes can fly up to  6000km before refuelling</span>
+<kbd is="sh">./travel Sydney London 6000</kbd>
+Least-hops route:
+Sydney
+-&gt; Guam
+-&gt; Manila
+-&gt; Bombay
+-&gt; Baghdad
+-&gt; London
+<span class="comment"># if planes can fly up to  5000km before refuelling</span>
+<span class="comment"># you can't leave Australia under this scenario</span>
+<kbd is="sh">./travel Sydney 'Buenos Aires' 5000</kbd>
+No route from Sydney to Buenos Aires
+<span class="comment"># if planes can fly up to  7000km before refuelling</span>
+<kbd is="sh">./travel Sydney 'Buenos Aires' 7000</kbd>
+Least-hops route:
+Sydney
+-&gt; Guam
+-&gt; Honolulu
+-&gt; Chicago
+-&gt; Panama City
+-&gt; Buenos Aires
+<span class="comment"># if planes can fly up to  8000km before refuelling</span>
+<kbd is="sh">./travel Sydney 'Buenos Aires' 8000</kbd>
+Least-hops route:
+Sydney
+-&gt; Guam
+-&gt; Honolulu
+-&gt; Mexico City
+-&gt; Buenos Aires
+<span class="comment"># if planes can fly up to 11000km before refuelling</span>
+<kbd is="sh">./travel Sydney 'Buenos Aires' 11000</kbd>
+Least-hops route:
+Sydney
+-&gt; Bombay
+-&gt; Azores
+-&gt; Buenos Aires
+<span class="comment"># if planes can fly up to 12000km before refuelling</span>
+<span class="comment"># we can reach Buenos Aires in a single flight</span>
+<kbd is="sh">./travel Sydney 'Buenos Aires' 12000</kbd>
+Least-hops route:
+Sydney
+-&gt; Buenos Aires
+<kbd is="sh">./travel Bombay Chicago 5000</kbd>
+Least-hops route:
+Bombay
+-&gt; Istanbul
+-&gt; Azores
+-&gt; Montreal
+-&gt; Chicago
+<kbd is="sh">./travel Sydney Sydney</kbd>
+Least-hops route:
+Sydney
+</pre>
+
+<p>The above routes were generated using an algorithm that checks vertices in numeric order (vertex 0 before vertex 1 before vertex 2, etc.). If you check vertices in a different order, you may generate different, but possibly equally valid, routes.</p>
+
+</section>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="mt-3 py-3 bg-dark text-center no-print" data-bs-theme="dark">
+      <p class="text-muted">
+        <small>
+          <strong>COMP2521 23T3: Data Structures and Algorithms</strong>
+          is brought to you by<br>
+          the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br>
+          at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br>
+          For all enquiries, please email the class account at
+          <a href="mailto:cs2521@cse.unsw.edu.au">cs2521@cse.unsw.edu.au</a><br>
+          
+          CRICOS Provider 00098G
+        </small>
+      </p>
+    </footer>
+    
+    <script src="./COMP2521 23T3 - Extra Lab Exercise_files/bootstrap.bundle.min.js.download" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- math -->
+    <script src="./COMP2521 23T3 - Extra Lab Exercise_files/latest.js.download" async=""></script>
+    
+    
+  
+</body></html>

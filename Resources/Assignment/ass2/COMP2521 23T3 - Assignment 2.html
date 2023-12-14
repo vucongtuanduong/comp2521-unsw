@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://cgi.cse.unsw.edu.au/~cs2521/23T3/assignments/ass2/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="./COMP2521 23T3 - Assignment 2_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Assignment 2_files/bootstrap-toc.min.css">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Assignment 2_files/style.css">
+    
+    
+
+    <title>COMP2521 23T3 - 
+
+	Assignment 2
+
+</title>
+  <script type="text/javascript" async="" src="./COMP2521 23T3 - Assignment 2_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.mjx-chtml {display: inline-block; line-height: 0; text-indent: 0; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; word-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; margin: 0; padding: 1px 0}
+.MJXc-display {display: block; text-align: center; margin: 1em 0; padding: 0}
+.mjx-chtml[tabindex]:focus, body :focus .mjx-chtml[tabindex] {display: inline-table}
+.mjx-full-width {text-align: center; display: table-cell!important; width: 10000em}
+.mjx-math {display: inline-block; border-collapse: separate; border-spacing: 0}
+.mjx-math * {display: inline-block; -webkit-box-sizing: content-box!important; -moz-box-sizing: content-box!important; box-sizing: content-box!important; text-align: left}
+.mjx-numerator {display: block; text-align: center}
+.mjx-denominator {display: block; text-align: center}
+.MJXc-stacked {height: 0; position: relative}
+.MJXc-stacked > * {position: absolute}
+.MJXc-bevelled > * {display: inline-block}
+.mjx-stack {display: inline-block}
+.mjx-op {display: block}
+.mjx-under {display: table-cell}
+.mjx-over {display: block}
+.mjx-over > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-under > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-stack > .mjx-sup {display: block}
+.mjx-stack > .mjx-sub {display: block}
+.mjx-prestack > .mjx-presup {display: block}
+.mjx-prestack > .mjx-presub {display: block}
+.mjx-delim-h > .mjx-char {display: inline-block}
+.mjx-surd {vertical-align: top}
+.mjx-mphantom * {visibility: hidden}
+.mjx-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 2px 3px; font-style: normal; font-size: 90%}
+.mjx-annotation-xml {line-height: normal}
+.mjx-menclose > svg {fill: none; stroke: currentColor}
+.mjx-mtr {display: table-row}
+.mjx-mlabeledtr {display: table-row}
+.mjx-mtd {display: table-cell; text-align: center}
+.mjx-label {display: table-row}
+.mjx-box {display: inline-block}
+.mjx-block {display: block}
+.mjx-span {display: inline}
+.mjx-char {display: block; white-space: pre}
+.mjx-itable {display: inline-table; width: auto}
+.mjx-row {display: table-row}
+.mjx-cell {display: table-cell}
+.mjx-table {display: table; width: 100%}
+.mjx-line {display: block; height: 0}
+.mjx-strut {width: 0; padding-top: 1em}
+.mjx-vsize {width: 0}
+.MJXc-space1 {margin-left: .167em}
+.MJXc-space2 {margin-left: .222em}
+.MJXc-space3 {margin-left: .278em}
+.mjx-chartest {display: block; visibility: hidden; position: absolute; top: 0; line-height: normal; font-size: 500%}
+.mjx-chartest .mjx-char {display: inline}
+.mjx-chartest .mjx-box {padding-top: 1000px}
+.MJXc-processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MJXc-processed {display: none}
+.mjx-test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.mjx-test.mjx-test-display {display: table!important}
+.mjx-test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.mjx-test.mjx-test-default {display: block!important; clear: both}
+.mjx-ex-box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.mjx-test-inline .mjx-left-box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .mjx-right-box {display: inline-block; width: 0; float: right}
+.mjx-test-display .mjx-right-box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+#MathJax_CHTML_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.mjx-chtml .mjx-noError {line-height: 1.2; vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+.MJXc-TeX-unknown-R {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: normal}
+.MJXc-TeX-unknown-I {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: normal}
+.MJXc-TeX-unknown-B {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: bold}
+.MJXc-TeX-unknown-BI {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: bold}
+.MJXc-TeX-ams-R {font-family: MJXc-TeX-ams-R,MJXc-TeX-ams-Rw}
+.MJXc-TeX-cal-B {font-family: MJXc-TeX-cal-B,MJXc-TeX-cal-Bx,MJXc-TeX-cal-Bw}
+.MJXc-TeX-frak-R {font-family: MJXc-TeX-frak-R,MJXc-TeX-frak-Rw}
+.MJXc-TeX-frak-B {font-family: MJXc-TeX-frak-B,MJXc-TeX-frak-Bx,MJXc-TeX-frak-Bw}
+.MJXc-TeX-math-BI {font-family: MJXc-TeX-math-BI,MJXc-TeX-math-BIx,MJXc-TeX-math-BIw}
+.MJXc-TeX-sans-R {font-family: MJXc-TeX-sans-R,MJXc-TeX-sans-Rw}
+.MJXc-TeX-sans-B {font-family: MJXc-TeX-sans-B,MJXc-TeX-sans-Bx,MJXc-TeX-sans-Bw}
+.MJXc-TeX-sans-I {font-family: MJXc-TeX-sans-I,MJXc-TeX-sans-Ix,MJXc-TeX-sans-Iw}
+.MJXc-TeX-script-R {font-family: MJXc-TeX-script-R,MJXc-TeX-script-Rw}
+.MJXc-TeX-type-R {font-family: MJXc-TeX-type-R,MJXc-TeX-type-Rw}
+.MJXc-TeX-cal-R {font-family: MJXc-TeX-cal-R,MJXc-TeX-cal-Rw}
+.MJXc-TeX-main-B {font-family: MJXc-TeX-main-B,MJXc-TeX-main-Bx,MJXc-TeX-main-Bw}
+.MJXc-TeX-main-I {font-family: MJXc-TeX-main-I,MJXc-TeX-main-Ix,MJXc-TeX-main-Iw}
+.MJXc-TeX-main-R {font-family: MJXc-TeX-main-R,MJXc-TeX-main-Rw}
+.MJXc-TeX-math-I {font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw}
+.MJXc-TeX-size1-R {font-family: MJXc-TeX-size1-R,MJXc-TeX-size1-Rw}
+.MJXc-TeX-size2-R {font-family: MJXc-TeX-size2-R,MJXc-TeX-size2-Rw}
+.MJXc-TeX-size3-R {font-family: MJXc-TeX-size3-R,MJXc-TeX-size3-Rw}
+.MJXc-TeX-size4-R {font-family: MJXc-TeX-size4-R,MJXc-TeX-size4-Rw}
+.MJXc-TeX-vec-R {font-family: MJXc-TeX-vec-R,MJXc-TeX-vec-Rw}
+.MJXc-TeX-vec-B {font-family: MJXc-TeX-vec-B,MJXc-TeX-vec-Bx,MJXc-TeX-vec-Bw}
+@font-face {font-family: MJXc-TeX-ams-R; src: local('MathJax_AMS'), local('MathJax_AMS-Regular')}
+@font-face {font-family: MJXc-TeX-ams-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-B; src: local('MathJax_Caligraphic Bold'), local('MathJax_Caligraphic-Bold')}
+@font-face {font-family: MJXc-TeX-cal-Bx; src: local('MathJax_Caligraphic'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-cal-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-R; src: local('MathJax_Fraktur'), local('MathJax_Fraktur-Regular')}
+@font-face {font-family: MJXc-TeX-frak-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-B; src: local('MathJax_Fraktur Bold'), local('MathJax_Fraktur-Bold')}
+@font-face {font-family: MJXc-TeX-frak-Bx; src: local('MathJax_Fraktur'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-frak-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-BI; src: local('MathJax_Math BoldItalic'), local('MathJax_Math-BoldItalic')}
+@font-face {font-family: MJXc-TeX-math-BIx; src: local('MathJax_Math'); font-weight: bold; font-style: italic}
+@font-face {font-family: MJXc-TeX-math-BIw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-R; src: local('MathJax_SansSerif'), local('MathJax_SansSerif-Regular')}
+@font-face {font-family: MJXc-TeX-sans-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-B; src: local('MathJax_SansSerif Bold'), local('MathJax_SansSerif-Bold')}
+@font-face {font-family: MJXc-TeX-sans-Bx; src: local('MathJax_SansSerif'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-sans-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-I; src: local('MathJax_SansSerif Italic'), local('MathJax_SansSerif-Italic')}
+@font-face {font-family: MJXc-TeX-sans-Ix; src: local('MathJax_SansSerif'); font-style: italic}
+@font-face {font-family: MJXc-TeX-sans-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-script-R; src: local('MathJax_Script'), local('MathJax_Script-Regular')}
+@font-face {font-family: MJXc-TeX-script-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-type-R; src: local('MathJax_Typewriter'), local('MathJax_Typewriter-Regular')}
+@font-face {font-family: MJXc-TeX-type-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-R; src: local('MathJax_Caligraphic'), local('MathJax_Caligraphic-Regular')}
+@font-face {font-family: MJXc-TeX-cal-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-B; src: local('MathJax_Main Bold'), local('MathJax_Main-Bold')}
+@font-face {font-family: MJXc-TeX-main-Bx; src: local('MathJax_Main'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-main-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-I; src: local('MathJax_Main Italic'), local('MathJax_Main-Italic')}
+@font-face {font-family: MJXc-TeX-main-Ix; src: local('MathJax_Main'); font-style: italic}
+@font-face {font-family: MJXc-TeX-main-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-R; src: local('MathJax_Main'), local('MathJax_Main-Regular')}
+@font-face {font-family: MJXc-TeX-main-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-I; src: local('MathJax_Math Italic'), local('MathJax_Math-Italic')}
+@font-face {font-family: MJXc-TeX-math-Ix; src: local('MathJax_Math'); font-style: italic}
+@font-face {font-family: MJXc-TeX-math-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size1-R; src: local('MathJax_Size1'), local('MathJax_Size1-Regular')}
+@font-face {font-family: MJXc-TeX-size1-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size2-R; src: local('MathJax_Size2'), local('MathJax_Size2-Regular')}
+@font-face {font-family: MJXc-TeX-size2-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size3-R; src: local('MathJax_Size3'), local('MathJax_Size3-Regular')}
+@font-face {font-family: MJXc-TeX-size3-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size4-R; src: local('MathJax_Size4'), local('MathJax_Size4-Regular')}
+@font-face {font-family: MJXc-TeX-size4-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-R; src: local('MathJax_Vector'), local('MathJax_Vector-Regular')}
+@font-face {font-family: MJXc-TeX-vec-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-B; src: local('MathJax_Vector Bold'), local('MathJax_Vector-Bold')}
+@font-face {font-family: MJXc-TeX-vec-Bx; src: local('MathJax_Vector'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-vec-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf') format('opentype')}
+</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-select__option{cursor:pointer}.ismanga .ismanga-select__control{cursor:pointer}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel-view-content__select-label{font-size:14px;font-weight:400;line-height:1.2;margin-bottom:4px;margin-top:4px}.ismanga .control-panel-view-content__btn-container{display:flex;flex-direction:column;margin-top:12px}.ismanga .control-panel-view-content__btn:first-child{margin-bottom:12px}.ismanga .control-panel-view-content__btn{border-radius:4px;padding:8px 16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel{background:#fff;border-bottom-right-radius:8px;border-top-right-radius:8px;box-shadow:0 0 5px #b4b4b4;color:#000;font-family:Helvetica;font-weight:normal;left:0;line-height:1.4;padding:16px;position:relative;transform:translateX(0);transition:transform .5s}.ismanga .control-panel--hidden{transform:translateX(-169px)}.ismanga .control-panel .control-panel__collapse-btn{background-color:#b4183d;border-top-left-radius:8px;border-top-right-radius:8px;color:#fff;cursor:pointer;font-family:"Bangers";font-size:20px;padding:8px 16px;position:absolute;right:-69px;top:56px;transform:rotate(90deg)}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-spinner{align-items:center;display:flex;flex-direction:column;position:absolute}.ismanga .ismanga-spinner__inner{animation:spin 2s linear infinite;border-color:rgba(0,0,0,.04);border-radius:50%;border-style:solid;border-top-color:#b4183d}.ismanga .ismanga-spinner__inner-text{background-color:rgba(255,255,255,.8);border-radius:4px;color:#b4183d;font-size:16px;margin-top:8px;text-align:center;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;word-break:break-word}.ismanga .ismanga-spinner__inner-text a{color:#b4183d;font-weight:bold;text-decoration:underline dotted #b4183d}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-click-translate-overlay{background-color:rgba(0,0,0,.5);border:4px solid #b4183d;height:100%;width:100%}.ismanga .ismanga-click-translate-overlay__translate-btn{border-radius:4px;display:flex;font-size:20px;justify-content:center;left:16px;padding:12px 16px;position:absolute;top:16px;width:auto}.ismanga .ismanga-click-translate-overlay__disabled-text{color:#fff;font-size:20px;padding-top:16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-screenshot-translation-content{height:100%;position:absolute;width:100%}.ismanga .ismanga-screenshot-translation-content__warning{align-items:center;background-color:#6c0e24;box-sizing:border-box;color:#fff;display:flex;font-size:22px;height:80px;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:9999}.ismanga .ismanga-screenshot-translation-content__warning .ismanga-spinner__inner{border-top-color:#fff}.ismanga .ismanga-screenshot-translation-content__spinner-container{margin-left:12px;position:relative}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-text-bubble-content__bubble{align-items:center;box-sizing:border-box;display:flex;justify-content:center;position:absolute}.ismanga .ismanga-text-bubble-content__bubble p{color:#000;line-height:1.2;margin:0;padding:4px;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;white-space:normal}.ismanga .ismanga-text-bubble-content__bubble p:hover{background-color:#fff;border-radius:4px;box-shadow:0 0 0 2px #b4183d;cursor:pointer;z-index:9999}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-interaction-content__overlay{align-items:center;background-color:rgba(255,255,255,.7);color:#b4183d;display:flex;font-size:24px;justify-content:center;position:absolute;text-align:center;z-index:1}.ismanga .ismanga-interaction-content__translate-button{background-color:#b4183d;border:0;border-radius:2px;box-shadow:none;color:#fff;font-family:"Comic Neue";outline:none;padding:6px 10px}.ismanga .ismanga-interaction-content__translate-button:hover{background-color:#901330}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga.ismanga-preloader{background-color:rgba(0,0,0,.1);color:#b4183d;font-size:16px;overflow:hidden;position:absolute;text-align:left}.ismanga.ismanga-preloader div{padding:8px}.ismanga.ismanga-preloader span{animation:slowshow 2s ease 0s infinite;color:#b4183d;font-size:28px;opacity:0}@keyframes slowshow{100%{opacity:1}}.ismanga.ismanga-control-panel-container{left:0;position:fixed;top:40%;z-index:99999 !important}</style></head>
+  <body class="d-flex flex-column" style="min-height: 100vh;"><div id="MathJax_Message" style="display: none;"></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="https://www.cse.unsw.edu.au/~cs2521/23T3/">COMP2521 23T3</a>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mr-auto">
+            <!--
+            <li class="nav-item active"><a class="nav-link" href="#">Outline</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Forum</a></li>
+            <li class="navbar-text px-2">|</li>
+            -->
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <main class="container" aria-label="Content" style="flex: 1; padding-top: 4rem;">
+      <header>
+        <h1 class="text-center">
+	Assignment 2
+</h1>
+        <h3 class="text-center">
+	Maps and Navigation
+</h3>
+        
+      </header>
+      <div class="text-justify mt-4">
+        
+
+<section class="exercise">
+<header><h3>Changelog</h3></header>
+<p>All important changes to the assignment specification and files will be listed here.</p>
+<ul class="text-left">
+	<li><code>[25/10 14:00]</code> Assignment released</li>
+	<li><code>[26/10 16:20]</code> Fixed mistake in expected output in <code>task3/2.exp</code>. Download the new version <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/ass/ass2/files/task3/2.exp">here</a>.</li>
+	<li><code>[27/10 01:45]</code> Added more details and an example to Task 4</li>
+	<li><code>[27/10 13:20]</code> Added testing details for Task 4</li>
+	<li><code>[01/11 14:00]</code> Added a few more test files for Task 4
+</li></ul>
+</section>
+
+
+<section class="exercise">
+<header><h3>Admin</h3></header>
+<dl class="dl-horizontal">
+	<dt>Marks</dt>
+	<dd>contributes 15% towards your final mark (see Assessment section for more details)</dd>
+	<dt>Submit</dt>
+	<dd>see the Submission section</dd>
+	<dt>Deadline</dt>
+	<dd>8pm on Friday of Week 10</dd>
+	<dt>Late penalty</dt>
+	<dd>0.2% of the maximum mark per hour or part thereof deducted from the attained mark, submissions later than 5 days not accepted</dd>
+</dl>
+</section>
+
+
+
+
+<section class="exercise">
+<header><h3>Background</h3></header>
+
+<p>The year is 2521, and humans have finally perfected interstellar travel! Humans have now colonised several planets in systems far from Earth.</p>
+
+<p>You have found yourself on the positively <i>bussin'</i> planet of Zephyrus. It is quite different from home, but you can see yourself getting comfortable, as long as you get used to the frequent dust storms... Anyway, the leadership on Zephyrus has told you about a growing problem - thanks to advanced technology, roads are being paved quicker than ever before, but the people are starting to have trouble navigating them. Therefore, you have been assigned the task of developing a navigation app to help drivers reach their destinations.</p>
+
+</section>
+
+
+<section class="exercise">
+<header><h3>Setting Up</h3></header>
+<p>Change into the directory you created for the assignment and run the following command:</p>
+
+<pre is="tty"><kbd is="sh">unzip <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/ass/ass2/downloads/files.zip">/web/cs2521/23T3/ass/ass2/downloads/files.zip</a></kbd>
+</pre>
+
+<p>If you're working on your own machine, download <code>files.zip</code> by clicking on the above link and then unzip the downloaded file.</p>
+
+<p>You should now have the following files:</p>
+
+<dl class="dl-horizontal">
+	<dt><code>Makefile</code></dt>
+	<dd>controls compilation</dd>
+	<dt><code>RoadMap.h</code></dt>
+	<dd>interface to the Road Map ADT</dd>
+	<dt><code>RoadMap.c</code></dt>
+	<dd>implementation of the Road Map ADT (incomplete)</dd>
+	<dt><code>navigator.h</code></dt>
+	<dd>interface to the navigation algorithms</dd>
+	<dt><code>navigator.c</code></dt>
+	<dd>implementation of the navigation algorithms (incomplete)</dd>
+	<dt><code>time.h</code></dt>
+	<dd>interface to the time module</dd>
+	<dt><code>time.c</code></dt>
+	<dd>implementation of the time module (complete)</dd>
+	<dt><code>testRoadMap.c</code></dt>
+	<dd>main program for testing the Road Map ADT</dd>
+	<dt><code>testNavigator.c</code></dt>
+	<dd>main program for testing the navigation algorithms in <code>navigator.c</code></dd>
+	<dt><code>task[34]/</code></dt>
+	<dd>subdirectories containing files for testing tasks 3 and 4</dd>
+</dl>
+
+<p>Note that the only files you are allowed to submit are <code>RoadMap.c</code> and <code>navigator.c</code>, so you must write all your code in these files. You shouldn't modify any other files unless you are doing it for testing purposes or if you know what you're doing.</p>
+
+</section>
+
+
+<section class="exercise with-self">
+<header><h3>Task 1: Road Map ADT</h3></header>
+
+<p>Before doing any navigation, you will first need to collect information about nodes (intersections) and roads. Therefore, your first task is to implement a Road Map ADT which stores information about nodes and roads.</p>
+
+<p>Like on Earth, roads on Zephyrus can be one-way or two-way, and only a small number of roads can be connected to each node (otherwise it would be impossible to control the traffic).</p>
+
+<p>The Road Map ADT contains a large number of operations, but only some of them need to be implemented in Task 1. Here are the operations that you need to implement in Task 1:</p>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Operation</th>
+			<th>Signature/Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>RoadMapNew</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="n">RoadMap</span><span class="w"> </span><span class="nf">RoadMapNew</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numNodes</span><span class="p">);</span>
+</pre></div>
+
+			    Creates a new road map with the given number of nodes (intersections) and no roads
+			</td>
+		</tr>
+		<tr>
+			<td>RoadMapFree</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">RoadMapFree</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">);</span>
+</pre></div>
+
+			    Frees all memory allocated to the given map
+			</td>
+		</tr>
+		<tr>
+			<td>RoadMapNumNodes</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">RoadMapNumNodes</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">);</span>
+</pre></div>
+
+			    Returns the number of nodes in the map
+			</td>
+		</tr>
+		<tr>
+			<td>RoadMapNumRoads</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">RoadMapNumRoads</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">);</span>
+</pre></div>
+
+			    Returns the number of roads in the map<br>
+			    <b>Note:</b> Both one-way and two-way roads count as a single road
+			</td>
+		</tr>
+		<tr>
+			<td>RoadMapAddRoad</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">RoadMapAddRoad</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node2</span><span class="p">,</span>
+<span class="w">                    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isTwoWay</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">travelMinutes</span><span class="p">);</span>
+</pre></div>
+
+				Adds a road between nodes <code>node1</code> and <code>node2</code> that takes <code>travelMinutes</code> to drive down, if:
+				<ul>
+					<li>There is not already <code>MAX_ROADS_PER_NODE</code> roads connected to <code>node1</code> or <code>node2</code>, and</li>
+					<li>There is not already a road (one-way or two-way) between <code>node1</code> and <code>node2</code></li>
+				</ul>
+				If <code>isTwoWay</code> is true, the new road should be a two-way road, otherwise it should be a one-way road from <code>node1</code> to <code>node2</code>.<br>
+				Returns true if the road was added, and false otherwise.<br>
+
+				Assumes that <code>node1</code> and <code>node2</code> are valid and are not the same, and that <code>travelMinutes</code> is positive and less than <code>MINUTES_PER_DAY</code> (see <code>time.h</code>).
+			</td>
+		</tr>
+
+		<tr>
+			<td>RoadMapGetRoadsFrom</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">RoadMapGetRoadsFrom</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">road</span><span class="w"> </span><span class="n">roads</span><span class="p">[]);</span>
+</pre></div>
+
+				Stores roads that can be used to drive <i>away</i> from <code>node</code> in the given <code>roads</code> array (in any order), and then returns the number of roads stored. In each of the roads stored, the <code>fromNode</code> field should be equal to <code>node</code>.<br><br>
+				<b>Example:</b><br>
+				Suppose the road map contains the following roads:<br>
+				<ul>
+					<li>Two-way road between 0 and 1</li>
+					<li>One-way road from 1 to 2</li>
+					<li>One-way road from 3 to 1</li>
+				</ul>
+
+				Then if <code>RoadMapGetRoadsFrom</code> is called with node 1, then two roads should be stored (in any order): a road from 1 to 0, and a road from 1 to 2.
+			</td>
+		</tr>
+		<tr>
+			<td>RoadMapGetRoadsTo</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">RoadMapGetRoadsTo</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">road</span><span class="w"> </span><span class="n">roads</span><span class="p">[]);</span>
+</pre></div>
+
+				Stores roads that can be used to drive <i>towards</i> <code>node</code> in the given <code>roads</code> array (in any order), and then returns the number of roads stored. In each of the roads stored, the <code>toNode</code> field should be equal to <code>node</code>.
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5 class="mt-3">Testing</h5>
+
+<p>We have provided a program <code>testRoadMap.c</code> for you to test your implementation of the Road Map ADT. This program contains tests for Task 1 and 2, but at this stage, you are only required to pass the tests for Task 1. These tests are numbered 1.1, 1.2, and so on.</p>
+
+<p>To run the tests, compile with <code>make</code> and then run <code>./testRoadMap</code>. The program takes one command-line argument, which is the task number (either 1 or 2). The tests are assert-based, which means the program will terminate with an error message if a test fails. If your implementation passes all the tests for Task 1, it will output the following:</p>
+
+<pre is="tty"><kbd is="sh">./testRoadMap 1</kbd>
+Test 1.1 passed!
+Test 1.2 passed!
+Test 1.3 passed!
+Test 1.4 passed!
+Test 1.5 passed!
+Test 1.6 passed!
+</pre>
+
+<p>The program contains only a few simple tests, and certainly does not cover all possible edge cases, so we strongly recommended that you add your own tests. You can add new tests by creating new test functions (e.g., <code>test1_7()</code>), and calling it from the main function.</p> 
+
+</section>
+
+
+
+
+<section class="exercise with-self">
+<header><h3>Task 2: Identifying Islands</h3></header>
+
+<p>Now that you've collected all the information you need, you're about to start working on the navigation feature of your app... when you make an important realisation! The population on Zephyrus is spread across contains several islands, some of which are fairly large. There is no way to drive between two islands, so if a user tries to find a route between two islands, you would like the app to respond quickly and tell the user that there is no route, instead of wasting time trying to find a route.</p>
+
+<p>Therefore, you would like your app to pre-process the nodes and roads to identify islands. When a user wants to find a route between two nodes, the app will be able to check whether the two nodes are on the same island before calculating any routes.</p>
+
+<div class="alert alert-secondary">
+	<h5>Definition</h5>
+	<p>Two nodes <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-1-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-1" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2" class="mjx-mrow"><span id="MJXc-Node-3" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">A</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math></span></span><script type="math/tex" id="MathJax-Element-1">A</script> and <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-2-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-4" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-5" class="mjx-mrow"><span id="MJXc-Node-6" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">B</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>B</mi></math></span></span><script type="math/tex" id="MathJax-Element-2">B</script> are on the same island if and only if:</p>
+	
+	<ul>
+		<li>There is a road (either one-way or two-way) between <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-3-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-7" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-8" class="mjx-mrow"><span id="MJXc-Node-9" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">A</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math></span></span><script type="math/tex" id="MathJax-Element-3">A</script> and <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-4-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-10" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-11" class="mjx-mrow"><span id="MJXc-Node-12" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">B</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>B</mi></math></span></span><script type="math/tex" id="MathJax-Element-4">B</script>, or</li>
+		<li>There is a road (either one-way or two-way) between <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-5-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-13" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-14" class="mjx-mrow"><span id="MJXc-Node-15" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">A</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math></span></span><script type="math/tex" id="MathJax-Element-5">A</script> and a node which is on the same island as <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-6-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-16" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-17" class="mjx-mrow"><span id="MJXc-Node-18" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">B</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>B</mi></math></span></span><script type="math/tex" id="MathJax-Element-6">B</script></li>
+	</ul>
+
+	<p>Consider the following road map (travel times are not shown as they are not relevant):</p>
+	
+	<img class="center my-3" src="./COMP2521 23T3 - Assignment 2_files/islands-1.svg">
+	
+	<p>There are three islands on this map: one of them consists of the nodes 0, 3 and 5, another consists of the nodes 1, 4, 7 and 8, and the last island consists of the nodes 2 and 6. Note that 0 and 5 are on the same island, even though there is no route from 5 to 0.</p>
+</div>
+
+<p>In order to help achieve this, your task is to implement the following operations in the Road Map ADT. Note that you will need to modify some of your code from Task 1 to store information about islands (namely, your <code>roadMap</code> struct definition, <code>RoadMapNew</code> and <code>RoadMapFree</code>).</p>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Operation</th>
+			<th>Signature/Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>RoadMapProcessIslands</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">RoadMapProcessIslands</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">);</span>
+</pre></div>
+
+				Internally processes and saves information about islands based on the current roads in the map.<br>
+				Assumes that no roads will be added to the map after this function is called.<br><br>
+
+				<b>Note:</b> This function returns no value, so calling this function alone will have no observable effect from a user's perspective. However, the purpose of this operation is to compute and store information in the map to enable the following operations to be efficient. All operations below assume that this function has been called first.
+			</td>
+		</tr>
+		<tr>
+			<td>RoadMapNumIslands</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">RoadMapNumIslands</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">);</span>
+</pre></div>
+
+				Returns the number of islands.<br>
+				<b>Note:</b> This function must have a worst-case time complexity of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-7-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-19" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-20" class="mjx-mrow"><span id="MJXc-Node-21" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">O</span></span><span id="MJXc-Node-22" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-23" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span><span id="MJXc-Node-24" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-7">O(1)</script> with respect to the number of nodes.
+			</td>
+		</tr>
+		<tr>
+			<td>RoadMapOnSameIsland</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">RoadMapOnSameIsland</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node2</span><span class="p">);</span>
+</pre></div>
+
+				Returns true if <code>node1</code> and <code>node2</code> are on the same island, and false otherwise.<br>
+				<b>Note:</b> This function must have a worst-case time complexity of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-8-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-25" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-26" class="mjx-mrow"><span id="MJXc-Node-27" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">O</span></span><span id="MJXc-Node-28" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-29" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span><span id="MJXc-Node-30" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-8">O(1)</script> with respect to the number of nodes.
+			</td>
+		</tr>
+		<tr>
+			<td>RoadMapSetIslandName</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">RoadMapSetIslandName</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">);</span>
+</pre></div>
+
+				Given a node, sets the name of the <i>island</i> that the node is on to the given name. If the island was already given a name, then it should be replaced with the given name.<br>
+				<b>Note:</b> This function must have a worst-case time complexity of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-9-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-31" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-32" class="mjx-mrow"><span id="MJXc-Node-33" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">O</span></span><span id="MJXc-Node-34" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-35" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span><span id="MJXc-Node-36" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-9">O(1)</script> with respect to the number of nodes.
+			</td>
+		</tr>
+		<tr>
+			<td>RoadMapGetIslandName</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">RoadMapGetIslandName</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node</span><span class="p">);</span>
+</pre></div>
+
+				Given a node, returns the name of the <i>island</i> that the node is on, or "(unnamed)" if the island has not been named via <code>RoadMapSetIslandName</code>.<br>
+				<b>Note:</b> This function must have a worst-case time complexity of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-10-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-37" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-38" class="mjx-mrow"><span id="MJXc-Node-39" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">O</span></span><span id="MJXc-Node-40" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-41" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span><span id="MJXc-Node-42" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-10">O(1)</script> with respect to the number of nodes.<br><br>
+				
+				<b>Note:</b> This function should simply return the island name stored in the map instead of a copy of the name. The user must not modify or free the returned string.
+			</td>
+		</tr>
+	</tbody>	
+</table>
+
+<h5 class="mt-3">Example</h5>
+
+<p>Consider the following road map:</p>
+
+<img class="center my-3" src="./COMP2521 23T3 - Assignment 2_files/islands-1.svg">
+
+<p>After this map is created, <code>RoadMapProcessIslands</code> will be called, which should process and store information about islands in the map. It can be assumed that no roads will be added to the map after <code>RoadMapProcessIslands</code> is called.</p>
+
+<p>After <code>RoadMapProcessIslands</code> has been called, all the other island-related functions can now be called. For example:</p>
+
+<ul>
+	<li><code>RoadMapNumIslands</code> should return 3, as there are three islands in the map.</li>
+	<li><code>RoadMapOnSameIsland(map, 0, 3)</code> should return true, as nodes 0 and 3 are on the same island.</li>
+	<li><code>RoadMapOnSameIsland(map, 0, 5)</code> should return true, as nodes 0 and 5 are on the same island.</li>
+	<li><code>RoadMapOnSameIsland(map, 5, 0)</code> should return true, as nodes 5 and 0 are on the same island.</li>
+	<li><code>RoadMapOnSameIsland(map, 0, 1)</code> should return false, as nodes 0 and 1 are not on the same island.</li>
+	<li>Suppose <code>RoadMapSetIslandName(map, 0, "Bora Bora")</code> is called. This should set the name of the island containing node 0 to "Bora Bora", which means if <code>RoadMapGetIslandName</code> is now called with the node 0, 3 or 5, it should return the string "Bora Bora".</li>
+</ul>
+
+
+<h5 class="mt-3">Testing</h5>
+
+<p>The <code>testRoadMap.c</code> program contains tests for Task 2. These tests are numbered 2.1, 2.2, and so on.</p>
+
+<p>To run the tests, compile with <code>make</code> and then run <code>./testRoadMap</code>. The tests are assert-based, which means the program will terminate with an error message if a test fails. If your implementation passes all the tests for Task 2, it will output the following:</p>
+
+<pre is="tty"><kbd is="sh">./testRoadMap 2</kbd>
+Test 2.1 passed!
+Test 2.2 passed!
+Test 2.3 passed!
+</pre>
+
+<p>The program contains only a few simple tests, and certainly does not cover all possible edge cases, so we strongly recommended that you add your own tests. You can add new tests by creating new test functions (e.g., <code>test2_4()</code>), and calling it from the main function.</p> 
+
+</section>
+
+
+
+
+<section class="exercise with-self">
+<header><h3>Task 3: Navigation</h3></header>
+
+<p>You're finally ready to work on navigation!</p>
+
+<p>Navigation should work in the same way as any other popular navigation app back on Earth (such as Google Maps) - users input a starting location, a destination, and a departure time, and the app finds the fastest route.</p>
+
+<p>For more accuracy, you would also like your app to take traffic lights into account, as some nodes contain traffic lights. You know that the average amount of time spent waiting at a traffic light is <code>TRAFFIC_LIGHT_WAIT</code> minutes, so each traffic light in the middle of a route (not at the start or end of the route) will add this many minutes to the total travel time. If a node does not contain a traffic light, then there is no waiting time.</p>
+
+<p>Your task consists of two parts. The first is to implement these simple operations in <code>RoadMap.c</code>. These may require you to modify some your existing code in <code>RoadMap.c</code>.</p>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Operation</th>
+			<th>Signature/Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>RoadMapAddTrafficLights</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">RoadMapAddTrafficLights</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node</span><span class="p">);</span>
+</pre></div>
+
+				Adds traffic lights to the given node. Does nothing if the node already has traffic lights.
+			</td>
+		</tr>
+		<tr>
+			<td>RoadMapHasTrafficLights</td>
+			<td>
+<div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">RoadMapHasTrafficLights</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node</span><span class="p">);</span>
+</pre></div>
+
+				Returns true if the given node has traffic lights, and false otherwise.
+			</td>
+		</tr>
+	</tbody>	
+</table>
+
+<p>Your main task is to implement the following function in <code>navigator.c</code>:</p>
+
+<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">route</span><span class="w"> </span><span class="n">navigate</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">fromNode</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">toNode</span><span class="p">,</span>
+<span class="w">                      </span><span class="k">struct</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="n">time</span><span class="p">);</span>
+</pre></div>
+
+
+<p>This function should find and return the fastest route from <code>fromNode</code> to <code>toNode</code>.</p>
+
+<p><code>time</code> is the departure time, which consists of an <code>hour</code> and <code>minute</code>. The <code>time</code> struct is defined in <code>time.h</code> as follows:</p>
+
+<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">hour</span><span class="p">;</span><span class="w">   </span><span class="c1">// between 0 and HOURS_PER_DAY - 1 (inclusive)</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">minute</span><span class="p">;</span><span class="w"> </span><span class="c1">// between 0 and MINUTES_PER_HOUR - 1 (inclusive)</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<p>The <code>route</code> struct is defined in <code>navigator.h</code>:</p>
+
+<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">route</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">fromNode</span><span class="p">;</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">toNode</span><span class="p">;</span>
+<span class="w">	</span><span class="k">struct</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="n">start</span><span class="p">;</span>
+<span class="w">	</span><span class="k">struct</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="n">end</span><span class="p">;</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">numLegs</span><span class="p">;</span>
+<span class="w">	</span><span class="k">struct</span><span class="w"> </span><span class="nc">leg</span><span class="w"> </span><span class="o">*</span><span class="n">legs</span><span class="p">;</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">totalDuration</span><span class="p">;</span><span class="w"> </span><span class="c1">// in minutes</span>
+<span class="p">};</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">leg</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">fromNode</span><span class="p">;</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">toNode</span><span class="p">;</span>
+<span class="w">	</span><span class="k">struct</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="n">start</span><span class="p">;</span>
+<span class="w">	</span><span class="k">struct</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="n">end</span><span class="p">;</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">duration</span><span class="p">;</span><span class="w"> </span><span class="c1">// in minutes</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<p>Each <code>route</code> struct contains:</p>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Field(s)</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>fromNode</code> and <code>toNode</code></td>
+			<td>These are the starting and finishing nodes of the route respectively, and should be the same as the <code>fromNode</code> and <code>toNode</code> arguments to the <code>navigate</code> function.
+		</td></tr>
+		<tr>
+			<td><code>start</code> and <code>end</code></td>
+			<td>These are the times at the start and end of the route respectively. In this task, <code>start</code> should be the same as the given departure time.</td>
+		</tr>
+		<tr>
+			<td><code>numLegs</code> and <code>legs</code></td>
+			<td>
+				Every route consists of one or more legs, where a leg involves driving down one road. If a route uses 3 roads, for example, then the number of legs is 3.<br>
+				<code>legs</code> should point to a dynamically allocated array of <code>leg</code> structs, which contains the details of each leg of the route in order from start to finish, including:
+				<ul>
+					<li>The start and finishing nodes of the road</li>
+					<li>The time at the start of driving down the road, and the time at the end</li>
+					<li>The time spent on this leg. Note that this is the time spent driving down the road, and does not include the time spent waiting at a traffic light before driving on the road.</li> 
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><code>totalDuration</code></td>
+			<td>This is the total amount of time (in minutes) taken by this route, including any waiting at nodes.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>If there are multiple fastest routes from <code>fromNode</code> to <code>toNode</code>, then you may return any of them. If there is no route from <code>fromNode</code> to <code>toNode</code>, then you should return a <code>route</code> struct with <code>numLegs</code> set to 0 and <code>legs</code> set to NULL.</p>
+
+<h5 class="mt-3">Example</h5>
+
+<p>Consider the following road map (here, all roads are two-way and there are traffic lights at nodes 0, 2 and 5):</p>
+
+<img class="center my-3 w-45" src="./COMP2521 23T3 - Assignment 2_files/navigate-1-1.svg">
+
+<p>If <code>navigate</code> is called to find a route from 0 to 5, with a departure time of 12:45, then the following route should be returned:</p>
+
+<img class="center my-3 w-65" src="./COMP2521 23T3 - Assignment 2_files/navigate-1-2.svg">
+
+<p>Note the following:</p>
+
+<ul>
+	<li>There is a one minute gap between the end of the second leg (12:58) and the start of the third leg (12:59) due to the traffic lights at node 2.</li>
+	<li>The sum of durations of all legs is 9 + 4 + 5 = 18 minutes, but the total duration of the route is 19 minutes, because 1 minute is spent waiting at traffic lights.</li>
+	<li>Even though there are traffic lights at nodes 0 and 5, since these are at the start and end of the route, no waiting time is added for these nodes.</li>
+</ul>
+
+<h5 class="mt-3">Testing</h5>
+
+<p>The <code>testRoadMap.c</code> program contains a simple test to check that you have implemented <code>RoadMapAddTrafficLights</code> and <code>RoadMapHasTrafficLights</code> correctly. To run this test, compile with <code>make</code> and then run <code>./testRoadMap</code>. If your implementation passes the test, it will output the following:</p>
+
+<pre is="tty"><kbd is="sh">./testRoadMap 3</kbd>
+Test 3.1 passed!
+</pre>
+
+<p>To test the main part of this task, we have provided a program <code>testNavigator.c</code> and some files in the <code>task3/</code> directory.</p>
+
+<p>The <code>task3</code> directory contains three types of files:</p>
+
+<dl>
+	<dt><code>*.map</code></dt>
+	<dd>
+		<p>These files contain descriptions of maps. The files are formatted as follows:</p>
+		<ul>
+			<li>The first line contains two integers: the number of nodes <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-11-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-43" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-44" class="mjx-mrow"><span id="MJXc-Node-45" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-11">n</script> and the number of roads <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-12-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-46" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-47" class="mjx-mrow"><span id="MJXc-Node-48" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">r</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi></math></span></span><script type="math/tex" id="MathJax-Element-12">r</script>.</li>
+			<li>The next <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-13-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-49" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-50" class="mjx-mrow"><span id="MJXc-Node-51" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">r</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>r</mi></math></span></span><script type="math/tex" id="MathJax-Element-13">r</script> lines each contain a description of a road, consisting of four integers:
+				<ul>
+					<li>The node that the road starts at</li>
+					<li>The node that the road ends at</li>
+					<li><code>1</code> if it is a one-way road, and <code>2</code> if it is a two-way road</li>
+					<li>The number of minutes required to drive across the road</li>
+				</ul>
+			</li>
+			<li>The next line contains a single integer <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-14-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-52" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-53" class="mjx-mrow"><span id="MJXc-Node-54" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.39em; padding-bottom: 0.279em;">t</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math></span></span><script type="math/tex" id="MathJax-Element-14">t</script>, which is the number of nodes containing traffic lights.</li>
+			<li>The next line contains <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-15-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-55" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-56" class="mjx-mrow"><span id="MJXc-Node-57" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.39em; padding-bottom: 0.279em;">t</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi></math></span></span><script type="math/tex" id="MathJax-Element-15">t</script> integers, which are the nodes containing traffic lights.</li>
+		</ul>
+
+		<p>For example, consider the following file:</p>
+<pre>6 9
+0 1 2 9
+0 2 2 14
+0 3 2 7
+1 2 2 4
+1 3 2 10
+1 4 2 3
+2 5 2 5
+3 4 2 15
+4 5 2 8
+3
+0 2 5
+</pre>
+
+		<p>The first line specifies that there are six nodes and nine roads, the next nine lines specify the roads, the following line specifies that there are three nodes with traffic lights, and the next line specifies that these nodes are 0, 2 and 5. This file corresponds to the road map in the example above.</p>
+
+		<p>The <code>testNavigator.c</code> program reads these files and creates an instance of the Road Map ADT for you, so you do not need to do any file reading yourself.</p>
+	</dd>
+
+	<dt><code>*.query</code></dt>
+	<dd>
+		These files contain route queries. The files are formatted as follows:
+		<ul>
+			<li>The first line contains two integers: the starting node and the destination node.</li>
+			<li>The second line contains the departure time, formatted as <code>HH:MM</code>, for example: <code>12:45</code></li>
+		</ul>
+
+		<p>For example, consider the following file:</p>
+<pre>0 5
+12:45
+</pre>
+		<p>This file specifies a query for a route starting at node 0 and ending at node 5, with a departure time of 12:45. This file also corresponds to the example above.</p>
+	</dd>
+
+	<dt><code>*.exp</code></dt>
+	<dd>These files contain expected routes for each map-query pair. For example, <code>1.exp</code> contains the expected route for the map <code>1.map</code> and the query <code>1.query</code>.</dd>
+</dl>
+
+<p>To test your function, compile with <code>make</code> and then run the <code>./testNavigator</code> program with two command-line arguments: the name of a map file and the name of a query file. For example:</p> 
+
+<pre is="tty"><kbd is="sh">./testNavigator task3/1.map task3/1.query</kbd>
+...
+</pre>
+
+<p>The program will print the route returned by your function to stdout, and you should compare this with the expected route in the corresponding <code>*.exp</code> file.</p>
+
+</section>
+
+
+
+
+<section class="exercise with-self">
+<header><h3>Task 4: Advanced Navigation</h3></header>
+
+<p>Dust storms occur all the time on Zephyrus! To help keep people safe, some roads are closed during certain periods of the day. Fortunately, you have learned that if a road is affected by dust storms, the dust storms will occur at the same time each day, so it is still possible to plan routes ahead of time.</p>
+
+<p>If a road is affected by dust storms, people are only allowed to drive down the road if the road will be open the whole time they are on it. If this is not the case, they will have to wait at the start of the road until they are able to drive down the entire road, or use a different route.</p>
+
+<p>For example, suppose a road takes 10 minutes to drive down, and is closed from 13:45 until 14:00. If it is 13:35, people are allowed to start driving down the road. But if it is 13:36, people are not allowed to start driving down the road, and they will either have to wait until 14:00, or take a different route. Once it is 14:00, people will be allowed to drive down the road again.</p>
+
+<p>Due to the need to wait for dust storms to subside, it will sometimes save a driver more time if they start on their route later than they originally intended. For example, consider the following simple road map:</p>
+
+<img class="center w-45" src="./COMP2521 23T3 - Assignment 2_files/task4-simple.svg">
+
+<p>Suppose that a driver would like to go from 0 to 2, and would like to depart at 15:00. If they do depart at 15:00, they will reach node 1 at 15:10, but they would then have to wait until 15:40 before driving from node 1 to 2. They would therefore arrive at their destination at 15:55, and the duration of the route would be 55 minutes. Meanwhile, if the driver departed at 15:30, they would arrive at the exact same time, but would have spent much less time on the road (25 minutes).</p>
+
+<p>Therefore, you would like your app to provide the route that not only arrives as early as possible, but that has the shortest duration. This means the starting time of the route may be later than the inputted departure time.</p>
+
+<p>Your task consists of two parts. The first is to implement the following function in <code>RoadMap.c</code>:
+
+</p><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">RoadMapSetClosedTimes</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">node2</span><span class="p">,</span>
+<span class="w">                           </span><span class="k">struct</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="n">closedFrom</span><span class="p">,</span>
+<span class="w">                           </span><span class="k">struct</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="n">closedUntil</span><span class="p">);</span>
+</pre></div>
+
+
+<p>This function specifies that the road between <code>node1</code> and <code>node2</code> should be closed from <code>closedFrom</code> until <code>closedUntil</code> each day.</p>
+
+<p>You will also need to make sure that the <code>road</code> structs stored by <code>RoadMapGetRoadsFrom</code> and <code>RoadMapGetRoadsTo</code> contain these times, if the road is affected by dust storms. This may require you to modify your <code>RoadMapGetRoadsFrom</code> and <code>RoadMapGetRoadsTo</code> functions to store these times. If a road is not affected by dust storms, you should ensure that <code>closedFrom</code> and <code>closedUntil</code> are equal.</p>
+
+<p>Your main task is to implement the following function in <code>navigator.c</code>:</p>
+
+<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">route</span><span class="w"> </span><span class="n">advancedNavigate</span><span class="p">(</span><span class="n">RoadMap</span><span class="w"> </span><span class="n">map</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">fromNode</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">toNode</span><span class="p">,</span>
+<span class="w">                              </span><span class="k">struct</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="n">time</span><span class="p">);</span>
+</pre></div>
+
+
+<p>This function should find and return the route from <code>fromNode</code> to <code>toNode</code> that arrives at <code>toNode</code> as soon as possible after <code>time</code>, and that departs as late as possible (i.e., has the shortest duration).</p>
+
+<p>If there are multiple such routes, then you may return any of them. If there is no route from <code>fromNode</code> to <code>toNode</code>, then you should return a <code>route</code> struct with <code>numLegs</code> set to 0 and <code>legs</code> set to NULL.</p>
+
+<div class="alert alert-warning mt-3">
+	To earn full marks for this task, your solution must not use the brute-force method of trying multiple departure times until you find the departure time that results in the shortest-duration route. Solutions that do this will earn at most 10 out of 15 marks.
+</div>
+
+<h5 class="mt-3">Example</h5>
+
+<p>Consider the following road map:</p>
+
+<img class="center w-70 my-3" src="./COMP2521 23T3 - Assignment 2_files/navigate-2-1.svg">
+
+<p>If <code>advancedNavigate</code> is called to find a route from 0 to 3, with a departure time of 11:45, then the following route should be returned:</p>
+
+<img class="center w-85 my-3" src="./COMP2521 23T3 - Assignment 2_files/navigate-2-2.svg">
+
+<p>Here is an explanation of the expected output:</p>
+
+<ul>
+	<li>Suppose the driver departs at 11:45.</li>
+	<li>The soonest they will be able to reach node 1 is 11:50, and it would be 11:51 after waiting for the light. Since there is 9 minutes before the road from 1 to 2 closes, and the road takes 10 minutes to traverse, they would need to wait until 12:10 before driving.</li>
+	<li>The soonest they will be able to reach node 5 is 11:55 (0 - 1 - 5), and it would be 11:56 after waiting for the light. Since there is 9 minutes before the road from 5 to 6 closes and the road takes 10 minutes to traverse, they would need to wait until 12:15 before driving.</li>
+	<li>If the driver takes the road from 1 to 2, then the soonest they can reach node 2 is 12:20, and they would reach node 3 at 12:35.</li>
+	<li>If the driver takes the road from 5 to 6, then the soonest they can reach node 6 is 12:25, and they would reach node 3 at 12:34.</li>
+	<li>This means the driver would arrive sooner by taking the road from 5 to 6. The latest they can depart from node 0 such that they can arrive at their destination at 12:34 is 12:04 (as you can see in the route above).</li>
+</ul>
+
+<h5 class="mt-3">Testing</h5>
+
+<p>Firstly, run the following command to update your <code>testNavigator.c</code> (this does not overwrite your work in other files):</p>
+
+<pre is="tty"><kbd is="sh">cp /web/cs2521/23T3/ass/ass2/files/testNavigator.c .</kbd>
+</pre>
+
+<p>If you're working on your own machine, click <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/ass/ass2/files/testNavigator.c">here</a> to download the updated file.</p>
+
+<p>To download the test files for Task 4, run the following command from your main assignment directory:</p>
+
+<pre is="tty"><kbd is="sh">unzip <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/ass/ass2/downloads/task4.zip">/web/cs2521/23T3/ass/ass2/downloads/task4.zip</a></kbd>
+</pre>
+
+<p>If you're working on your own machine, download <code>task4.zip</code> by clicking on the above link and then unzip the downloaded file.</p>
+
+<p>Testing for Task 4 involves the same files as Task 3:</p>
+
+<dl>
+	<dt><code>*.map</code></dt>
+	<dd>
+		<p>The start of these files is formatted the same way as the <code>.map</code> files for Task 3.</p>
+
+		<p>If a road map has closed roads, the data will be followed by a single line containing the number of closed roads <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-16-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-58" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-59" class="mjx-mrow"><span id="MJXc-Node-60" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">c</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math></span></span><script type="math/tex" id="MathJax-Element-16">c</script>. This will be followed by <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-17-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-61" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-62" class="mjx-mrow"><span id="MJXc-Node-63" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">c</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>c</mi></math></span></span><script type="math/tex" id="MathJax-Element-17">c</script> lines describing each of the closed roads. Each of these lines contains:</p>
+		<ul>
+			<li>The two endpoint nodes of the road</li>
+			<li>The time that the road is closed from (formatted as <code>HH:MM</code>)</li>
+			<li>The time that the road is closed until (formatted as <code>HH:MM</code>)</li>
+		</ul>
+		
+		<p>For example, consider the following file:</p>
+		
+<pre>3 2
+0 1 2 10
+1 2 2 15
+0
+
+1
+1 2 15:20 15:40
+</pre>
+		<p>This input describes a map that:</p>
+		<ul>
+			<li>Has 3 nodes and 2 roads</li>
+			<li>Has a two-way road between 0 and 1 that takes 10 minutes, and a two-way road between 1 and 2 that takes 15 minutes</li>
+			<li>Has no traffic lights</li>
+			<li>Has one road affected by dust storms - this road is between 1 and 2, and is closed from 15:20 to 15:40 each day</li>
+		</ul>
+	</dd>
+	
+	<dt><code>*.query</code></dt>
+	<dd>These files are formatted the same as in Task 3. They contain just the starting location, destination and departure time.</dd>
+</dl>
+
+<p>To test your function, compile with <code>make</code> and then run the <code>./testNavigator</code> program with two command-line arguments: the name of a map file and the name of a query file. Make sure that you've used the command above to update your <code>testNavigator.c</code> file. For example:</p> 
+
+<pre is="tty"><kbd is="sh">./testNavigator task4/1.map task4/1.query</kbd>
+...
+</pre>
+
+</section>
+
+
+
+
+<section class="exercise">
+<header><h3>Frequently Asked Questions</h3></header>
+
+<ul>
+	<li><b>Are we allowed to create our own functions?</b> You are always allowed to create your own functions. All additional functions you create should be made <code>static</code>.</li>
+	<li><b>Are we allowed to create our own <code>#define</code>s and structs?</b> Yes.</li>
+	<li><b>Are we allowed to <code>#include</code> any other libraries?</b> No. All the libraries required for this assignment are provided already.</li>
+	<li><b>Are we allowed to change the signatures of the given functions?</b> No. If you change these, your code won't compile and we won't be able to test it.</li>
+	<li><b>What errors do we need to handle?</b> You should handle common errors such as <code>NULL</code> returned from <code>malloc</code> by printing an error message to <code>stderr</code> and terminating the program. You are not required to handle other errors.</li>
+	<li><b>What invalid inputs do we need to handle?</b> You are not required to handle invalid inputs, such as <code>NULL</code> being passed in as a road map, an integer outside the range <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-18-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-64" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-65" class="mjx-mrow"><span id="MJXc-Node-66" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">[</span></span><span id="MJXc-Node-67" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.39em;">0</span></span><span id="MJXc-Node-68" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="margin-top: -0.163em; padding-bottom: 0.556em;">,</span></span><span id="MJXc-Node-69" class="mjx-mi MJXc-space1"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em; padding-right: 0.085em;">N</span></span><span id="MJXc-Node-70" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.279em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-71" class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span><span id="MJXc-Node-72" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">]</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>N</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo></math></span></span><script type="math/tex" id="MathJax-Element-18">[0, N - 1]</script> being passed in as a node (where <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-19-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-73" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-74" class="mjx-mrow"><span id="MJXc-Node-75" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em; padding-right: 0.085em;">N</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></span></span><script type="math/tex" id="MathJax-Element-19">N</script> is the number of nodes). It is the user's responsibility to provide valid inputs.</li>
+	<li><b>Will we be assessed on our tests?</b> No. You will not be submitting any test files, and therefore you will not be assessed on your tests.</li>
+	<li><b>Are we allowed to share tests?</b> No. Testing is an important part of software development. Students that test their code more will likely have more correct code, so to ensure fairness, each student should independently develop their own tests.</li>
+</ul>
+</section>
+
+<section class="exercise">
+<header><h3>Submission</h3></header>
+<p>You must submit the files <code>RoadMap.c</code> and <code>navigator.c</code>. You can submit via the command line using the <code>give</code> command:</p>
+
+<pre is="tty"><kbd is="sh">give cs2521 ass2 RoadMap.c navigator.c</kbd>
+</pre>
+
+<p>You can also submit via <a href="https://cgi.cse.unsw.edu.au/~give/Student/give.php" target="_blank">give's web interface</a>. You can submit multiple times. Only your last submission will be marked. You can check the files you have submitted <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">here</a>.</p>
+
+<aside class="warning">
+	<p>After you submit, you must check that your submission was successful by going to your <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">submissions page</a>. Check that the timestamp is correct. If your submission does not appear under Last Submission or the timestamp is not correct, then resubmit.</p>
+</aside>
+
+<h5>Compilation</h5>
+
+<p>You must ensure that your final submission compiles on CSE machines. Submitting non-compiling code leads to extra administrative overhead and will result in a 10% penalty.</p>
+
+<p>Every time you make a submission, a dryrun test will be run on your code to check that it compiles. Please ensure that your final submission successfully compiles, even for parts that you have not completed.</p>
+
+</section>
+
+<section class="exercise">
+<header><h3>Assessment Criteria</h3></header>
+<p>This assignment will contribute 15% to your final mark.</p>
+
+<h4>Correctness</h4>
+
+<p><b>80%</b> of the marks for this assignment will be based on the correctness of your code, and will be mostly based on autotesting. Marks for correctness will be distributed as follows:</p>
+
+<table class="table table-sm table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Task</th>
+			<th>Weighting</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Task 1 - Road Map ADT</td>
+			<td>20%</td>
+		</tr>
+		<tr>
+			<td>Task 2 - Identifying Islands</td>
+			<td>20%</td>
+		</tr>
+		<tr>
+			<td>Task 3 - Navigation</td>
+			<td>25%</td>
+		</tr>
+		<tr>
+			<td>Task 4 - Advanced Navigation</td>
+			<td>15%</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>Time limits</h5>
+
+<p>There will be a 3 second user-time limit applied to <b>each test</b>. This means each time the <code>testRoadMap</code> or <code>testNavigator</code> program is run, a 3 second user-time limit will be applied to it. The programs will be compiled with the same flags as <code>make asan</code>.</p>
+
+<p>The main intention of the time limit is to stop programs containing infinite loops. Large amounts of data will not be used in testing.</p>
+
+<h5>Memory errors/leaks</h5>
+
+<p>You must ensure that your code does not contain memory errors or leaks, as code that contains memory errors is unsafe and it is bad practice to leave memory leaks in your program.</p>
+
+<p>Our tests will include memory error/leak test(s) for each task. If a memory error/leak arises from your code, you will receive a penalty which is 10% of the marks for that task. For example, the penalty for having a memory error/leak in the island-related functions will be 2.0%. Note that our tests will always free memory as necessary at the end of the test.</p>
+
+<h4>Style</h4>
+
+<p><b>20%</b> of the marks for this assignment will come from hand marking of the readability of the code you have written.<br> These marks will be awarded on the basis of clarity, commenting, elegance and style. The following is an indicative list of characteristics that will be assessed, though your program will be assessed wholistically so other characteristics may be assessed too (see the <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/resources/style_guide.html" target="_blank">style guide</a> for more details):</p>
+
+<ul>
+	<li>Consistent and sensible indentation and spacing</li>
+	<li>Using blank lines and whitespace</li>
+	<li>Using functions to avoid repeating code</li>
+	<li>Decomposing code into functions and not having overly long functions</li>
+	<li>Using comments effectively and not leaving planning or debugging comments</li>
+</ul>
+
+<p>The course staff may vary the assessment scheme after inspecting the assignment submissions but it will remain broadly similar to the description above.</p>
+</section>
+
+
+<section class="exercise">
+<header><h3>Originality of Work</h3></header>
+<p>This is an individual assignment. The work you submit must be your own work and only your work apart from the exceptions below. Joint work is not permitted. At no point should a student read or have a copy of another student's assignment code.</p>
+
+<p>You may use any amount of code from the lectures and labs of the <b>current iteration</b> of this course. You must clearly attribute the source of this code in a comment.</p>
+
+<p>You may use small amounts (&lt; 10 lines) of general purpose code (not specific to the assignment) obtained from sites such as Stack Overflow or other publicly available resources. You must clearly attribute the source of this code in a comment.</p>
+
+<p>You are not permitted to request help with the assignment apart from in the course forum, help sessions or from course lecturers or tutors.</p>
+
+<p>Do not provide or show your assignment work to any other person (including by posting it publicly on the forum) apart from the teaching staff of COMP2521. When posting on the course forum, teaching staff will be able to view the assignment code you have recently submitted with give.</p>
+
+<p>The work you submit must otherwise be entirely your own work. Submission of work partially or completely derived from any other person or jointly written with any other person is not permitted. The penalties for such an offence may include negative marks, automatic failure of the course and possibly other academic discipline. Assignment submissions will be examined both automatically and manually for such issues.</p>
+
+<p>Relevant scholarship authorities will be informed if students holding scholarships are involved in an incident of plagiarism or other misconduct. If you knowingly provide or show your assignment work to another person for any reason, and work derived from it is submitted, then you may be penalised, even if the work was submitted without your knowledge or consent. This may apply even if your work is submitted by a third party unknown to you.</p>
+</section>
+
+
+
+      </div>
+    </main>
+
+    <footer class="mt-3 py-3 bg-dark text-center no-print" data-bs-theme="dark">
+      <p class="text-muted">
+        <small>
+          <strong>COMP2521 23T3: Data Structures and Algorithms</strong>
+          is brought to you by<br>
+          the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br>
+          at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br>
+          For all enquiries, please email the class account at
+          <a href="mailto:cs2521@cse.unsw.edu.au">cs2521@cse.unsw.edu.au</a><br>
+          
+          CRICOS Provider 00098G
+        </small>
+      </p>
+    </footer>
+    
+    <script src="./COMP2521 23T3 - Assignment 2_files/bootstrap.bundle.min.js.download" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- math -->
+    <script src="./COMP2521 23T3 - Assignment 2_files/latest.js.download" async=""></script>
+    
+    
+<script>
+	const myCarouselElement = document.querySelector('#myCarousel');
+
+	const carousel = new bootstrap.Carousel(myCarouselElement, {
+		interval: 2000,
+		touch: false,
+	});
+</script>
+
+  
+</body></html>

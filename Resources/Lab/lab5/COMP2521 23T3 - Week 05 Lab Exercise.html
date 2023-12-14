@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/questions -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="./COMP2521 23T3 - Week 05 Lab Exercise_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Week 05 Lab Exercise_files/bootstrap-toc.min.css">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Week 05 Lab Exercise_files/style.css">
+    
+    
+
+    <title>COMP2521 23T3 - 
+
+Week 05 Lab
+Exercise
+
+</title>
+  <script type="text/javascript" async="" src="./COMP2521 23T3 - Week 05 Lab Exercise_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.mjx-chtml {display: inline-block; line-height: 0; text-indent: 0; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; word-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; margin: 0; padding: 1px 0}
+.MJXc-display {display: block; text-align: center; margin: 1em 0; padding: 0}
+.mjx-chtml[tabindex]:focus, body :focus .mjx-chtml[tabindex] {display: inline-table}
+.mjx-full-width {text-align: center; display: table-cell!important; width: 10000em}
+.mjx-math {display: inline-block; border-collapse: separate; border-spacing: 0}
+.mjx-math * {display: inline-block; -webkit-box-sizing: content-box!important; -moz-box-sizing: content-box!important; box-sizing: content-box!important; text-align: left}
+.mjx-numerator {display: block; text-align: center}
+.mjx-denominator {display: block; text-align: center}
+.MJXc-stacked {height: 0; position: relative}
+.MJXc-stacked > * {position: absolute}
+.MJXc-bevelled > * {display: inline-block}
+.mjx-stack {display: inline-block}
+.mjx-op {display: block}
+.mjx-under {display: table-cell}
+.mjx-over {display: block}
+.mjx-over > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-under > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-stack > .mjx-sup {display: block}
+.mjx-stack > .mjx-sub {display: block}
+.mjx-prestack > .mjx-presup {display: block}
+.mjx-prestack > .mjx-presub {display: block}
+.mjx-delim-h > .mjx-char {display: inline-block}
+.mjx-surd {vertical-align: top}
+.mjx-mphantom * {visibility: hidden}
+.mjx-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 2px 3px; font-style: normal; font-size: 90%}
+.mjx-annotation-xml {line-height: normal}
+.mjx-menclose > svg {fill: none; stroke: currentColor}
+.mjx-mtr {display: table-row}
+.mjx-mlabeledtr {display: table-row}
+.mjx-mtd {display: table-cell; text-align: center}
+.mjx-label {display: table-row}
+.mjx-box {display: inline-block}
+.mjx-block {display: block}
+.mjx-span {display: inline}
+.mjx-char {display: block; white-space: pre}
+.mjx-itable {display: inline-table; width: auto}
+.mjx-row {display: table-row}
+.mjx-cell {display: table-cell}
+.mjx-table {display: table; width: 100%}
+.mjx-line {display: block; height: 0}
+.mjx-strut {width: 0; padding-top: 1em}
+.mjx-vsize {width: 0}
+.MJXc-space1 {margin-left: .167em}
+.MJXc-space2 {margin-left: .222em}
+.MJXc-space3 {margin-left: .278em}
+.mjx-chartest {display: block; visibility: hidden; position: absolute; top: 0; line-height: normal; font-size: 500%}
+.mjx-chartest .mjx-char {display: inline}
+.mjx-chartest .mjx-box {padding-top: 1000px}
+.MJXc-processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MJXc-processed {display: none}
+.mjx-test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.mjx-test.mjx-test-display {display: table!important}
+.mjx-test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.mjx-test.mjx-test-default {display: block!important; clear: both}
+.mjx-ex-box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.mjx-test-inline .mjx-left-box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .mjx-right-box {display: inline-block; width: 0; float: right}
+.mjx-test-display .mjx-right-box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+#MathJax_CHTML_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.mjx-chtml .mjx-noError {line-height: 1.2; vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+.MJXc-TeX-unknown-R {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: normal}
+.MJXc-TeX-unknown-I {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: normal}
+.MJXc-TeX-unknown-B {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: bold}
+.MJXc-TeX-unknown-BI {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: bold}
+.MJXc-TeX-ams-R {font-family: MJXc-TeX-ams-R,MJXc-TeX-ams-Rw}
+.MJXc-TeX-cal-B {font-family: MJXc-TeX-cal-B,MJXc-TeX-cal-Bx,MJXc-TeX-cal-Bw}
+.MJXc-TeX-frak-R {font-family: MJXc-TeX-frak-R,MJXc-TeX-frak-Rw}
+.MJXc-TeX-frak-B {font-family: MJXc-TeX-frak-B,MJXc-TeX-frak-Bx,MJXc-TeX-frak-Bw}
+.MJXc-TeX-math-BI {font-family: MJXc-TeX-math-BI,MJXc-TeX-math-BIx,MJXc-TeX-math-BIw}
+.MJXc-TeX-sans-R {font-family: MJXc-TeX-sans-R,MJXc-TeX-sans-Rw}
+.MJXc-TeX-sans-B {font-family: MJXc-TeX-sans-B,MJXc-TeX-sans-Bx,MJXc-TeX-sans-Bw}
+.MJXc-TeX-sans-I {font-family: MJXc-TeX-sans-I,MJXc-TeX-sans-Ix,MJXc-TeX-sans-Iw}
+.MJXc-TeX-script-R {font-family: MJXc-TeX-script-R,MJXc-TeX-script-Rw}
+.MJXc-TeX-type-R {font-family: MJXc-TeX-type-R,MJXc-TeX-type-Rw}
+.MJXc-TeX-cal-R {font-family: MJXc-TeX-cal-R,MJXc-TeX-cal-Rw}
+.MJXc-TeX-main-B {font-family: MJXc-TeX-main-B,MJXc-TeX-main-Bx,MJXc-TeX-main-Bw}
+.MJXc-TeX-main-I {font-family: MJXc-TeX-main-I,MJXc-TeX-main-Ix,MJXc-TeX-main-Iw}
+.MJXc-TeX-main-R {font-family: MJXc-TeX-main-R,MJXc-TeX-main-Rw}
+.MJXc-TeX-math-I {font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw}
+.MJXc-TeX-size1-R {font-family: MJXc-TeX-size1-R,MJXc-TeX-size1-Rw}
+.MJXc-TeX-size2-R {font-family: MJXc-TeX-size2-R,MJXc-TeX-size2-Rw}
+.MJXc-TeX-size3-R {font-family: MJXc-TeX-size3-R,MJXc-TeX-size3-Rw}
+.MJXc-TeX-size4-R {font-family: MJXc-TeX-size4-R,MJXc-TeX-size4-Rw}
+.MJXc-TeX-vec-R {font-family: MJXc-TeX-vec-R,MJXc-TeX-vec-Rw}
+.MJXc-TeX-vec-B {font-family: MJXc-TeX-vec-B,MJXc-TeX-vec-Bx,MJXc-TeX-vec-Bw}
+@font-face {font-family: MJXc-TeX-ams-R; src: local('MathJax_AMS'), local('MathJax_AMS-Regular')}
+@font-face {font-family: MJXc-TeX-ams-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-B; src: local('MathJax_Caligraphic Bold'), local('MathJax_Caligraphic-Bold')}
+@font-face {font-family: MJXc-TeX-cal-Bx; src: local('MathJax_Caligraphic'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-cal-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-R; src: local('MathJax_Fraktur'), local('MathJax_Fraktur-Regular')}
+@font-face {font-family: MJXc-TeX-frak-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-B; src: local('MathJax_Fraktur Bold'), local('MathJax_Fraktur-Bold')}
+@font-face {font-family: MJXc-TeX-frak-Bx; src: local('MathJax_Fraktur'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-frak-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-BI; src: local('MathJax_Math BoldItalic'), local('MathJax_Math-BoldItalic')}
+@font-face {font-family: MJXc-TeX-math-BIx; src: local('MathJax_Math'); font-weight: bold; font-style: italic}
+@font-face {font-family: MJXc-TeX-math-BIw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-R; src: local('MathJax_SansSerif'), local('MathJax_SansSerif-Regular')}
+@font-face {font-family: MJXc-TeX-sans-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-B; src: local('MathJax_SansSerif Bold'), local('MathJax_SansSerif-Bold')}
+@font-face {font-family: MJXc-TeX-sans-Bx; src: local('MathJax_SansSerif'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-sans-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-I; src: local('MathJax_SansSerif Italic'), local('MathJax_SansSerif-Italic')}
+@font-face {font-family: MJXc-TeX-sans-Ix; src: local('MathJax_SansSerif'); font-style: italic}
+@font-face {font-family: MJXc-TeX-sans-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-script-R; src: local('MathJax_Script'), local('MathJax_Script-Regular')}
+@font-face {font-family: MJXc-TeX-script-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-type-R; src: local('MathJax_Typewriter'), local('MathJax_Typewriter-Regular')}
+@font-face {font-family: MJXc-TeX-type-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-R; src: local('MathJax_Caligraphic'), local('MathJax_Caligraphic-Regular')}
+@font-face {font-family: MJXc-TeX-cal-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-B; src: local('MathJax_Main Bold'), local('MathJax_Main-Bold')}
+@font-face {font-family: MJXc-TeX-main-Bx; src: local('MathJax_Main'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-main-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-I; src: local('MathJax_Main Italic'), local('MathJax_Main-Italic')}
+@font-face {font-family: MJXc-TeX-main-Ix; src: local('MathJax_Main'); font-style: italic}
+@font-face {font-family: MJXc-TeX-main-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-R; src: local('MathJax_Main'), local('MathJax_Main-Regular')}
+@font-face {font-family: MJXc-TeX-main-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-I; src: local('MathJax_Math Italic'), local('MathJax_Math-Italic')}
+@font-face {font-family: MJXc-TeX-math-Ix; src: local('MathJax_Math'); font-style: italic}
+@font-face {font-family: MJXc-TeX-math-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size1-R; src: local('MathJax_Size1'), local('MathJax_Size1-Regular')}
+@font-face {font-family: MJXc-TeX-size1-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size2-R; src: local('MathJax_Size2'), local('MathJax_Size2-Regular')}
+@font-face {font-family: MJXc-TeX-size2-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size3-R; src: local('MathJax_Size3'), local('MathJax_Size3-Regular')}
+@font-face {font-family: MJXc-TeX-size3-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size4-R; src: local('MathJax_Size4'), local('MathJax_Size4-Regular')}
+@font-face {font-family: MJXc-TeX-size4-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-R; src: local('MathJax_Vector'), local('MathJax_Vector-Regular')}
+@font-face {font-family: MJXc-TeX-vec-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-B; src: local('MathJax_Vector Bold'), local('MathJax_Vector-Bold')}
+@font-face {font-family: MJXc-TeX-vec-Bx; src: local('MathJax_Vector'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-vec-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf') format('opentype')}
+</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-select__option{cursor:pointer}.ismanga .ismanga-select__control{cursor:pointer}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel-view-content__select-label{font-size:14px;font-weight:400;line-height:1.2;margin-bottom:4px;margin-top:4px}.ismanga .control-panel-view-content__btn-container{display:flex;flex-direction:column;margin-top:12px}.ismanga .control-panel-view-content__btn:first-child{margin-bottom:12px}.ismanga .control-panel-view-content__btn{border-radius:4px;padding:8px 16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel{background:#fff;border-bottom-right-radius:8px;border-top-right-radius:8px;box-shadow:0 0 5px #b4b4b4;color:#000;font-family:Helvetica;font-weight:normal;left:0;line-height:1.4;padding:16px;position:relative;transform:translateX(0);transition:transform .5s}.ismanga .control-panel--hidden{transform:translateX(-169px)}.ismanga .control-panel .control-panel__collapse-btn{background-color:#b4183d;border-top-left-radius:8px;border-top-right-radius:8px;color:#fff;cursor:pointer;font-family:"Bangers";font-size:20px;padding:8px 16px;position:absolute;right:-69px;top:56px;transform:rotate(90deg)}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-spinner{align-items:center;display:flex;flex-direction:column;position:absolute}.ismanga .ismanga-spinner__inner{animation:spin 2s linear infinite;border-color:rgba(0,0,0,.04);border-radius:50%;border-style:solid;border-top-color:#b4183d}.ismanga .ismanga-spinner__inner-text{background-color:rgba(255,255,255,.8);border-radius:4px;color:#b4183d;font-size:16px;margin-top:8px;text-align:center;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;word-break:break-word}.ismanga .ismanga-spinner__inner-text a{color:#b4183d;font-weight:bold;text-decoration:underline dotted #b4183d}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-click-translate-overlay{background-color:rgba(0,0,0,.5);border:4px solid #b4183d;height:100%;width:100%}.ismanga .ismanga-click-translate-overlay__translate-btn{border-radius:4px;display:flex;font-size:20px;justify-content:center;left:16px;padding:12px 16px;position:absolute;top:16px;width:auto}.ismanga .ismanga-click-translate-overlay__disabled-text{color:#fff;font-size:20px;padding-top:16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-screenshot-translation-content{height:100%;position:absolute;width:100%}.ismanga .ismanga-screenshot-translation-content__warning{align-items:center;background-color:#6c0e24;box-sizing:border-box;color:#fff;display:flex;font-size:22px;height:80px;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:9999}.ismanga .ismanga-screenshot-translation-content__warning .ismanga-spinner__inner{border-top-color:#fff}.ismanga .ismanga-screenshot-translation-content__spinner-container{margin-left:12px;position:relative}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-text-bubble-content__bubble{align-items:center;box-sizing:border-box;display:flex;justify-content:center;position:absolute}.ismanga .ismanga-text-bubble-content__bubble p{color:#000;line-height:1.2;margin:0;padding:4px;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;white-space:normal}.ismanga .ismanga-text-bubble-content__bubble p:hover{background-color:#fff;border-radius:4px;box-shadow:0 0 0 2px #b4183d;cursor:pointer;z-index:9999}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-interaction-content__overlay{align-items:center;background-color:rgba(255,255,255,.7);color:#b4183d;display:flex;font-size:24px;justify-content:center;position:absolute;text-align:center;z-index:1}.ismanga .ismanga-interaction-content__translate-button{background-color:#b4183d;border:0;border-radius:2px;box-shadow:none;color:#fff;font-family:"Comic Neue";outline:none;padding:6px 10px}.ismanga .ismanga-interaction-content__translate-button:hover{background-color:#901330}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga.ismanga-preloader{background-color:rgba(0,0,0,.1);color:#b4183d;font-size:16px;overflow:hidden;position:absolute;text-align:left}.ismanga.ismanga-preloader div{padding:8px}.ismanga.ismanga-preloader span{animation:slowshow 2s ease 0s infinite;color:#b4183d;font-size:28px;opacity:0}@keyframes slowshow{100%{opacity:1}}.ismanga.ismanga-control-panel-container{left:0;position:fixed;top:40%;z-index:99999 !important}</style></head>
+  <body class="d-flex flex-column" style="min-height: 100vh;"><div id="MathJax_Message" style="display: none;"></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="https://www.cse.unsw.edu.au/~cs2521/23T3/">COMP2521 23T3</a>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mr-auto">
+            <!--
+            <li class="nav-item active"><a class="nav-link" href="#">Outline</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Forum</a></li>
+            <li class="navbar-text px-2">|</li>
+            -->
+
+            
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="week-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Week 05 <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="week-selector">
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/1/questions">
+        Week 01
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/2/questions">
+        Week 02
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/questions">
+        Week 03
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/4/questions">
+        Week 04
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/questions">
+        Week 05
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/7/questions">
+        Week 07
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/8/questions">
+        Week 08
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/9/questions">
+        Week 09
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/10/questions">
+        Week 10
+        
+          (tutors only)
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/11/questions">
+        Week 11
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/12/questions">
+        Week 12
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/questions">
+        Week 13
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/14/questions">
+        Week 14
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/15/questions">
+        Week 15
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/questions">
+        Week 16
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/17/questions">
+        Week 17
+        
+      </a>
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="classtype-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Lab <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="classtype-selector">
+    
+  	  
+  	    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/5/questions">
+  	      Tutorial
+  	      
+  	    </a>
+  	  
+    
+  	  
+  	    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/questions">
+  	      Lab
+  	      
+  	    </a>
+  	  
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="qa-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+      Exercise
+    
+    
+    <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="qa-selector">
+    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/questions">
+      Exercise
+      
+      
+    </a>
+    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/answers">
+      Solution
+      
+      
+        (tutors only)
+      
+    </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/notes">
+        Tutors' Notes (tutors only)
+      </a>
+    
+  </div>
+</li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <main class="container" aria-label="Content" style="flex: 1; padding-top: 4rem;">
+      <header>
+        <h1 class="text-center">
+Week 05 Lab
+Exercise
+</h1>
+        <h3 class="text-center">
+Graphs and Social Networks<br>
+</h3>
+        
+      </header>
+      <div class="text-justify mt-4">
+        
+
+
+
+
+<section class="exercise">
+<header><h3>Objectives</h3></header>
+<ul>
+	<li>To explore an application of graphs</li>
+	<li>To get some practice with graph problems</li>
+	<li>To perform complexity analysis on graph algorithms</li>
+	<li>To implement some basic features of social networks</li>
+</ul>
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Admin</h3></header>
+
+
+
+<dl class="dl-horizontal">
+	<dt>Marks</dt>
+	<dd>5 (see the Assessment section for more details)</dd>
+	<dt>Demo</dt>
+	
+		<dd>in the Week 5, 7 or 8 lab session</dd>
+	
+	<dt>Submit</dt>
+	<dd>see the Submission section</dd>
+	<dt>Deadline to submit to give</dt>
+	<dd>12pm Monday of Week 7</dd>
+	<dt>Late penalty</dt>
+	<dd>0.2% per hour or part thereof, submissions later than 5 days not accepted</dd>
+</dl>
+
+
+
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Background</h3></header>
+<p>In lectures, we learned that a graph is a collection of vertices and edges between them. This very abstract definition allows for many real-world scenarios and systems to be modelled by graphs - for example, maps, social networks, and the web. In this lab, we will explore an application of graphs in a simple social network app called Friendbook.</p>
+
+<h4>Friendbook</h4>
+<p>Friendbook is a very simple social network app with the following features:</p>
+<ul>
+	<li>People can sign up with their name. For simplicity, people are identified by their names, so two people cannot have the same name.</li>
+	<li>People can friend other people (i.e., add them as friends). Friending goes both ways, so if you add someone as a friend, you become their friend as well.</li>
+	<li>People can unfriend their friends (i.e., remove them from their friends list). This also goes both ways.</li>
+	<li>People can see a count of how many friends they have.</li>
+	<li>People can see a list of their friends.</li>
+	<li>People can see a list of the mutual friends that they share with someone else.</li>
+	<li>People can receive friend recommendations. Friendbook has two different methods of generating recommendations:
+		<ol>
+			<li>The first method only recommends friends of friends, and ranks friend recommendations in order of the number of mutual friends, so people who you share more mutual friends with will be recommended first.</li>
+			<li>The second method recommends friends of friends first, and then friends of friends of friends next, and then friends of friends of friends of friends, and so on. Anyone who can be reached by following friendship links can be recommended.<p></p>
+		</li></ol>
+	</li>
+</ul>
+
+<h4>Names as Vertices</h4>
+<p>All of the graph implementations we have seen so far have used integer vertices numbered from <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-1-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-1" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2" class="mjx-mrow"><span id="MJXc-Node-3" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.39em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-1"> 0 </script> to <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-2-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-4" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-5" class="mjx-mrow"><span id="MJXc-Node-6" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span><span id="MJXc-Node-7" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.279em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-8" class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>−</mo><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-2"> n - 1 </script>, where <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-3-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-9" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-10" class="mjx-mrow"><span id="MJXc-Node-11" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-3"> n </script> is the number of vertices. This is convenient, as vertex numbers can double as indices into the adjacency matrix or adjacency list. But in Friendbook, the vertices are people (names), so how do we represent this internally?</p>
+
+<p>It turns out we don't need to do that much more work. If we give each person an integer ID between <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-4-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-12" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-13" class="mjx-mrow"><span id="MJXc-Node-14" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.39em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-4"> 0 </script> and <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-5-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-15" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-16" class="mjx-mrow"><span id="MJXc-Node-17" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span><span id="MJXc-Node-18" class="mjx-mo MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.279em; padding-bottom: 0.445em;">−</span></span><span id="MJXc-Node-19" class="mjx-mn MJXc-space2"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi><mo>−</mo><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-5"> n - 1 </script> and store a mapping between names and IDs, then we can continue to use the graph representations that we are familiar with. A simple way to implement this mapping would be to store all the names in an array, and let the ID of each person be the index containing their name in the array. The first person in the array would have an ID of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-6-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-20" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-21" class="mjx-mrow"><span id="MJXc-Node-22" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.39em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-6"> 0 </script>, the second person in the array would have an ID of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-7-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-23" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-24" class="mjx-mrow"><span id="MJXc-Node-25" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-7"> 1 </script>, and so on. If we wanted to answer a question involving one or more people, we can scan this array to determine their ID, and then use this ID to query the matrix/list. For example, suppose this is our internal representation:</p>
+
+<img class="center w-60" src="./COMP2521 23T3 - Week 05 Lab Exercise_files/string-graph-adjlist.svg">
+
+<p>Now suppose we wanted to find out if Harry and Draco are friends. First, we need to find the vertex numbers associated with Harry and Draco, so we perform a linear scan of the array of names (called <code>labels</code>), and find that Harry is associated with a vertex number of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-8-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-26" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-27" class="mjx-mrow"><span id="MJXc-Node-28" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.39em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-8"> 0 </script>, and Draco is associated with a vertex number of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-9-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-29" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-30" class="mjx-mrow"><span id="MJXc-Node-31" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.39em;">3</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math></span></span><script type="math/tex" id="MathJax-Element-9"> 3 </script>. The adjacency list for vertex <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-10-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-32" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-33" class="mjx-mrow"><span id="MJXc-Node-34" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.39em;">0</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-10"> 0 </script> does not contain vertex <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-11-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-35" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-36" class="mjx-mrow"><span id="MJXc-Node-37" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.39em;">3</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math></span></span><script type="math/tex" id="MathJax-Element-11"> 3 </script>, so we can conclude that Harry and Draco are <b>not</b> friends.</p>
+
+<p>Unfortunately, this translation between names and vertex numbers adds quite a bit of overhead to our graph operations. Converting from vertex numbers to names is easy, as we can go straight to the relevant index in the array (<span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-12-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-38" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-39" class="mjx-mrow"><span id="MJXc-Node-40" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">O</span></span><span id="MJXc-Node-41" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-42" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span><span id="MJXc-Node-43" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-12"> O(1) </script>), but converting from names to vertex numbers requires a linear scan of the array, which is <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-13-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-44" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-45" class="mjx-mrow"><span id="MJXc-Node-46" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">O</span></span><span id="MJXc-Node-47" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-48" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span><span id="MJXc-Node-49" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-13"> O(n) </script>. So what was once an <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-14-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-50" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-51" class="mjx-mrow"><span id="MJXc-Node-52" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">O</span></span><span id="MJXc-Node-53" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-54" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.39em; padding-bottom: 0.335em;">1</span></span><span id="MJXc-Node-55" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-14"> O(1) </script> operation (checking if an edge exists) is now an <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-15-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-56" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-57" class="mjx-mrow"><span id="MJXc-Node-58" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">O</span></span><span id="MJXc-Node-59" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-60" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span><span id="MJXc-Node-61" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-15"> O(n) </script> operation. We can improve the efficiency of the name to vertex number conversion by using a data structure that allows for efficient searching, such as a binary search tree.</p>
+
+</section>
+
+<section class="exercise">
+<header><h3>Setting Up</h3></header>
+
+<p>Create a directory for this lab, change into it, and run the following command:</p>
+
+<pre is="tty"><kbd is="sh">unzip <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/downloads/files.zip">/web/cs2521/23T3/labs/week05/downloads/files.zip</a></kbd>
+</pre>
+
+<p>If you're working at home, download <code>files.zip</code> by clicking on the above link and then unzip the downloaded file.</p>
+
+<p>If you've done the above correctly, you should now have the following files:</p>
+
+<dl class="dl-horizontal">
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/Makefile">Makefile</a></code></dt>
+	<dd>a set of dependencies used to control compilation</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/Fb.c">Fb.c</a></code></dt>
+	<dd>an incomplete implementation of the Friendbook ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/Fb.h">Fb.h</a></code></dt>
+	<dd>the interface for the Friendbook ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/List.c">List.c</a></code></dt>
+	<dd>a complete implementation of the List ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/List.h">List.h</a></code></dt>
+	<dd>the interface for the List ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/Map.c">Map.c</a></code></dt>
+	<dd>a complete implementation of the Map ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/Map.h">Map.h</a></code></dt>
+	<dd>the interface for the Map ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/Queue.c">Queue.c</a></code></dt>
+	<dd>a complete implementation of the Queue ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/Queue.h">Queue.h</a></code></dt>
+	<dd>the interface for the Queue ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/runFb.c">runFb.c</a></code></dt>
+	<dd>a program that provides a command-line interface to the Friendbook ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week05/files/analysis.txt">analysis.txt</a></code></dt>
+	<dd>a template for you to enter your time complexity analysis</dd>
+</dl>
+
+<p>Once you've got these files, the first thing to do is to run the command</p>
+
+<pre is="tty"><kbd is="sh">make</kbd></pre>
+
+<p>This will compile the initial version of the files, and produce the <code>./runFb</code> executable.</p>
+
+<h4>File Walkthrough</h4>
+<dl>
+    <dt><code>runFb.c</code></dt>
+    <dd>
+        <p><code>runFb.c</code> provides a command-line interface to the Friendbook ADT. It creates a Friendbook instance, and then accepts commands to interact with it. Here is an example session with the program once it is working correctly:</p>
+
+<pre is="tty"><kbd is="sh">./runFb</kbd>
+Friendbook v1.0
+Enter ? to see the list of commands.
+&gt; <kbd>?</kbd>
+Commands:
+    + &lt;name&gt;             add a new person
+    l                    list the names of all people
+    f &lt;name1&gt; &lt;name2&gt;    friend two people
+    u &lt;name1&gt; &lt;name2&gt;    unfriend two people
+    s &lt;name1&gt; &lt;name2&gt;    get the friendship status of two people
+    n &lt;name&gt;             get the number of friends a person has
+    m &lt;name1&gt; &lt;name2&gt;    list all mutual friends of two people
+    r &lt;name&gt;             get friend recommendations for a person based on mutual friends
+    R &lt;name&gt;             get friend recommendations for a person based on friendship closeness
+    ?                    show this message
+    q                    quit
+
+&gt; <kbd>+ Harry</kbd>
+Harry was successfully added to Friendbook!
+&gt; <kbd>+ Ron</kbd>
+Ron was successfully added to Friendbook!
+&gt; <kbd>+ Hermione</kbd>
+Hermione was successfully added to Friendbook!
+&gt; <kbd>f Harry Ron</kbd>
+Successfully friended Harry and Ron!
+&gt; <kbd>f Ron Hermione</kbd>
+Successfully friended Ron and Hermione!
+&gt; <kbd>s Harry Ron</kbd>
+Harry and Ron are friends.
+&gt; <kbd>n Harry</kbd>
+Harry has 1 friend.
+&gt; <kbd>n Ron</kbd>
+Ron has 2 friends.
+&gt; <kbd>s Harry Hermione</kbd>
+Harry and Hermione are not friends.
+&gt; <kbd>m Harry Hermione</kbd>
+Harry and Hermione's mutual friends:
+	Ron
+&gt; <kbd>r Harry</kbd>
+Harry's friend recommendations
+	Hermione               1 mutual friends
+&gt; <kbd>u Harry Ron</kbd>
+Successfully unfriended Harry and Ron!
+&gt; <kbd>s Harry Ron</kbd>
+Harry and Ron are not friends.
+&gt; <kbd>q</kbd>
+<kbd is="sh"></kbd>
+</pre>
+    </dd>
+    
+    <dt><code>Fb.c</code></dt>
+    <dd>
+        <p><code>Fb.c</code> implements the Friendbook ADT. Most of the functions are complete, however, it would be helpful to read through these functions to get a good idea of how they manipulate and obtain information from the graph representation, how they create and return lists of names, and how they convert people's names to vertex numbers. You should also read the definition of <code>struct fb</code> and make sure you understand the purpose of each field.</p>
+    </dd>
+    
+    <dt><code>List.h</code></dt>
+    <dd>
+        <p><code>List.h</code> defines the interface to the List ADT. Some operations require a list of names to be returned to the user, and the List ADT is used for this purpose. To see how to create a list and add names to the list, you should read some of the already-completed functions in the Friendbook ADT.</p>
+    </dd>
+    
+    <dt><code>Map.h</code></dt>
+    <dd>
+        <p><code>Map.h</code> defines the interface to the Map ADT, which is used to map people's names to IDs. An important thing to note is that the Map ADT is not strictly necessary - it is only used for efficiency reasons. If we didn't have access to the Map ADT and wanted to know the ID of a particular person, we could simply scan the <code>names</code> array until we found the index containing that person's name, and their ID would be that index.</p>
+    </dd>
+    
+    <dt><code>Queue.h</code></dt>
+    <dd>
+        <p><code>Queue.h</code> defines the interface to the Queue ADT. The Queue ADT is currently not used.</p>
+    </dd>
+</dl>
+
+</section>
+
+
+
+<section class="exercise with-self">
+<header><h3>Task 1 - Counting Friends</h3></header>
+<p>Implement the <code>FbNumFriends()</code> function in <code>Fb.c</code>, which takes the name of a person and returns the number of friends they have.</p>
+
+<p>Once you think you've got the function working, test it by recompiling with <code>make</code> and running the <code>runFb</code> program.</p>
+
+<p>When you're certain that the function works correctly, determine its worst case time complexity and write in <code>analysis.txt</code> along with an explanation. The time complexity should be in terms of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-16-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-62" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-63" class="mjx-mrow"><span id="MJXc-Node-64" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-16">n</script>, where <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-17-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-65" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-66" class="mjx-mrow"><span id="MJXc-Node-67" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-17">n</script> is the total number of people.</p>
+
+<div class="alert alert-warning mt-3">
+	<b>Important:</b> The Map ADT uses an inefficient binary search tree implementation, but you should assume that it uses an AVL tree for complexity analysis.
+</div>
+
+<aside class="note">
+	It is possible to speed up testing by entering your commands into a file and making the <code>runFb</code> program read in commands from the file. Here's an example command file that tests a very simple case:
+	
+<pre>+ Harry
++ Ron
++ Hermione
+f Harry Ron
+f Ron Hermione
+n Harry
+n Ron
+n Hermione
+</pre>
+
+	Suppose the file is called <code>num-friends-1.txt</code>. Then, the following command will run the <code>runFb</code> program using the commands from the file and echo the commands to the terminal to make it easy to see which operations are being performed.
+
+<pre is="tty"><kbd is="sh">./runFb -e &lt; num-friends-1.txt</kbd>
+</pre>
+
+	If you've implemented the function correctly, you should get the following output:
+
+<pre>Friendbook v1.0
+Enter ? to see the list of commands.
+&gt; + Harry
+Harry was successfully added to Friendbook!
+&gt; + Ron
+Ron was successfully added to Friendbook!
+&gt; + Hermione
+Hermione was successfully added to Friendbook!
+&gt; f Harry Ron
+Successfully friended Harry and Ron!
+&gt; f Ron Hermione
+Successfully friended Ron and Hermione!
+&gt; n Harry
+Harry has 1 friend.
+&gt; n Ron
+Ron has 2 friends.
+&gt; n Hermione
+Hermione has 1 friend.
+</pre>
+
+</aside>
+</section>
+
+
+
+<section class="exercise with-self">
+<header><h3>Task 2 - Unfriending :(</h3></header>
+<p>Implement the <code>FbUnfriend()</code> function in <code>Fb.c</code>, which takes the names of two people, and unfriends them if they are friends. The function should return true if the people were friends and were successfully unfriended, and false if the two people were not friends (and so they could not be unfriended).</p>
+
+<p>Once you think you've got the function working, test it by recompiling with <code>make</code> and running the <code>runFb</code> program.</p>
+
+<p>When you're certain that the function works correctly, determine its worst case time complexity and write in <code>analysis.txt</code> along with an explanation. The time complexity should be in terms of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-18-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-68" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-69" class="mjx-mrow"><span id="MJXc-Node-70" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-18">n</script>, where <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-19-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-71" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-72" class="mjx-mrow"><span id="MJXc-Node-73" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-19">n</script> is the total number of people.</p>
+</section>
+
+
+
+<section class="exercise with-self">
+<header><h3>Task 3 - Finding Mutual Friends</h3></header>
+<p>Implement the <code>FbMutualFriends()</code> function in <code>Fb.c</code>, which takes the names of two people, and returns a list of all their mutual friends. A person is a mutual friend of two people if that person is friends with both of those people. To illustrate this, here is an example:</p>
+
+<img class="center w-60" src="./COMP2521 23T3 - Week 05 Lab Exercise_files/mutual-friends.svg">
+
+<p>In the example, Harry and Hermione have three mutual friends: Neville, Ron and Luna. Draco and Vincent have one mutual friend: Gregory. Harry and Draco have no mutual friends.</p>
+
+<aside class="hint">
+	To find out how to create a list and add names to it, see the comments in <code>List.h</code>, or read one of the existing functions in <code>Fb.c</code> that use the List ADT.
+</aside>
+
+<p>Once you think you've got the function working, test it by recompiling with <code>make</code> and running the <code>runFb</code> program.</p>
+
+<p>When you're certain that the function works correctly, determine its worst case time complexity and write in <code>analysis.txt</code> along with an explanation. The time complexity should be in terms of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-20-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-74" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-75" class="mjx-mrow"><span id="MJXc-Node-76" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-20">n</script>, where <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-21-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-77" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-78" class="mjx-mrow"><span id="MJXc-Node-79" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-21">n</script> is the total number of people.</p>
+
+</section>
+
+
+
+<section class="exercise with-self">
+<header><h3>Task 4 - Generating Friend Recommendations</h3></header>
+
+<p>Implement the <code>FbFriendRecs1()</code> function in <code>Fb.c</code>, which takes the name of a person and finds friend recommendations for them. The function should store the recommendations for them in the given <code>recs</code> array and return the number of recommendations stored in the array.</p>
+
+<p>The function should only recommend people who are friends of friends of the person. In other words, it should only recommend people who share at least one mutual friend with the person. Obviously, it should not recommend someone who is already the person's friend.</p>
+
+<p>Each recommendation consists of the name of the person being recommended and the number of mutual friends they share with the given person.</p>
+
+<p>The recommendations should be sorted in descending order on the number of mutual friends shared, since someone with more mutual friends is more likely to be known by the person, and is therefore more likely to be added as a friend. If two people share the same number of mutual friends, they may be sorted in any order.</p>
+
+<p>For example, consider the following scenario:</p>
+
+<img class="center w-60" src="./COMP2521 23T3 - Week 05 Lab Exercise_files/friend-recs-1.svg">
+
+<p>If <code>FbFriendRecs1()</code> is called with the name "Harry", the following output should be produced:</p>
+
+<pre class="tab-8">Harry's friend recommendations:
+	Neville                3 mutual friends
+	Lavender               2 mutual friends
+	Draco                  1 mutual friends
+</pre>
+
+<p><b>Explanation:</b> Neville should be recommended first as he shares three mutual friends with Harry: Luna, Ron and Hermione. Lavender should be recommended next as she shares two mutual friends with Harry: Ron and Hermione. Draco should be recommended last as he shares just one mutual friend with Harry: Hermione. (<i>Note:</i> There is no typo on the last line - it is left as "friends" for simplicity's sake.)</p>
+
+<p>Once you think you've got the function working, test it by recompiling with <code>make</code> and running the <code>runFb</code> program.</p>
+
+<p>When you're certain that the function works correctly, determine its worst case time complexity and write in <code>analysis.txt</code> along with an explanation. The time complexity should be in terms of <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-22-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-80" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-81" class="mjx-mrow"><span id="MJXc-Node-82" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-22">n</script>, where <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-23-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-83" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-84" class="mjx-mrow"><span id="MJXc-Node-85" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-23">n</script> is the total number of people.</p>
+
+
+
+</section>
+
+
+
+<section class="exercise with-self">
+<header><h3>Optional Task</h3></header>
+
+<aside class="note">
+	<p>This task is <b>optional</b>. It is not worth any marks.</p>
+</aside>
+
+<p>Implement the <code>FbFriendRecs2()</code> function in <code>Fb.c</code>, which takes the name of a person and finds friend recommendations for them. The function should return a list containing the names of all the people being recommended, with the names being ordered as described below.</p>
+
+<p>Unlike <code>FbFriendRecs1</code>, this function should recommend all people who are reachable from the given person via friendship links (not just people who share a mutual friend), and should recommend people who are "closer" to the person first. In other words, friends of friends of the person should be recommended first, then friends of friends of friends, and so on. Obviously, it should not recommend someone who is already the person's friend. If multiple people are the same "distance" from the person, they can be recommended in any order.</p>
+
+<p>Limit the number of recommendations to 20 to avoid generating too many recommendations.</p>
+
+<p>For example, consider the same scenario as in Part 2:</p>
+
+<img class="center w-60" src="./COMP2521 23T3 - Week 05 Lab Exercise_files/friend-recs-1.svg">
+
+<p>If <code>FbFriendRecs2()</code> was called with the name "Luna", the following is one possible valid output:</p>
+
+<pre class="tab-8">Luna's friend recommendations:
+	Ron
+	Hermione
+	Draco
+	Lavender
+	Vincent
+	Gregory
+</pre>
+
+<p><b>Explanation:</b> Ron and Hermione are the closest people to Luna who are not also her friends, so they are recommended first. The example output recommends Ron first and then Hermione, but it would be equally valid to recommend Hermione first and then Ron. Draco and Lavender are the next furthest away, so they are recommended next. It would be valid to recommend Lavender before Draco. Vincent and Gregory are the next furthest away, so they are printed next. Once again, it would be valid to recommend Gregory before Vincent.</p>
+
+<p>When you think you are done, use the <code>make</code> command to recompile the <code>runFb</code> program and then develop some scenarios to test your code.</p>
+
+<aside class="hint">
+	You will need to use a graph traversal algorithm to complete this task. But which one? You can review the graph traversal algorithms <a href="http://www.cse.unsw.edu.au/~cs2521/20T2/lecs/graph-traversal/slides.html">here</a>, and then follow the pseudocode of your chosen algorithm.
+</aside>
+
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Submission</h3></header>
+<p>You need to submit two files: <code>Fb.c</code> and <code>analysis.txt</code>. <b>You must submit all of these files, even if you did not complete all of the tasks.</b> You can submit via the command line using the <code>give</code> command:</p>
+
+<pre is="tty"><kbd is="sh">give cs2521 lab05 Fb.c analysis.txt</kbd>
+</pre>
+
+<p>You can also submit via <a href="https://cgi.cse.unsw.edu.au/~give/Student/give.php" target="_blank">give's web interface</a>. You can submit multiple times. Only your last submission will be marked. You can check the files you have submitted <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">here</a>.</p>
+
+<aside class="warning">
+	<p>After you submit, you <b>must</b> check that your submission was successful by going to your <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">submissions page</a>. Check that the timestamp is correct. If your submission does not appear under Last Submission or the timestamp is not correct, then resubmit.</p>
+</aside>
+</section>
+
+<section class="exercise">
+<header><h3>Assessment</h3></header>
+<p>Most of the marks for this lab will come from automarking. To receive the rest of the marks, you must show your work to your tutor during your Week 5, 7 or 8 lab session. You will be marked based on the following criteria:</p>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Aspect</th>
+			<th>Marks</th>
+			<th>Criteria</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Code correctness</td>
+			<td>4</td>
+			<td>Your code for each task will be automarked. Automarking will be run after submissions have closed. After automarking is run you will be able to view your results <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">here</a>.</td>
+		</tr>
+		<tr>
+			<td>Complexity analysis</td>
+			<td>1</td>
+			<td>This mark is based on how accurate you were with your time complexity analysis and the quality of your explanations in <code>analysis.txt</code>. Analysis of each function is worth 0.25 marks.</td>
+		</tr>
+	</tbody>
+</table>
+
+</section>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="mt-3 py-3 bg-dark text-center no-print" data-bs-theme="dark">
+      <p class="text-muted">
+        <small>
+          <strong>COMP2521 23T3: Data Structures and Algorithms</strong>
+          is brought to you by<br>
+          the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br>
+          at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br>
+          For all enquiries, please email the class account at
+          <a href="mailto:cs2521@cse.unsw.edu.au">cs2521@cse.unsw.edu.au</a><br>
+          
+          CRICOS Provider 00098G
+        </small>
+      </p>
+    </footer>
+    
+    <script src="./COMP2521 23T3 - Week 05 Lab Exercise_files/bootstrap.bundle.min.js.download" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- math -->
+    <script src="./COMP2521 23T3 - Week 05 Lab Exercise_files/latest.js.download" async=""></script>
+    
+    
+  
+</body></html>

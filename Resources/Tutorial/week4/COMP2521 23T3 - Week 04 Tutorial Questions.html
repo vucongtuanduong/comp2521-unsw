@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/4/questions -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="./COMP2521 23T3 - Week 04 Tutorial Questions_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Week 04 Tutorial Questions_files/bootstrap-toc.min.css">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Week 04 Tutorial Questions_files/style.css">
+    
+    
+
+    <title>COMP2521 23T3 - 
+
+	Week 04 Tutorial
+	Questions
+
+</title>
+  <script type="text/javascript" async="" src="./COMP2521 23T3 - Week 04 Tutorial Questions_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-select__option{cursor:pointer}.ismanga .ismanga-select__control{cursor:pointer}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel-view-content__select-label{font-size:14px;font-weight:400;line-height:1.2;margin-bottom:4px;margin-top:4px}.ismanga .control-panel-view-content__btn-container{display:flex;flex-direction:column;margin-top:12px}.ismanga .control-panel-view-content__btn:first-child{margin-bottom:12px}.ismanga .control-panel-view-content__btn{border-radius:4px;padding:8px 16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel{background:#fff;border-bottom-right-radius:8px;border-top-right-radius:8px;box-shadow:0 0 5px #b4b4b4;color:#000;font-family:Helvetica;font-weight:normal;left:0;line-height:1.4;padding:16px;position:relative;transform:translateX(0);transition:transform .5s}.ismanga .control-panel--hidden{transform:translateX(-169px)}.ismanga .control-panel .control-panel__collapse-btn{background-color:#b4183d;border-top-left-radius:8px;border-top-right-radius:8px;color:#fff;cursor:pointer;font-family:"Bangers";font-size:20px;padding:8px 16px;position:absolute;right:-69px;top:56px;transform:rotate(90deg)}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-spinner{align-items:center;display:flex;flex-direction:column;position:absolute}.ismanga .ismanga-spinner__inner{animation:spin 2s linear infinite;border-color:rgba(0,0,0,.04);border-radius:50%;border-style:solid;border-top-color:#b4183d}.ismanga .ismanga-spinner__inner-text{background-color:rgba(255,255,255,.8);border-radius:4px;color:#b4183d;font-size:16px;margin-top:8px;text-align:center;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;word-break:break-word}.ismanga .ismanga-spinner__inner-text a{color:#b4183d;font-weight:bold;text-decoration:underline dotted #b4183d}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-click-translate-overlay{background-color:rgba(0,0,0,.5);border:4px solid #b4183d;height:100%;width:100%}.ismanga .ismanga-click-translate-overlay__translate-btn{border-radius:4px;display:flex;font-size:20px;justify-content:center;left:16px;padding:12px 16px;position:absolute;top:16px;width:auto}.ismanga .ismanga-click-translate-overlay__disabled-text{color:#fff;font-size:20px;padding-top:16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-screenshot-translation-content{height:100%;position:absolute;width:100%}.ismanga .ismanga-screenshot-translation-content__warning{align-items:center;background-color:#6c0e24;box-sizing:border-box;color:#fff;display:flex;font-size:22px;height:80px;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:9999}.ismanga .ismanga-screenshot-translation-content__warning .ismanga-spinner__inner{border-top-color:#fff}.ismanga .ismanga-screenshot-translation-content__spinner-container{margin-left:12px;position:relative}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-text-bubble-content__bubble{align-items:center;box-sizing:border-box;display:flex;justify-content:center;position:absolute}.ismanga .ismanga-text-bubble-content__bubble p{color:#000;line-height:1.2;margin:0;padding:4px;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;white-space:normal}.ismanga .ismanga-text-bubble-content__bubble p:hover{background-color:#fff;border-radius:4px;box-shadow:0 0 0 2px #b4183d;cursor:pointer;z-index:9999}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-interaction-content__overlay{align-items:center;background-color:rgba(255,255,255,.7);color:#b4183d;display:flex;font-size:24px;justify-content:center;position:absolute;text-align:center;z-index:1}.ismanga .ismanga-interaction-content__translate-button{background-color:#b4183d;border:0;border-radius:2px;box-shadow:none;color:#fff;font-family:"Comic Neue";outline:none;padding:6px 10px}.ismanga .ismanga-interaction-content__translate-button:hover{background-color:#901330}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga.ismanga-preloader{background-color:rgba(0,0,0,.1);color:#b4183d;font-size:16px;overflow:hidden;position:absolute;text-align:left}.ismanga.ismanga-preloader div{padding:8px}.ismanga.ismanga-preloader span{animation:slowshow 2s ease 0s infinite;color:#b4183d;font-size:28px;opacity:0}@keyframes slowshow{100%{opacity:1}}.ismanga.ismanga-control-panel-container{left:0;position:fixed;top:40%;z-index:99999 !important}</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+  <body class="d-flex flex-column" style="min-height: 100vh;"><div id="MathJax_Message" style="display: none;"></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="https://www.cse.unsw.edu.au/~cs2521/23T3/">COMP2521 23T3</a>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mr-auto">
+            <!--
+            <li class="nav-item active"><a class="nav-link" href="#">Outline</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Forum</a></li>
+            <li class="navbar-text px-2">|</li>
+            -->
+
+            
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="week-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/4/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Week 04 <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="week-selector">
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/1/questions">
+        Week 01
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/2/questions">
+        Week 02
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/3/questions">
+        Week 03
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/4/questions">
+        Week 04
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/5/questions">
+        Week 05
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/7/questions">
+        Week 07
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/8/questions">
+        Week 08
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/9/questions">
+        Week 09
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/10/questions">
+        Week 10
+        
+      </a>
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="classtype-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/4/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Tutorial <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="classtype-selector">
+    
+  	  
+  	    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/4/questions">
+  	      Tutorial
+  	      
+  	    </a>
+  	  
+    
+  	  
+  	    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/4/questions">
+  	      Lab
+  	      
+  	    </a>
+  	  
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="qa-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/4/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+      Questions
+    
+    
+    <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="qa-selector">
+    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/4/questions">
+      Questions
+      
+      
+    </a>
+    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/4/answers">
+      Answers
+      
+      
+    </a>
+    
+  </div>
+</li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <main class="container" aria-label="Content" style="flex: 1; padding-top: 4rem;">
+      <header>
+        <h1 class="text-center">
+	Week 04 Tutorial
+	Questions
+</h1>
+        <h3 class="text-center">ADTs, Binary Search Trees</h3>
+        
+      </header>
+      <div class="text-justify mt-4">
+        
+
+<h5>ADTs</h5>
+
+<ol class="mt-3">
+	<li style="margin-top: 0.5rem">
+    
+
+<p>Consider the following Set ADT interface:</p>
+
+<div class="highlight"><pre><span></span><span class="c1">// Creates a new empty set</span>
+<span class="n">Set</span><span class="w"> </span><span class="nf">SetNew</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+<span class="c1">// Frees memory allocated to the set</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">SetFree</span><span class="p">(</span><span class="n">Set</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+
+<span class="c1">// Inserts an element into the set</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">SetInsert</span><span class="p">(</span><span class="n">Set</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">elem</span><span class="p">);</span>
+
+<span class="c1">// Deletes an element from the set</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">SetDelete</span><span class="p">(</span><span class="n">Set</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">elem</span><span class="p">);</span>
+
+<span class="c1">// Returns true if the given element is in the set, and false otherwise</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">SetContains</span><span class="p">(</span><span class="n">Set</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">elem</span><span class="p">);</span>
+
+<span class="c1">// Returns the number of elements in the set</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">SetSize</span><span class="p">(</span><span class="n">Set</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Use the Set ADT to implement the following functions:</p>
+
+<ol type="a">
+	<li>
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">numOddOccurrences</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+</pre></div>
+
+
+		<p>This function takes an array of integers and its size, and returns the number of integers that occur an odd number of times.</p>
+		
+		<p>For example, if given the array <code>[4, 3, 4, 8, 8, 4]</code>, the function should return 2, because there are two elements that appear an odd number of times: 3 (occurs 1 time) and 4 (occurs 3 times).</p>
+	</li>
+	
+	<li>
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">numSingleOccurrences</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+</pre></div>
+
+
+		<p>This function takes an array of integers and its size, and returns the number of integers that occur exactly once.</p>
+		
+		<p>For example, if given the array <code>[4, 3, 4, 8, 7, 4]</code>, the function should return 3, because there are three elements that occur exactly once: 3, 8 and 7.</p>
+	</li>
+</ol>
+
+
+    
+</li>
+	<li style="margin-top: 0.5rem">
+    
+
+<p>A classic problem in computer science is the problem of implementing a queue using two stacks. Consider the following stack ADT interface:</p>
+
+<div class="highlight"><pre><span></span><span class="c1">// Creates a new empty stack</span>
+<span class="n">Stack</span><span class="w"> </span><span class="nf">StackNew</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+<span class="c1">// Pushes an item onto the stack</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">StackPush</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">item</span><span class="p">);</span>
+
+<span class="c1">// Pops an item from the stack and returns it</span>
+<span class="c1">// Assumes that the stack is not empty</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">StackPop</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+
+<span class="c1">// Returns the number of items on the stack</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">StackSize</span><span class="p">(</span><span class="n">Stack</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Use the stack ADT interface to complete the implementation of the queue ADT below:</p>
+
+<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">queue</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">Stack</span><span class="w"> </span><span class="n">s1</span><span class="p">;</span>
+<span class="w">	</span><span class="n">Stack</span><span class="w"> </span><span class="n">s2</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">Queue</span><span class="w"> </span><span class="nf">QueueNew</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">Queue</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">queue</span><span class="p">));</span>
+<span class="w">	</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StackNew</span><span class="p">();</span>
+<span class="w">	</span><span class="n">q</span><span class="o">-&gt;</span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StackNew</span><span class="p">();</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">QueueEnqueue</span><span class="p">(</span><span class="n">Queue</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// TODO</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">QueueDequeue</span><span class="p">(</span><span class="n">Queue</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// TODO</span>
+<span class="p">}</span>
+</pre></div>
+
+
+
+    
+</li>
+</ol>
+
+<h5>Binary Search Trees</h5>
+
+<p>For the questions below, use the following data type:</p>
+
+<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">	</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">left</span><span class="p">;</span>
+<span class="w">	</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">right</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<ol class="mt-3">
+	<li style="margin-top: 0.5rem">
+    
+
+<p>(Binary Search Trees)</p>
+
+<p>For each of the sequences below</p>
+
+<ul>
+	<li>start from an initially empty binary search tree</li>
+	<li>show the tree resulting from inserting values in the order given</li>
+</ul>
+
+<ol class="mt-3" type="a">
+	<li>4 6 5 2 1 3 7</li>
+	<li>5 2 3 4 6 1 7</li>
+	<li>7 6 5 4 3 2 1</li>
+</ol>
+
+<p>Assume new values are always inserted as new leaf nodes.</p>
+
+
+    
+</li>
+	<li style="margin-top: 0.5rem">
+    
+
+<p>(Binary Search Trees)</p>
+
+<p>Consider the following tree and its values displayed in different output orderings:</p>
+
+<img class="center w-80" src="./COMP2521 23T3 - Week 04 Tutorial Questions_files/bst-traversals.svg">
+
+<p>What kind of trees have the property that their in-order traversal is the same as their pre-order traversal?</p>
+
+<p>Are there any kinds of trees for which all output orders will be the same?</p>
+
+
+    
+</li>
+	
+	<li style="margin-top: 0.5rem">
+    
+
+<p>(Binary Search Trees)</p>
+
+<p>Implement the following function that counts the number of odd values in a tree. Use the following function interface:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">bstCountOdds</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+
+
+
+    
+</li>
+	
+	<li style="margin-top: 0.5rem">
+    
+
+<p>(Binary Search Trees)</p>
+
+<p>Implement the following function to count number of internal nodes in a given tree. An internal node is a node with at least one child node. Use the following function interface:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">bstCountInternal</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+
+
+
+    
+</li>
+	<li style="margin-top: 0.5rem">
+    
+
+<p>(Binary Search Trees)</p>
+
+<p>Implement the following function that returns the level of the node containing a given key if such a node exists, otherwise the function returns -1 (when a given key is not in the binary search tree). The level of the root node is zero. Use the following function interface:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">bstNodeLevel</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+
+
+
+    
+</li>
+	<li style="margin-top: 0.5rem">
+    
+
+<p>(Binary Search Trees)</p>
+
+<p>Implement the following function that counts the number of values that are greater than a given value. This function should avoid visiting nodes that it doesn't have to visit. Use the following function interface:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">bstCountGreater</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">node</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
+
+
+
+    
+</li>
+	
+	
+	
+</ol>
+
+
+      </div>
+    </main>
+
+    <footer class="mt-3 py-3 bg-dark text-center no-print" data-bs-theme="dark">
+      <p class="text-muted">
+        <small>
+          <strong>COMP2521 23T3: Data Structures and Algorithms</strong>
+          is brought to you by<br>
+          the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br>
+          at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br>
+          For all enquiries, please email the class account at
+          <a href="mailto:cs2521@cse.unsw.edu.au">cs2521@cse.unsw.edu.au</a><br>
+          
+          CRICOS Provider 00098G
+        </small>
+      </p>
+    </footer>
+    
+    <script src="./COMP2521 23T3 - Week 04 Tutorial Questions_files/bootstrap.bundle.min.js.download" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- math -->
+    <script src="./COMP2521 23T3 - Week 04 Tutorial Questions_files/latest.js.download" async=""></script>
+    
+    
+  
+</body></html>

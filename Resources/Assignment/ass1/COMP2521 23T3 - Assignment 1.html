@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://cgi.cse.unsw.edu.au/~cs2521/23T3/assignments/ass1/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="./COMP2521 23T3 - Assignment 1_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Assignment 1_files/bootstrap-toc.min.css">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Assignment 1_files/style.css">
+    
+    
+
+    <title>COMP2521 23T3 - 
+
+	Assignment 1
+
+</title>
+  <script type="text/javascript" async="" src="./COMP2521 23T3 - Assignment 1_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.mjx-chtml {display: inline-block; line-height: 0; text-indent: 0; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; word-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; margin: 0; padding: 1px 0}
+.MJXc-display {display: block; text-align: center; margin: 1em 0; padding: 0}
+.mjx-chtml[tabindex]:focus, body :focus .mjx-chtml[tabindex] {display: inline-table}
+.mjx-full-width {text-align: center; display: table-cell!important; width: 10000em}
+.mjx-math {display: inline-block; border-collapse: separate; border-spacing: 0}
+.mjx-math * {display: inline-block; -webkit-box-sizing: content-box!important; -moz-box-sizing: content-box!important; box-sizing: content-box!important; text-align: left}
+.mjx-numerator {display: block; text-align: center}
+.mjx-denominator {display: block; text-align: center}
+.MJXc-stacked {height: 0; position: relative}
+.MJXc-stacked > * {position: absolute}
+.MJXc-bevelled > * {display: inline-block}
+.mjx-stack {display: inline-block}
+.mjx-op {display: block}
+.mjx-under {display: table-cell}
+.mjx-over {display: block}
+.mjx-over > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-under > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-stack > .mjx-sup {display: block}
+.mjx-stack > .mjx-sub {display: block}
+.mjx-prestack > .mjx-presup {display: block}
+.mjx-prestack > .mjx-presub {display: block}
+.mjx-delim-h > .mjx-char {display: inline-block}
+.mjx-surd {vertical-align: top}
+.mjx-mphantom * {visibility: hidden}
+.mjx-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 2px 3px; font-style: normal; font-size: 90%}
+.mjx-annotation-xml {line-height: normal}
+.mjx-menclose > svg {fill: none; stroke: currentColor}
+.mjx-mtr {display: table-row}
+.mjx-mlabeledtr {display: table-row}
+.mjx-mtd {display: table-cell; text-align: center}
+.mjx-label {display: table-row}
+.mjx-box {display: inline-block}
+.mjx-block {display: block}
+.mjx-span {display: inline}
+.mjx-char {display: block; white-space: pre}
+.mjx-itable {display: inline-table; width: auto}
+.mjx-row {display: table-row}
+.mjx-cell {display: table-cell}
+.mjx-table {display: table; width: 100%}
+.mjx-line {display: block; height: 0}
+.mjx-strut {width: 0; padding-top: 1em}
+.mjx-vsize {width: 0}
+.MJXc-space1 {margin-left: .167em}
+.MJXc-space2 {margin-left: .222em}
+.MJXc-space3 {margin-left: .278em}
+.mjx-chartest {display: block; visibility: hidden; position: absolute; top: 0; line-height: normal; font-size: 500%}
+.mjx-chartest .mjx-char {display: inline}
+.mjx-chartest .mjx-box {padding-top: 1000px}
+.MJXc-processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MJXc-processed {display: none}
+.mjx-test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.mjx-test.mjx-test-display {display: table!important}
+.mjx-test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.mjx-test.mjx-test-default {display: block!important; clear: both}
+.mjx-ex-box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.mjx-test-inline .mjx-left-box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .mjx-right-box {display: inline-block; width: 0; float: right}
+.mjx-test-display .mjx-right-box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+#MathJax_CHTML_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.mjx-chtml .mjx-noError {line-height: 1.2; vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+.MJXc-TeX-unknown-R {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: normal}
+.MJXc-TeX-unknown-I {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: normal}
+.MJXc-TeX-unknown-B {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: bold}
+.MJXc-TeX-unknown-BI {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: bold}
+.MJXc-TeX-ams-R {font-family: MJXc-TeX-ams-R,MJXc-TeX-ams-Rw}
+.MJXc-TeX-cal-B {font-family: MJXc-TeX-cal-B,MJXc-TeX-cal-Bx,MJXc-TeX-cal-Bw}
+.MJXc-TeX-frak-R {font-family: MJXc-TeX-frak-R,MJXc-TeX-frak-Rw}
+.MJXc-TeX-frak-B {font-family: MJXc-TeX-frak-B,MJXc-TeX-frak-Bx,MJXc-TeX-frak-Bw}
+.MJXc-TeX-math-BI {font-family: MJXc-TeX-math-BI,MJXc-TeX-math-BIx,MJXc-TeX-math-BIw}
+.MJXc-TeX-sans-R {font-family: MJXc-TeX-sans-R,MJXc-TeX-sans-Rw}
+.MJXc-TeX-sans-B {font-family: MJXc-TeX-sans-B,MJXc-TeX-sans-Bx,MJXc-TeX-sans-Bw}
+.MJXc-TeX-sans-I {font-family: MJXc-TeX-sans-I,MJXc-TeX-sans-Ix,MJXc-TeX-sans-Iw}
+.MJXc-TeX-script-R {font-family: MJXc-TeX-script-R,MJXc-TeX-script-Rw}
+.MJXc-TeX-type-R {font-family: MJXc-TeX-type-R,MJXc-TeX-type-Rw}
+.MJXc-TeX-cal-R {font-family: MJXc-TeX-cal-R,MJXc-TeX-cal-Rw}
+.MJXc-TeX-main-B {font-family: MJXc-TeX-main-B,MJXc-TeX-main-Bx,MJXc-TeX-main-Bw}
+.MJXc-TeX-main-I {font-family: MJXc-TeX-main-I,MJXc-TeX-main-Ix,MJXc-TeX-main-Iw}
+.MJXc-TeX-main-R {font-family: MJXc-TeX-main-R,MJXc-TeX-main-Rw}
+.MJXc-TeX-math-I {font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw}
+.MJXc-TeX-size1-R {font-family: MJXc-TeX-size1-R,MJXc-TeX-size1-Rw}
+.MJXc-TeX-size2-R {font-family: MJXc-TeX-size2-R,MJXc-TeX-size2-Rw}
+.MJXc-TeX-size3-R {font-family: MJXc-TeX-size3-R,MJXc-TeX-size3-Rw}
+.MJXc-TeX-size4-R {font-family: MJXc-TeX-size4-R,MJXc-TeX-size4-Rw}
+.MJXc-TeX-vec-R {font-family: MJXc-TeX-vec-R,MJXc-TeX-vec-Rw}
+.MJXc-TeX-vec-B {font-family: MJXc-TeX-vec-B,MJXc-TeX-vec-Bx,MJXc-TeX-vec-Bw}
+@font-face {font-family: MJXc-TeX-ams-R; src: local('MathJax_AMS'), local('MathJax_AMS-Regular')}
+@font-face {font-family: MJXc-TeX-ams-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-B; src: local('MathJax_Caligraphic Bold'), local('MathJax_Caligraphic-Bold')}
+@font-face {font-family: MJXc-TeX-cal-Bx; src: local('MathJax_Caligraphic'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-cal-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-R; src: local('MathJax_Fraktur'), local('MathJax_Fraktur-Regular')}
+@font-face {font-family: MJXc-TeX-frak-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-B; src: local('MathJax_Fraktur Bold'), local('MathJax_Fraktur-Bold')}
+@font-face {font-family: MJXc-TeX-frak-Bx; src: local('MathJax_Fraktur'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-frak-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-BI; src: local('MathJax_Math BoldItalic'), local('MathJax_Math-BoldItalic')}
+@font-face {font-family: MJXc-TeX-math-BIx; src: local('MathJax_Math'); font-weight: bold; font-style: italic}
+@font-face {font-family: MJXc-TeX-math-BIw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-R; src: local('MathJax_SansSerif'), local('MathJax_SansSerif-Regular')}
+@font-face {font-family: MJXc-TeX-sans-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-B; src: local('MathJax_SansSerif Bold'), local('MathJax_SansSerif-Bold')}
+@font-face {font-family: MJXc-TeX-sans-Bx; src: local('MathJax_SansSerif'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-sans-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-I; src: local('MathJax_SansSerif Italic'), local('MathJax_SansSerif-Italic')}
+@font-face {font-family: MJXc-TeX-sans-Ix; src: local('MathJax_SansSerif'); font-style: italic}
+@font-face {font-family: MJXc-TeX-sans-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-script-R; src: local('MathJax_Script'), local('MathJax_Script-Regular')}
+@font-face {font-family: MJXc-TeX-script-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-type-R; src: local('MathJax_Typewriter'), local('MathJax_Typewriter-Regular')}
+@font-face {font-family: MJXc-TeX-type-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-R; src: local('MathJax_Caligraphic'), local('MathJax_Caligraphic-Regular')}
+@font-face {font-family: MJXc-TeX-cal-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-B; src: local('MathJax_Main Bold'), local('MathJax_Main-Bold')}
+@font-face {font-family: MJXc-TeX-main-Bx; src: local('MathJax_Main'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-main-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-I; src: local('MathJax_Main Italic'), local('MathJax_Main-Italic')}
+@font-face {font-family: MJXc-TeX-main-Ix; src: local('MathJax_Main'); font-style: italic}
+@font-face {font-family: MJXc-TeX-main-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-R; src: local('MathJax_Main'), local('MathJax_Main-Regular')}
+@font-face {font-family: MJXc-TeX-main-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-I; src: local('MathJax_Math Italic'), local('MathJax_Math-Italic')}
+@font-face {font-family: MJXc-TeX-math-Ix; src: local('MathJax_Math'); font-style: italic}
+@font-face {font-family: MJXc-TeX-math-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size1-R; src: local('MathJax_Size1'), local('MathJax_Size1-Regular')}
+@font-face {font-family: MJXc-TeX-size1-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size2-R; src: local('MathJax_Size2'), local('MathJax_Size2-Regular')}
+@font-face {font-family: MJXc-TeX-size2-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size3-R; src: local('MathJax_Size3'), local('MathJax_Size3-Regular')}
+@font-face {font-family: MJXc-TeX-size3-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size4-R; src: local('MathJax_Size4'), local('MathJax_Size4-Regular')}
+@font-face {font-family: MJXc-TeX-size4-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-R; src: local('MathJax_Vector'), local('MathJax_Vector-Regular')}
+@font-face {font-family: MJXc-TeX-vec-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-B; src: local('MathJax_Vector Bold'), local('MathJax_Vector-Bold')}
+@font-face {font-family: MJXc-TeX-vec-Bx; src: local('MathJax_Vector'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-vec-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf') format('opentype')}
+</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-select__option{cursor:pointer}.ismanga .ismanga-select__control{cursor:pointer}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel-view-content__select-label{font-size:14px;font-weight:400;line-height:1.2;margin-bottom:4px;margin-top:4px}.ismanga .control-panel-view-content__btn-container{display:flex;flex-direction:column;margin-top:12px}.ismanga .control-panel-view-content__btn:first-child{margin-bottom:12px}.ismanga .control-panel-view-content__btn{border-radius:4px;padding:8px 16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel{background:#fff;border-bottom-right-radius:8px;border-top-right-radius:8px;box-shadow:0 0 5px #b4b4b4;color:#000;font-family:Helvetica;font-weight:normal;left:0;line-height:1.4;padding:16px;position:relative;transform:translateX(0);transition:transform .5s}.ismanga .control-panel--hidden{transform:translateX(-169px)}.ismanga .control-panel .control-panel__collapse-btn{background-color:#b4183d;border-top-left-radius:8px;border-top-right-radius:8px;color:#fff;cursor:pointer;font-family:"Bangers";font-size:20px;padding:8px 16px;position:absolute;right:-69px;top:56px;transform:rotate(90deg)}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-spinner{align-items:center;display:flex;flex-direction:column;position:absolute}.ismanga .ismanga-spinner__inner{animation:spin 2s linear infinite;border-color:rgba(0,0,0,.04);border-radius:50%;border-style:solid;border-top-color:#b4183d}.ismanga .ismanga-spinner__inner-text{background-color:rgba(255,255,255,.8);border-radius:4px;color:#b4183d;font-size:16px;margin-top:8px;text-align:center;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;word-break:break-word}.ismanga .ismanga-spinner__inner-text a{color:#b4183d;font-weight:bold;text-decoration:underline dotted #b4183d}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-click-translate-overlay{background-color:rgba(0,0,0,.5);border:4px solid #b4183d;height:100%;width:100%}.ismanga .ismanga-click-translate-overlay__translate-btn{border-radius:4px;display:flex;font-size:20px;justify-content:center;left:16px;padding:12px 16px;position:absolute;top:16px;width:auto}.ismanga .ismanga-click-translate-overlay__disabled-text{color:#fff;font-size:20px;padding-top:16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-screenshot-translation-content{height:100%;position:absolute;width:100%}.ismanga .ismanga-screenshot-translation-content__warning{align-items:center;background-color:#6c0e24;box-sizing:border-box;color:#fff;display:flex;font-size:22px;height:80px;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:9999}.ismanga .ismanga-screenshot-translation-content__warning .ismanga-spinner__inner{border-top-color:#fff}.ismanga .ismanga-screenshot-translation-content__spinner-container{margin-left:12px;position:relative}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-text-bubble-content__bubble{align-items:center;box-sizing:border-box;display:flex;justify-content:center;position:absolute}.ismanga .ismanga-text-bubble-content__bubble p{color:#000;line-height:1.2;margin:0;padding:4px;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;white-space:normal}.ismanga .ismanga-text-bubble-content__bubble p:hover{background-color:#fff;border-radius:4px;box-shadow:0 0 0 2px #b4183d;cursor:pointer;z-index:9999}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-interaction-content__overlay{align-items:center;background-color:rgba(255,255,255,.7);color:#b4183d;display:flex;font-size:24px;justify-content:center;position:absolute;text-align:center;z-index:1}.ismanga .ismanga-interaction-content__translate-button{background-color:#b4183d;border:0;border-radius:2px;box-shadow:none;color:#fff;font-family:"Comic Neue";outline:none;padding:6px 10px}.ismanga .ismanga-interaction-content__translate-button:hover{background-color:#901330}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga.ismanga-preloader{background-color:rgba(0,0,0,.1);color:#b4183d;font-size:16px;overflow:hidden;position:absolute;text-align:left}.ismanga.ismanga-preloader div{padding:8px}.ismanga.ismanga-preloader span{animation:slowshow 2s ease 0s infinite;color:#b4183d;font-size:28px;opacity:0}@keyframes slowshow{100%{opacity:1}}.ismanga.ismanga-control-panel-container{left:0;position:fixed;top:40%;z-index:99999 !important}</style></head>
+  <body class="d-flex flex-column" style="min-height: 100vh;"><div id="MathJax_Message" style="display: none;"></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="https://www.cse.unsw.edu.au/~cs2521/23T3/">COMP2521 23T3</a>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mr-auto">
+            <!--
+            <li class="nav-item active"><a class="nav-link" href="#">Outline</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Forum</a></li>
+            <li class="navbar-text px-2">|</li>
+            -->
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <main class="container" aria-label="Content" style="flex: 1; padding-top: 4rem;">
+      <header>
+        <h1 class="text-center">
+	Assignment 1
+</h1>
+        <h3 class="text-center">
+	My Huffman Tree Encoder
+</h3>
+        
+      </header>
+      <div class="text-justify mt-4">
+        
+
+<section class="exercise">
+<header><h3>Changelog</h3></header>
+<p>All important changes to the assignment specification and files will be listed here.</p>
+<ul class="text-left">
+	<li><code>[04/10 14:00]</code> Assignment released</li>
+	<li><code>[05/10 00:10]</code> Added <code>Counter.c</code> as a dependency of <code>testCounter.c</code> in the <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/ass/ass1/files/Makefile">Makefile</a>.</li>
+	<li><code>[05/10 16:30]</code> Added tests and updated Testing section for Task 4.</li>
+	<li><code>[10/10 12:45]</code> Improved documentation in <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/ass/ass1/files/File.h"><code>File.h</code></a>, added <code>fclose(fp);</code> before return statement in <code>readEncoding</code> function in <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/ass/ass1/files/decode.c"><code>decode.c</code></a>.</li>
+	<li><code>[15/10 13:10]</code> Added more details about how to test Task 3, including a reference program.</li>
+	<li><code>[17/10 09:10]</code> Added details about time limits to Assessment section.</li>
+</ul>
+</section>
+
+
+<section class="exercise">
+<header><h3>Admin</h3></header>
+<dl class="dl-horizontal">
+	<dt>Marks</dt>
+	<dd>contributes 15% towards your final mark (see Assessment section for more details)</dd>
+	<dt>Submit</dt>
+	<dd>see the Submission section</dd>
+	<dt>Deadline</dt>
+	<dd>12pm on Monday of Week 7</dd>
+	<dt>Late penalty</dt>
+	<dd>0.2% of the maximum mark per hour or part thereof deducted from the attained mark, submissions later than 5 days not accepted</dd>
+</dl>
+</section>
+
+
+
+
+<section class="exercise">
+<header><h3>Background</h3></header>
+
+
+<h5 class="mt-3">What is Encoding?</h5>
+
+<p>Encoding is the process of converting data into a different format.</p>
+
+<p>In the real world, data often needs to be converted into different formats for efficient processing, storage or transmission, so there are countless examples of encoding:</p>
+
+<ul>
+	<li>ASCII encoding, which converts commonly used characters to a 7 bit code</li>
+	<li>UTF-8 encoding, which converts a much wider range of characters to a 8-32 bit code</li>
+	<li>Base64 encoding, which converts binary data (often images) to Base64 text</li>
+	<li>SHA-256 converts a text/byte sequence to a hash which can be used for security purposes</li>
+	<li>QR codes, which convert various kinds of information (often a link) to a grid of black/white pixels</li>
+</ul>
+
+<p>The aim of this assignment is to encode and decode text into/from a compressed format. To achieve this, you will use two kinds of binary trees: a binary search tree and a Huffman tree.</p>
+
+<h5 class="mt-3">Binary Search Tree</h5>
+
+<p>A binary search tree is a binary tree which is ordered such that for each node, all items in its left subtree are less than the item in the node, and all items in its right subtree are greater than the item in the node. In the lectures and labs, we have been using binary search trees of integers - however in this assignment, you will be using binary search trees of strings. Throughout this assignment, we'll be referring to these strings as tokens because they will often contain only a single character, but they should nonetheless be treated as regular strings.</p>
+
+<p>You will use a binary search tree to implement a Counter ADT, which keeps track of the frequencies of tokens. To achieve this, each node in the binary search tree will contain not just a token and left and right pointers, but an integer which indicates the number of occurrences of the token. For example, consider the following binary search tree of tokens:</p>
+
+<img src="./COMP2521 23T3 - Assignment 1_files/bst.svg" class="center w-60 my-3">
+
+<p>This shows, for example, that the token "e" occurs 5 times, the tokens "a" and "s" occur 4 times, the tokens "i", "n", "r" and "t" occur 3 times, and so on.</p>
+
+<h5 class="mt-3">Huffman Tree</h5>
+
+<p>A Huffman tree is a binary tree which is used to encode and decode text. In a Huffman tree, all leaf nodes (and <em>only</em> leaf nodes) contain a token, and the path from the root to each token determines the encoding of the token, with left and right corresponding to 0 and 1 respectively. For example, consider the following Huffman tree:</p>
+
+<img src="./COMP2521 23T3 - Assignment 1_files/huffman-tree.svg" class="center w-50 my-3">
+
+<p>This means the token "s" is encoded as "00", the token "t" is encoded as "010", and so on. The text "stirred", which consists of multiple tokens, would be encoded as "000101111010011110".</p>
+
+<p>An important thing to note is that since only the leaves of the Huffman tree contain tokens, each encoding has a unique decoding - in other words, it is not possible for an encoding to be decoded to two different texts.</p>
+
+</section>
+
+
+<section class="exercise">
+<header><h3>Setting Up</h3></header>
+<p>Change into the directory you created for the assignment and run the following command:</p>
+
+<pre is="tty"><kbd is="sh">unzip <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/ass/ass1/downloads/files.zip">/web/cs2521/23T3/ass/ass1/downloads/files.zip</a></kbd>
+</pre>
+
+<p>If you're working on your own machine, download <code>files.zip</code> by clicking on the above link and then unzip the downloaded file.</p>
+
+<p>You should now have the following files:</p>
+
+<dl class="dl-horizontal">
+	<dt><code>Makefile</code></dt>
+	<dd>to help you compile your code</dd>
+	<dt><code>Counter.h</code></dt>
+	<dd>interface to the Counter ADT</dd>
+	<dt><code>Counter.c</code></dt>
+	<dd>implementation of the Counter ADT (incomplete)</dd>
+	<dt><code>File.h</code></dt>
+	<dd>interface to the File ADT</dd>
+	<dt><code>File.c</code></dt>
+	<dd>implementation of the File ADT (complete)</dd>
+	<dt><code>huffman.h</code></dt>
+	<dd>interface to the Huffman module</dd>
+	<dt><code>huffman.c</code></dt>
+	<dd>implementation of the Huffman module (incomplete)</dd>
+	<dt><code>encode.c</code></dt>
+	<dd>main program for encoding a text (complete)</dd>
+	<dt><code>decode.c</code></dt>
+	<dd>main program for decoding an encoded text (complete)</dd>
+	<dt><code>testCounter.c</code></dt>
+	<dd>main program for testing the Counter ADT</dd>
+	<dt><code>treePrinter.c</code></dt>
+	<dd>main program for generating a visualisation of a Huffman tree</dd>
+	<dt><code>task[134]/</code></dt>
+	<dd>subdirectories containing files for testing tasks 1, 3 and 4</dd>
+	<dt><code>tree-vis</code></dt>
+	<dd>subdirectory containing files for visualising Huffman trees in a web browser</dd>
+</dl>
+
+<p>Note that the only files you are allowed to submit are <code>Counter.c</code> and <code>huffman.c</code>, so you must write all your code in these files. You shouldn't modify any other files unless you are doing it for testing purposes or if you know what you're doing.</p>
+
+<h4>Types of Files</h4>
+
+<p>If you look around the provided directories you will find a few different types of files (with different extensions):</p>
+
+<dl>
+	<dt><code>*.txt</code> files</dt>
+	<dd>
+		<p>These files contain regular, human-readable text. You will be encoding these files in the tasks below. It is also very easy to create new files for testing.</p>
+	</dd>
+
+	<dt><code>*.enc</code> files</dt>
+	<dd>
+		<p>These files contain encodings of <code>.txt</code> files, and consist entirely of the characters <code>0</code> and <code>1</code>. You will be producing these encodings and decoding them in the tasks below. You must not modify any of these files, otherwise they won't get decoded to the correct text.</p>
+		
+		<p>Note that in reality, these files would be approximately eight times smaller, because each of the <code>0</code>'s and <code>1</code>'s would be stored as a single bit. In this assignment, these files contain explicit <code>0</code> and <code>1</code> characters so you can see the encodings.</p>
+	</dd>
+
+	<dt><code>*.tree</code> files</dt>
+	<dd>
+		<p>These files contain Huffman trees in a format that is easy for computers to understand (i.e., they contain serialisations of Huffman trees). The format can be described recursively as follows:</p>
+		<ul>
+			<li>The serialisation of a leaf node (which will always contain a token) is simply the token in the leaf node. For example, a leaf node which contains the token "a" is serialised as <code>a</code>.</li>
+			<li>The serialisation of a tree that contains two smaller subtrees is <code>(</code><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-1-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-1" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2" class="mjx-mrow"><span id="MJXc-Node-3" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">A</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math></span></span><script type="math/tex" id="MathJax-Element-1">A</script><code>,</code><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-2-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-4" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-5" class="mjx-mrow"><span id="MJXc-Node-6" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">B</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>B</mi></math></span></span><script type="math/tex" id="MathJax-Element-2">B</script><code>)</code>, where <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-3-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-7" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-8" class="mjx-mrow"><span id="MJXc-Node-9" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">A</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>A</mi></math></span></span><script type="math/tex" id="MathJax-Element-3">A</script> is the serialisation of the left subtree, and <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-4-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-10" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-11" class="mjx-mrow"><span id="MJXc-Node-12" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.445em; padding-bottom: 0.279em;">B</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>B</mi></math></span></span><script type="math/tex" id="MathJax-Element-4">B</script> is the serialisation of the right subtree.</li>
+			<li>If a token contains the character <code>(</code>, <code>,</code>, <code>)</code> or <code>\</code>, it is escaped with a <code>\</code> character. This is so that these characters do not confuse a program that is trying to parse a tree from this format.</li>
+		</ul>
+		
+		<p>As an example, the serialisation of the Huffman tree in the Background section is:</p>
+<pre>((s,(t,e)),(r,(d,i)))
+</pre>
+
+		<p>Although it is possible for humans to read this format, it is difficult to visualise the tree without drawing it out, and even then it is extremely easy to make mistakes. Therefore, we have provided a bundle of files in the <code>tree-vis</code> directory to help you visualise trees in the browser.</p>
+		
+		<p>To visualise a Huffman tree, first compile the <code>treePrinter</code> program in the main assignment directory using <code>make</code>. The <code>./treePrinter</code> program takes two command-line arguments - the first is the name of the <code>.tree</code> file, and the second is the name of a new <code>.html</code> file where you want the visualiser webpage to be stored (this should always be in the <code>tree-vis</code> directory). For example, you can run the program like so:</p>
+
+<pre is="tty"><kbd is="sh">./treePrinter task1/sea_shells.tree tree-vis/sea_shells.html</kbd>
+</pre>
+
+		<p>This will create a visualiser page for the tree, which you can then open in the web browser. Note that you must store the visualiser pages in the <code>tree-vis</code> directory, because the visualiser depends on other files in this directory - if you store them somewhere else, the visualiser won't be able to find them. You must also have access to the Internet for the visualiser to work correctly.</p>
+		
+		<p>You must not modify any of the existing <code>.tree</code> files, because the file format needs to be precise for the computer to read them. If you modify them, the provided programs may produce an incorrect tree or even terminate with an error.</p>
+	</dd>
+</dl>
+
+</section>
+
+
+<section class="exercise with-self">
+<header><h3>Task 1: Decoding</h3></header>
+
+<p>Given a Huffman tree and an encoded text, decoding is very easy, so we've designated this as the first task.</p>
+
+<p>Your task is to implement the following function in <code>huffman.c</code>:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">decode</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">huffmanTree</span><span class="w"> </span><span class="o">*</span><span class="n">tree</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">encoding</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">outputFilename</span><span class="p">);</span>
+</pre></div>
+
+
+<p>This function takes a Huffman tree and an encoding, and writes the decoded text to a file with the given name. The encoding is a string consisting entirely of the characters <code>'0'</code> and <code>'1'</code>. You must use the File ADT to open and write to the file.</p>
+
+<p>Note that <code>struct huffmanTree</code> contains a <code>freq</code> field, but this field is not used during decoding, so you should simply ignore it.</p>
+
+<h5>Example</h5>
+
+<p>Consider the following Huffman tree:</p>
+
+<img src="./COMP2521 23T3 - Assignment 1_files/decoding-example-tree.svg" class="center w-65 my-3">
+
+<p>Here are some example encodings and what they would be decoded to:</p>
+
+<table class="table table-sm table-bordered m-auto w-auto">
+	<thead>
+		<tr><th>Encoding</th>
+		<th>Decoded text</th>
+	</tr></thead>
+	<tbody>
+		<tr>
+			<td><code>101111010</code></td>
+			<td><code>eat</code></td>
+		</tr>
+		<tr>
+			<td><code>010100101101110</code></td>
+			<td><code>trees</code></td>
+		</tr>
+		<tr>
+			<td><code>1101011110111010000110101</code></td>
+			<td><code>sea tide</code></td>
+		</tr>
+		<tr>
+			<td><code>011000100101011111001010011100010110</code></td>
+			<td><code>dire straits</code></td>
+		</tr>
+	</tbody>
+</table>
+
+<h5 class="mt-3">Testing</h5>
+
+<p>We have provided some files for you to test Task 1.</p>
+
+<p>The <code>task1/</code> directory contains the following types of files:</p>
+
+<ul>
+	<li><code>*.tree</code> - each of these files contains a serialised Huffman tree. These files are not very readable, so you should instead use the <code>treePrinter</code> program (described above) to create a visualisation of the tree that you can view in the browser.</li>
+	<li><code>*.enc</code> - each of these files contains an encoding consisting entirely of <code>0</code>'s and <code>1</code>'s.</li>
+	<li><code>*.txt</code> - these files contain regular text.</li>
+</ul>
+
+<p>The files in the <code>task1/</code> directory come in groups of three, containing one of each of the above types of files.</p>
+
+<p>To test your <code>decode</code> function, compile your program with <code>make</code> and then run the <code>decode</code> program, passing it a <code>.tree</code> file, the matching <code>.enc</code> file and a filename for the output to go to. For example:</p>
+
+<pre is="tty"><kbd is="sh">./decode task1/sea_shells.tree task1/sea_shells.enc task1/sea_shells.out</kbd>
+</pre>
+
+<p>If you've implemented the function correctly, then the text in the output file you created (e.g., <code>task1/sea_shells.out</code>) should match the text in the corresponding <code>.txt</code> file (e.g., <code>task1/sea_shells.txt</code>). You can check that the files are the same using the <code>diff</code> command:</p>
+
+<pre is="tty"><kbd is="sh">diff task1/sea_shells.out task1/sea_shells.txt</kbd>
+</pre>
+
+<p>If the files are identical, the <code>diff</code> command will produce no output.</p>
+
+<p>Note that you should only run the <code>./decode</code> program on matching <code>.tree</code> and <code>.enc</code> files. If you run the program on non-matching <code>.tree</code> and <code>.enc</code> files then either the program will encounter an error, or you will get the wrong output.</p>
+
+</section>
+
+
+<section class="exercise with-self">
+<header><h3>Task 2: Counter ADT</h3></header>
+
+<p>Encoding is much more difficult than decoding, so we've divided it into three tasks.</p>
+
+<p>The first step in encoding a text is to count the occurrences of each token. Therefore, your task is to implement a Counter ADT which records the frequency of tokens <b>using a binary search tree</b>. The Counter ADT should treat a token as a string.</p>
+
+<p>Here are the operations of the Counter ADT:</p>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Operation</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>CounterNew</code></td>
+			<td>Returns a new empty counter with no tokens</td>
+		</tr>
+		<tr>
+			<td><code>CounterFree</code></td>
+			<td>Frees all memory allocated to the given counter</td>
+		</tr>
+		<tr>
+			<td><code>CounterAdd</code></td>
+			<td>Adds an occurrence of the given token to the counter<br>
+				<b>Note:</b> This function should not make any assumptions about the maximum length of a token.
+			</td>
+		</tr>
+		<tr>
+			<td><code>CounterNumItems</code></td>
+			<td>Returns the number of distinct tokens added to the counter</td>
+		</tr>
+		<tr>
+			<td><code>CounterGet</code></td>
+			<td>Returns the frequency of the given token</td>
+		</tr>
+		<tr>
+			<td><code>CounterItems</code></td>
+			<td>Returns a dynamically allocated array containing a copy of each distinct token in the counter and its count (in any order), and sets <code>*numItems</code> to the number of distinct tokens. Each token in the array must be dynamically allocated.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5 class="mt-3">Constraints</h5>
+
+<p>You must implement the Counter ADT using a binary search tree. You will not receive marks for this task if you use any other data structure.</p>
+
+<p>The binary search tree does not need to be balanced.</p>
+
+<h5 class="mt-3">Testing</h5>
+
+<p>We have provided a program <code>testCounter.c</code> for you to test your implementation of the Counter ADT.</p>
+
+<p>To run the tests, compile with <code>make</code> and then run <code>./testCounter</code>. The tests are assert-based, which means the program will terminate with an error message if a test fails. If your implementation passes all the tests, it will simply output:</p>
+
+<pre is="tty"><kbd is="sh">./testCounter</kbd>
+Test 1 passed!
+Test 2 passed!
+Test 3 passed!
+</pre>
+
+<p>The program contains only three simple tests, so it is recommended that you add your own tests. You can add new tests by creating a new test function (e.g., <code>test4()</code>), and calling it from the <code>main</code> function.</p>
+
+</section>
+
+
+<section class="exercise with-self">
+<header><h3>Task 3: Constructing a Huffman Tree</h3></header>
+
+<p>After you've recorded the frequencies of all tokens, the next step is to construct the Huffman tree.</p>
+
+<p>Your task is to implement the following function in <code>huffman.c</code>:</p>
+
+<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">huffmanTree</span><span class="w"> </span><span class="o">*</span><span class="n">createHuffmanTree</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">inputFilename</span><span class="p">);</span>
+</pre></div>
+
+
+<p>This function takes the name of a text file and constructs a Huffman tree from the tokens in the file. You must use the File ADT to read tokens from the file, and use the Counter ADT to count the number of occurrences of each token.</p>
+
+<p>After you have counted all the tokens, you must follow this algorithm to construct the Huffman tree:</p>
+
+<div class="alert alert-secondary my-3">
+	<ul>
+		<li>For each token, create a leaf node that contains the token and its frequency. This creates <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-5-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-13" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-14" class="mjx-mrow"><span id="MJXc-Node-15" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-5">n</script> Huffman trees (each consisting of one node) where <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-6-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-16" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-17" class="mjx-mrow"><span id="MJXc-Node-18" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-6">n</script> is the number of tokens.</li>
+		<li>Until there is only one Huffman tree remaining:
+			<ul>
+				<li>Take the two Huffman trees with the smallest total frequency
+					<ul>
+						<li>If there are multiple possibilities for which pair of trees to take, you may select any of these pairs</li>
+					</ul>
+				</li>
+				<li>Combine the two trees, i.e., create a new node that has the two trees as subtrees, with frequency equal to the sum of their frequencies. The <code>token</code> field of the new node should be set to <code>NULL</code>, as only leaf nodes contain tokens.</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<h5>Example</h5>
+
+<p>Suppose you have processed all the tokens in the text file and these are their frequencies:</p>
+
+<table class="table table-sm table-bordered m-auto w-auto my-3">
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Frequency</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>"e"</code></td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td><code>"s"</code></td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td><code>"t"</code></td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td><code>"a"</code></td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td><code>"m"</code></td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td><code>"h"</code></td>
+			<td>2</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>The following images demonstrate the process of constructing the Huffman tree (click the arrows on the sides to navigate between steps):</p>
+
+<style>
+#task-3-carousel {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+    height: 500px;
+}
+</style>
+
+<div id="task-3-carousel" class="carousel slide mt-3">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#task-3-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#task-3-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#task-3-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#task-3-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#task-3-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#task-3-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#task-3-carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div style="height: 400px; display: flex; align-items: center;">
+        <img src="./COMP2521 23T3 - Assignment 1_files/constructing-tree-1.svg" class="d-block w-75 center" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block" style="color: black;">
+        <p>Initially, there are <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-7-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-19" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-20" class="mjx-mrow"><span id="MJXc-Node-21" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-7">n</script> Huffman trees.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div style="height: 400px; display: flex; align-items: center;">
+        <img src="./COMP2521 23T3 - Assignment 1_files/constructing-tree-2.svg" class="d-block w-70 center" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block" style="color: black;">
+        <p>The two Huffman trees with the lowest frequencies (1 and 2) are merged into a new Huffman tree with frequency 3.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div style="height: 400px; display: flex; align-items: center;">
+        <img src="./COMP2521 23T3 - Assignment 1_files/constructing-tree-3.svg" class="d-block w-65 center" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block" style="color: black;">
+        <p>The two Huffman trees with the lowest frequencies (3 and 3) are merged into a new Huffman tree with frequency 6.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div style="height: 400px; display: flex; align-items: center;">
+        <img src="./COMP2521 23T3 - Assignment 1_files/constructing-tree-4.svg" class="d-block w-55 center" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block" style="color: black;">
+        <p>The two Huffman trees with the lowest frequencies (6 and 7) are merged into a new Huffman tree with frequency 13.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div style="height: 400px; display: flex; align-items: center;">
+        <img src="./COMP2521 23T3 - Assignment 1_files/constructing-tree-5.svg" class="d-block w-60 center" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block" style="color: black;">
+        <p>The two Huffman trees with the lowest frequencies (8 and 10) are merged into a new Huffman tree with frequency 18.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div style="height: 400px; display: flex; align-items: center;">
+        <img src="./COMP2521 23T3 - Assignment 1_files/constructing-tree-6.svg" class="d-block w-50 center" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block" style="color: black;">
+        <p>The two Huffman trees with the lowest frequencies (13 and 18) are merged into a new Huffman tree with frequency 31.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div style="height: 400px; display: flex; align-items: center;">
+        <img src="./COMP2521 23T3 - Assignment 1_files/constructing-tree-7.svg" class="d-block w-50 center" alt="...">
+      </div>
+      <div class="carousel-caption d-none d-md-block" style="color: black;">
+        <p>The Huffman tree is complete.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#task-3-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#task-3-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<h5 class="mt-3">Notes</h5>
+
+<p>You can assume that the text file contains at least two distinct tokens.</p>
+
+<p>Note that when you are choosing two subtrees to combine, if there are multiple eligible pairs, then you may choose any of them. When combining the two subtrees, it does not matter which one goes on the left and which one goes on the right. Because of this, it is possible to construct many different correct Huffman trees from the same text.</p>
+
+<h5 class="mt-3">Testing</h5>
+
+<p>We have provided some files for you to test Task 3.</p>
+
+<p>The <code>task3/</code> directory contains some text files, and a subdirectory <code>sample_trees/</code> which contains <em>one possible Huffman tree</em> for each of the text files. Note that there are multiple possible Huffman trees for each text file, so the trees you obtain may be different from the given sample trees.</p>
+
+<p>To test your <code>createHuffmanTree</code> function, compile with <code>make</code> and then run the <code>./encode</code> program with two command-line arguments: the name of the text file, and the name of a new <code>.tree</code> file that you want your Huffman tree to be printed to. For example:</p>
+
+<pre is="tty"><kbd is="sh">./encode task3/sea_shells.txt task3/sea_shells.tree</kbd>
+</pre>
+
+<p>As in task 1, you may want to use the <code>./treePrinter</code> program to generate a visualisation of your Huffman tree so that you can more easily verify whether your tree is correct.</p>
+
+<div class="alert alert-secondary mt-3">
+
+<h5>Reference Program</h5>
+
+<p>Note that even though multiple Huffman trees are possible, all correct Huffman trees will result in encodings of the same length (<i>for the file that they were created from</i>), which also happens to be the minimal encoding length. To help you check whether your function has produced a correct Huffman tree, we have provided the following reference program:</p>
+
+<pre>/web/cs2521/23T3/ass/ass1/references/encodingLength
+</pre>
+
+<p>The reference program behaves as follows:</p>
+
+<ul>
+	<li>If the program is run with one command-line argument, a valid text file, then the program will output the encoding length that would result from a correct Huffman tree. For example:
+
+<pre is="tty"><kbd is="sh">/web/cs2521/23T3/ass/ass1/references/encodingLength task3/sea_shells.txt</kbd>
+Minimal encoding length for task3/sea_shells.txt: 112
+</pre>
+	</li>
+	
+	<li>If the program is run with two command-line arguments, a valid text file and a matching <code>.tree</code> file produced by your <code>encode</code> program, then the program will output the encoding length that would result from using the given Huffman tree. For example:
+
+<pre is="tty"><kbd is="sh">/web/cs2521/23T3/ass/ass1/references/encodingLength task3/sea_shells.txt task3/sea_shells.tree</kbd>
+Encoding length: 112
+</pre>
+	    <p>If the encoding length shown here is the same as the minimal encoding length shown above, then this means your program has produced a correct Huffman tree.</p>
+	</li>
+</ul>
+
+</div>
+
+</section>
+
+
+<section class="exercise with-self">
+<header><h3>Task 4: Encoding</h3></header>
+
+<p>The final step is to use the Huffman tree to encode the text.</p>
+
+<p>Your task is to implement the following function in <code>huffman.c</code>:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">encode</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">huffmanTree</span><span class="w"> </span><span class="o">*</span><span class="n">tree</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">inputFilename</span><span class="p">);</span>
+</pre></div>
+
+
+<p>This function takes a Huffman tree and the name of a text file, and encodes the text file. It should return a string containing the encoding of the file, and the string should consist entirely of the characters <code>'0'</code> and <code>'1'</code>. You must use the File ADT to read tokens from the file.</p>
+
+<h5>Example</h5>
+
+<p>Encoding is just the opposite of decoding. Consider the following Huffman tree (same as above):</p>
+
+<img src="./COMP2521 23T3 - Assignment 1_files/decoding-example-tree.svg" class="center w-65 my-3">
+
+<p>Here are some examples of texts and their encodings:</p>
+
+<table class="table table-sm table-bordered mt-3 m-auto w-auto">
+	<thead>
+		<tr><th>Text</th>
+		<th>Encoding</th>
+	</tr></thead>
+	<tbody>
+		<tr>
+			<td><code>tires</code></td>
+			<td><code>01000100101110</code></td>
+		</tr>
+		<tr>
+			<td><code>reader</code></td>
+			<td><code>1001011110110101100</code></td>
+		</tr>
+		<tr>
+			<td><code>iterate</code></td>
+			<td><code>00010101100111010101</code></td>
+		</tr>
+		<tr>
+			<td><code>red star</code></td>
+			<td><code>10010101100111110010111100</code></td>
+		</tr>
+	</tbody>
+</table>
+
+<h5 class="mt-3">Testing</h5>
+
+<p>To download the test files for Task 4, run the following command from your main assignment directory:</p>
+
+<pre is="tty"><kbd is="sh">unzip <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/ass/ass1/downloads/task4.zip">/web/cs2521/23T3/ass/ass1/downloads/task4.zip</a></kbd>
+</pre>
+
+<p>If you're working on your own machine, download <code>task4.zip</code> by clicking on the above link and then unzip the downloaded file.</p>
+
+<p>The <code>task4/</code> directory contains some pairs of <code>.txt</code> and <code>.tree</code> files, and a subdirectory <code>expected_encodings/</code> which contain the expected encoding for each of the pairs of files.</p>
+
+<p>To test your <code>encode</code> function, compile with <code>make</code> and then run the <code>./encode</code> program with <b>three</b> command-line arguments: the name of the text file, the name of the matching <code>.tree</code> file, and the name of a new file where you want the encoding to be printed to. For example:</p>
+
+<pre is="tty"><kbd is="sh">./encode task4/sea_shells.txt task4/sea_shells.tree task4/sea_shells.enc</kbd>
+</pre>
+
+<p>Then use the <code>diff</code> command to compare the encoding your function produced with the expected encoding in the <code>expected_encodings/</code> directory. For example:</p>
+
+<pre is="tty"><kbd is="sh">diff task4/sea_shells.enc task4/expected_encodings/sea_shells.enc</kbd>
+</pre>
+
+<p>If the files are identical, the <code>diff</code> command will produce no output.</p>
+
+<h5>Time Limits</h5>
+
+<p>When we test your <code>encode</code> function, we will impose a 5 second user-time limit on each run of the <code>encode</code> program. The program will be compiled using <code>make asan</code>. The largest text file we will use is the provided <code>war_and_peace.txt</code> file.</p>
+
+<div class="alert alert-success">
+	For reference, our reference solution takes about 1.147 user seconds (over an average of 50 runs) to encode <code>war_and_peace.txt</code> on CSE machines.
+</div>
+
+</section>
+
+
+
+
+<section class="exercise">
+<header><h3>Frequently Asked Questions</h3></header>
+
+<ul>
+	<li><b>Are we allowed to create our own functions?</b> You are always allowed to create your own functions. All additional functions you create should be made <code>static</code>.</li>
+	<li><b>Are we allowed to create our own <code>#define</code>s and structs?</b> Yes.</li>
+	<li><b>Are we allowed to <code>#include</code> any other libraries?</b> No. All the libraries required for this assignment are provided already.</li>
+	<li><b>Are we allowed to change the signatures of the given functions?</b> No. If you change these, your code won't compile and we won't be able to test it.</li>
+	<li><b>What errors do we need to handle?</b> You should handle common errors such as <code>NULL</code> returned from <code>malloc</code> by printing an error message to <code>stderr</code> and terminating the program. You are not required to handle other errors.</li>
+	<li><b>What invalid inputs do we need to handle?</b> You are not required to handle invalid inputs, such as <code>NULL</code> being passed in as a counter. It is the user's responsibility to provide valid inputs.</li>
+	<li><b>Will we be assessed on our tests?</b> No. You will not be submitting any test files, and therefore you will not be assessed on your tests.</li>
+	<li><b>Are we allowed to share tests?</b> No. Testing is an important part of software development. Students that test their code more will likely have more correct code, so to ensure fairness, each student should independently develop their own tests.</li>
+</ul>
+</section>
+
+<section class="exercise">
+<header><h3>Submission</h3></header>
+<p>You must submit the files <code>Counter.c</code> and <code>huffman.c</code>. You can submit via the command line using the <code>give</code> command:</p>
+
+<pre is="tty"><kbd is="sh">give cs2521 ass1 Counter.c huffman.c</kbd>
+</pre>
+
+<p>You can also submit via <a href="https://cgi.cse.unsw.edu.au/~give/Student/give.php" target="_blank">give's web interface</a>. You can submit multiple times. Only your last submission will be marked. You can check the files you have submitted <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">here</a>.</p>
+
+<aside class="warning">
+	<p>After you submit, you must check that your submission was successful by going to your <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">submissions page</a>. Check that the timestamp is correct. If your submission does not appear under Last Submission or the timestamp is not correct, then resubmit.</p>
+</aside>
+
+<h5>Compilation</h5>
+
+<p>You must ensure that your final submission compiles on CSE machines. Submitting non-compiling code leads to extra administrative overhead and will result in a 10% penalty.</p>
+
+<p>Every time you make a submission, a dryrun test will be run on your code to check that it compiles. Please ensure that your final submission successfully compiles, even for parts that you have not completed.</p>
+
+</section>
+
+<section class="exercise">
+<header><h3>Assessment Criteria</h3></header>
+<p>This assignment will contribute 15% to your final mark.</p>
+
+<h4>Correctness</h4>
+
+<p><b>80%</b> of the marks for this assignment will be based on the correctness of your code, and will be mostly based on autotesting. Marks for correctness will be distributed as follows:</p>
+
+<table class="table table-sm table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Task</th>
+			<th>Weighting</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Task 1 - Decoding</td>
+			<td>10%</td>
+		</tr>
+		<tr>
+			<td>Task 2 - Counter ADT</td>
+			<td>25%</td>
+		</tr>
+		<tr>
+			<td>Task 3 - Constructing a Huffman Tree</td>
+			<td>25%</td>
+		</tr>
+		<tr>
+			<td>Task 4 - Encoding</td>
+			<td>20%</td>
+		</tr>
+	</tbody>
+</table>
+
+<h5>Time limits</h5>
+
+<p>There will be a 5 second user-time limit applied to <b>each test</b>. This means each time the <code>decode</code>, <code>encode</code> or <code>testCounter</code> program is run, a 5 second user-time limit will be applied to it. The programs will be compiled with the same flags as <code>make asan</code>.</p>
+
+<p>The largest <code>.enc</code> file that will be used for testing task 1 is the <code>war_and_peace.enc</code> file provided in the <code>task4/expected_encodings</code> directory (see the Testing section of Task 4). The largest text file that will be used for testing tasks 3 and 4 is <code>war_and_peace.txt</code> provided in the <code>task4</code> directory. For task 2, a Counter ADT that is implemented sensibly with no function slower than <span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-8-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" style="font-size: 113%; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;O&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><span id="MJXc-Node-22" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-23" class="mjx-mrow"><span id="MJXc-Node-24" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.501em; padding-bottom: 0.279em;">O</span></span><span id="MJXc-Node-25" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">(</span></span><span id="MJXc-Node-26" class="mjx-mi"><span class="mjx-char MJXc-TeX-math-I" style="padding-top: 0.224em; padding-bottom: 0.279em;">n</span></span><span id="MJXc-Node-27" class="mjx-mo"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.445em; padding-bottom: 0.611em;">)</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-8">O(n)</script> will run in time.</p>
+
+<h5>Memory errors/leaks</h5>
+
+<p>You must ensure that your code does not contain memory errors or leaks, as code that contains memory errors is unsafe and it is bad practice to leave memory leaks in your program.</p>
+
+<p>Our tests will include memory error/leak test(s) for each task. If a memory error/leak arises from your code, you will receive a penalty which is 10% of the marks for that task. For example, the penalty for having a memory error/leak in the Counter ADT will be 2.5%. Note that our tests will always free memory as necessary at the end of the test.</p>
+
+<h4>Style</h4>
+
+<p><b>20%</b> of the marks for this assignment will come from hand marking of the readability of the code you have written.<br> These marks will be awarded on the basis of clarity, commenting, elegance and style. The following is an indicative list of characteristics that will be assessed, though your program will be assessed wholistically so other characteristics may be assessed too (see the <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/resources/style_guide.html" target="_blank">style guide</a> for more details):</p>
+
+<ul>
+	<li>Consistent and sensible indentation and spacing</li>
+	<li>Using blank lines and whitespace</li>
+	<li>Using functions to avoid repeating code</li>
+	<li>Decomposing code into functions and not having overly long functions</li>
+	<li>Using comments effectively and not leaving planning or debugging comments</li>
+</ul>
+
+<p>The course staff may vary the assessment scheme after inspecting the assignment submissions but it will remain broadly similar to the description above.</p>
+</section>
+
+
+<section class="exercise">
+<header><h3>Originality of Work</h3></header>
+<p>This is an individual assignment. The work you submit must be your own work and only your work apart from the exceptions below. Joint work is not permitted. At no point should a student read or have a copy of another student's assignment code.</p>
+
+<p>You may use any amount of code from the lectures and labs of the <b>current iteration</b> of this course. You must clearly attribute the source of this code in a comment.</p>
+
+<p>You may use small amounts (&lt; 10 lines) of general purpose code (not specific to the assignment) obtained from sites such as Stack Overflow or other publicly available resources. You must clearly attribute the source of this code in a comment.</p>
+
+<p>You are not permitted to request help with the assignment apart from in the course forum, help sessions or from course lecturers or tutors.</p>
+
+<p>Do not provide or show your assignment work to any other person (including by posting it publicly on the forum) apart from the teaching staff of COMP2521. When posting on the course forum, teaching staff will be able to view the assignment code you have recently submitted with give.</p>
+
+<p>The work you submit must otherwise be entirely your own work. Submission of work partially or completely derived from any other person or jointly written with any other person is not permitted. The penalties for such an offence may include negative marks, automatic failure of the course and possibly other academic discipline. Assignment submissions will be examined both automatically and manually for such issues.</p>
+
+<p>Relevant scholarship authorities will be informed if students holding scholarships are involved in an incident of plagiarism or other misconduct. If you knowingly provide or show your assignment work to another person for any reason, and work derived from it is submitted, then you may be penalised, even if the work was submitted without your knowledge or consent. This may apply even if your work is submitted by a third party unknown to you.</p>
+</section>
+
+
+
+      </div>
+    </main>
+
+    <footer class="mt-3 py-3 bg-dark text-center no-print" data-bs-theme="dark">
+      <p class="text-muted">
+        <small>
+          <strong>COMP2521 23T3: Data Structures and Algorithms</strong>
+          is brought to you by<br>
+          the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br>
+          at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br>
+          For all enquiries, please email the class account at
+          <a href="mailto:cs2521@cse.unsw.edu.au">cs2521@cse.unsw.edu.au</a><br>
+          
+          CRICOS Provider 00098G
+        </small>
+      </p>
+    </footer>
+    
+    <script src="./COMP2521 23T3 - Assignment 1_files/bootstrap.bundle.min.js.download" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- math -->
+    <script src="./COMP2521 23T3 - Assignment 1_files/latest.js.download" async=""></script>
+    
+    
+<script>
+	const myCarouselElement = document.querySelector('#myCarousel');
+
+	const carousel = new bootstrap.Carousel(myCarouselElement, {
+		interval: 2000,
+		touch: false,
+	});
+</script>
+
+  
+</body></html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/questions -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="./COMP2521 23T3 - Week 03 Lab Exercise_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Week 03 Lab Exercise_files/bootstrap-toc.min.css">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Week 03 Lab Exercise_files/style.css">
+    
+    
+
+    <title>COMP2521 23T3 - 
+
+Week 03 Lab
+Exercise
+
+</title>
+  <script type="text/javascript" async="" src="./COMP2521 23T3 - Week 03 Lab Exercise_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-select__option{cursor:pointer}.ismanga .ismanga-select__control{cursor:pointer}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel-view-content__select-label{font-size:14px;font-weight:400;line-height:1.2;margin-bottom:4px;margin-top:4px}.ismanga .control-panel-view-content__btn-container{display:flex;flex-direction:column;margin-top:12px}.ismanga .control-panel-view-content__btn:first-child{margin-bottom:12px}.ismanga .control-panel-view-content__btn{border-radius:4px;padding:8px 16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel{background:#fff;border-bottom-right-radius:8px;border-top-right-radius:8px;box-shadow:0 0 5px #b4b4b4;color:#000;font-family:Helvetica;font-weight:normal;left:0;line-height:1.4;padding:16px;position:relative;transform:translateX(0);transition:transform .5s}.ismanga .control-panel--hidden{transform:translateX(-169px)}.ismanga .control-panel .control-panel__collapse-btn{background-color:#b4183d;border-top-left-radius:8px;border-top-right-radius:8px;color:#fff;cursor:pointer;font-family:"Bangers";font-size:20px;padding:8px 16px;position:absolute;right:-69px;top:56px;transform:rotate(90deg)}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-spinner{align-items:center;display:flex;flex-direction:column;position:absolute}.ismanga .ismanga-spinner__inner{animation:spin 2s linear infinite;border-color:rgba(0,0,0,.04);border-radius:50%;border-style:solid;border-top-color:#b4183d}.ismanga .ismanga-spinner__inner-text{background-color:rgba(255,255,255,.8);border-radius:4px;color:#b4183d;font-size:16px;margin-top:8px;text-align:center;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;word-break:break-word}.ismanga .ismanga-spinner__inner-text a{color:#b4183d;font-weight:bold;text-decoration:underline dotted #b4183d}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-click-translate-overlay{background-color:rgba(0,0,0,.5);border:4px solid #b4183d;height:100%;width:100%}.ismanga .ismanga-click-translate-overlay__translate-btn{border-radius:4px;display:flex;font-size:20px;justify-content:center;left:16px;padding:12px 16px;position:absolute;top:16px;width:auto}.ismanga .ismanga-click-translate-overlay__disabled-text{color:#fff;font-size:20px;padding-top:16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-screenshot-translation-content{height:100%;position:absolute;width:100%}.ismanga .ismanga-screenshot-translation-content__warning{align-items:center;background-color:#6c0e24;box-sizing:border-box;color:#fff;display:flex;font-size:22px;height:80px;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:9999}.ismanga .ismanga-screenshot-translation-content__warning .ismanga-spinner__inner{border-top-color:#fff}.ismanga .ismanga-screenshot-translation-content__spinner-container{margin-left:12px;position:relative}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-text-bubble-content__bubble{align-items:center;box-sizing:border-box;display:flex;justify-content:center;position:absolute}.ismanga .ismanga-text-bubble-content__bubble p{color:#000;line-height:1.2;margin:0;padding:4px;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;white-space:normal}.ismanga .ismanga-text-bubble-content__bubble p:hover{background-color:#fff;border-radius:4px;box-shadow:0 0 0 2px #b4183d;cursor:pointer;z-index:9999}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-interaction-content__overlay{align-items:center;background-color:rgba(255,255,255,.7);color:#b4183d;display:flex;font-size:24px;justify-content:center;position:absolute;text-align:center;z-index:1}.ismanga .ismanga-interaction-content__translate-button{background-color:#b4183d;border:0;border-radius:2px;box-shadow:none;color:#fff;font-family:"Comic Neue";outline:none;padding:6px 10px}.ismanga .ismanga-interaction-content__translate-button:hover{background-color:#901330}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga.ismanga-preloader{background-color:rgba(0,0,0,.1);color:#b4183d;font-size:16px;overflow:hidden;position:absolute;text-align:left}.ismanga.ismanga-preloader div{padding:8px}.ismanga.ismanga-preloader span{animation:slowshow 2s ease 0s infinite;color:#b4183d;font-size:28px;opacity:0}@keyframes slowshow{100%{opacity:1}}.ismanga.ismanga-control-panel-container{left:0;position:fixed;top:40%;z-index:99999 !important}</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+  <body class="d-flex flex-column" style="min-height: 100vh;"><div id="MathJax_Message" style="display: none;"></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="https://www.cse.unsw.edu.au/~cs2521/23T3/">COMP2521 23T3</a>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mr-auto">
+            <!--
+            <li class="nav-item active"><a class="nav-link" href="#">Outline</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Forum</a></li>
+            <li class="navbar-text px-2">|</li>
+            -->
+
+            
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="week-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Week 03 <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="week-selector">
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/1/questions">
+        Week 01
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/2/questions">
+        Week 02
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/questions">
+        Week 03
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/4/questions">
+        Week 04
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/questions">
+        Week 05
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/7/questions">
+        Week 07
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/8/questions">
+        Week 08
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/9/questions">
+        Week 09
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/10/questions">
+        Week 10
+        
+          (tutors only)
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/11/questions">
+        Week 11
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/12/questions">
+        Week 12
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/questions">
+        Week 13
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/14/questions">
+        Week 14
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/15/questions">
+        Week 15
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/questions">
+        Week 16
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/17/questions">
+        Week 17
+        
+      </a>
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="classtype-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Lab <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="classtype-selector">
+    
+  	  
+  	    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/tut/3/questions">
+  	      Tutorial
+  	      
+  	    </a>
+  	  
+    
+  	  
+  	    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/questions">
+  	      Lab
+  	      
+  	    </a>
+  	  
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="qa-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+      Exercise
+    
+    
+    <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="qa-selector">
+    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/questions">
+      Exercise
+      
+      
+    </a>
+    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/answers">
+      Solution
+      
+      
+        (tutors only)
+      
+    </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/notes">
+        Tutors' Notes (tutors only)
+      </a>
+    
+  </div>
+</li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <main class="container" aria-label="Content" style="flex: 1; padding-top: 4rem;">
+      <header>
+        <h1 class="text-center">
+Week 03 Lab
+Exercise
+</h1>
+        <h3 class="text-center">
+<center>
+<table border="0">
+<tbody><tr>
+	<td><img align="center" src="./COMP2521 23T3 - Week 03 Lab Exercise_files/sherlockR.png"></td>
+	<td>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+	<td align="center">Sort Detective</td>
+	<td>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+	<td><img align="center" src="./COMP2521 23T3 - Week 03 Lab Exercise_files/sherlockL.png"></td>
+</tr>
+</tbody></table>
+</center>
+</h3>
+        
+      </header>
+      <div class="text-justify mt-4">
+        
+
+
+
+
+<section class="exercise">
+<header><h3>Objectives</h3></header>
+<ul>
+	<li>To familiarise yourself with practical aspects of computational complexity</li>
+	<li>To practice a systematic approach to problem solving</li>
+	<li>To apply sound scientific reasoning in reaching conclusions</li>
+	<li>To hone your analysis skills</li>
+	<li>To identify algorithms from their behaviour</li>
+</ul>
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Admin</h3></header>
+
+
+
+<dl class="dl-horizontal">
+	<dt>Marks</dt>
+	<dd>5 (see the Assessment section for more details)</dd>
+	<dt>Demo</dt>
+	
+		<dd>in the Week 3, 4 or 5 lab session</dd>
+	
+	<dt>Submit</dt>
+	<dd>see the Submission section</dd>
+	<dt>Deadline to submit to give</dt>
+	<dd>1pm Tuesday of Week 4</dd>
+	<dt>Late penalty</dt>
+	<dd>0.2% per hour or part thereof, submissions later than 5 days not accepted</dd>
+</dl>
+
+
+
+</section>
+
+
+
+<aside class="note">
+	In this lab, you are allowed to work with a partner. If you do, you must:
+	<ul>
+		<li>Include both names and zids in your report</li>
+		<li>Indicate whose sort programs you used in your report</li>
+		<li>Both submit the report</li>
+		<li>Demo the report as a pair at your lab session in Week 3, 4 or 5 to get marks</li>
+	</ul>
+	You are allowed to work with a student from another lab. However, you must still demo the report as a pair.
+</aside>
+
+<section class="exercise">
+<header><h3>Background</h3></header>
+<p>A very long time ago, in a burst of enthusiasm, Richard Buckland wrote a collection of sort programs. Sadly, he forgot to give the programs meaningful names, so when he later passed them on to COMP2521 lecturers to use for this lab, he couldn't tell us which program used which algorithm. All that he could remember is that the sorting algorithms he used came from the following list:</p>
+
+<ul>
+	<li>
+		Bubble sort
+		<ul><li>bubble sort with early exit</li></ul>
+	</li>
+	<li>
+		Insertion sort
+		<ul><li>standard insertion sort</li></ul>
+	</li>
+	<li>
+		Selection sort
+		<ul><li>standard selection sort</li></ul>
+	</li>
+	<li>
+		Merge sort
+		<ul><li>standard merge sort</li></ul>
+	</li>
+	<li>
+		Naive quicksort
+		<ul><li>uses the leftmost element as the pivot</li></ul>
+	</li>
+	<li>
+		Median-of-three quicksort
+		<ul><li>uses the median of the first, middle and last elements as the pivot</li></ul>
+	</li>
+	<li>
+		Randomised quicksort
+		<ul><li>uses a randomly chosen element as the pivot</li></ul>
+	</li>
+	<li>
+		Bogosort
+		<ul><li>repeatedly generates permutations of its input until one is found that is sorted</li></ul>
+	</li>
+</ul>
+
+<p>Despite not knowing which program uses which algorithm, Richard did remember a few things about the programs:</p>
+
+<ul>
+	<li>All of the programs read their input from stdin and write the sorted version of the data to stdout</li>
+	<li>Sorting happens line-by-line, like the Unix sort program</li>
+	<li>There is a limit on the size of the input the programs can process (100,000,000 lines), because they read their input into a fixed size array and sort it there, before writing out the sorted result</li>
+	<li>The programs all expect each line to start with a number, which acts as the sorting key. The sorting is numeric, which means that the programs all behave something like the Unix sort program run with the -n option. If no number is present at the start of a line, it will be treated as a zero value.</li>
+</ul>
+
+<pre is="tty"><kbd is="sh">./sort<i>X</i> &lt; data &gt; sorted_data</kbd>
+<span class="comment"># behaves like</span>
+<kbd is="sh">sort -n &lt; data &gt; sorted_data</kbd>
+</pre>
+
+<p>Your task is to help us identify the specific sorting algorithms used in two of these programs. You will not be able to view the source code. Instead, you will have to try to identify the algorithms using only the programs' observable behaviour when sorting different data. Note that since the programs are only available in binary format, they will most likely only run on the CSE machines, so you'll have to do your work there.</p>
+
+<p>In the setup phase, we will give you access to two different sort programs; each lab pair or individual gets a different (randomly chosen) pair of programs. The first phase of the task is to design and write up the experimental framework that you plan to use to solve the problem. In the second phase, you should gather data on the execution behaviour of the two programs according to your exerimental setup. You then add the data to your report and analyse it to reach a conclusion on which algorithm each of the supplied programs contains.</p>
+
+<p>To make your task a little simpler, we've supplied a program to generate data in the correct format for the sorting programs to use.</p>
+
+<pre is="tty"><kbd is="sh">/web/cs2521/23T3/labs/week03/scripts/gen 5 R</kbd>
+1 nwl
+5 arz
+4 hcd
+2 rbb
+3 mqb
+<kbd is="sh">/web/cs2521/23T3/labs/week03/scripts/gen</kbd>
+Not enough arguments
+Usage: /web/cs2521/23T3/labs/week03/scripts/gen  N  A|D|R  [S]
+       N = number of lines
+       A|D|R = Ascending|Descending|Random
+       S = seed for Random
+<kbd is="sh"></kbd>
+</pre>
+
+<p>Use the <code>gen</code> program however you like, or not at all. Note that the <code>gen</code> program always generates a unique set of keys (from 1..N). This won't enable you to test stability, so you'll need to come up with some more data of your own. Note that the seed argument allows you to generate the same sequence of "random" numbers; if you want to test both sort programs on the same random sequence, use the same seed (<b>note:</b> the seed must be an integer).</p>
+
+<p>Note that the <code>setup</code> script (below) will put a copy of the <code>gen</code> executable into your lab directory, so you can run it as <code>./gen</code> rather than having to type the long file name.</p>
+
+</section>
+
+<section class="exercise">
+<header><h3>Setting Up</h3></header>
+
+<p>Create a directory for this lab, change into it, and run the following command:</p>
+
+<pre is="tty"><kbd is="sh">/web/cs2521/23T3/labs/week03/setup</kbd>
+</pre>
+
+<p>This must be run on the CSE machines, either via VLAB or SSH. This command will set up two symbolic links in your directory called <code>sortA</code> and <code>sortB</code> which reference executable programs under the class account. The <code>setup</code> command also gives you a copy of the <code>gen</code> program and <code>timeit</code> shell script.</p>
+
+<div class="alert alert-primary mt-3">
+	<h5>Working in a pair?</h5>
+
+	<p>If you are working in a pair and you are using your partner's sort programs, run the <code>setup</code> command above, and then delete your own sort programs with the <code>rm</code> command:</p>
+
+<pre is="tty"><kbd is="sh">rm sortA sortB</kbd>
+</pre>
+
+	<p>Then get your partner to run the following command in their lab directory:</p>
+
+<pre is="tty"><kbd is="sh">ls -l sortA sortB</kbd>
+lrwxrwxrwx 1 ... sortA -&gt; <i>long-path-ending-with-sort...A</i>
+lrwxrwxrwx 1 ... sortB -&gt; <i>long-path-ending-with-sort...B</i>
+</pre>
+
+	<p>Finally, copy the long paths that you obtained to create symlinks (shortcuts) to the sort programs:</p>
+
+<pre is="tty"><kbd is="sh">ln -s <i>long-path-ending-with-sort...A</i> sortA</kbd>
+<kbd is="sh">ln -s <i>long-path-ending-with-sort...B</i> sortB</kbd>
+</pre>
+
+	<p>This will give you the same symbolic link as your partner so you can both investigate the same sort programs. <b>Make sure you remember whose sort programs you are using.</b></p>
+</div>
+
+<p>You can check that the sortA and sortB programs actually do sorting by running something like the following:</p>
+
+<pre is="tty"><kbd is="sh">./gen 5 R</kbd>
+<span class="comment">... unsorted output ...</span>
+<kbd is="sh">./gen 5 R | ./sortA</kbd>
+<span class="comment">... sorted output ...</span>
+<kbd is="sh">./gen 5 R | ./sortB</kbd>
+<span class="comment">... sorted output ...</span>
+</pre>
+
+</section>
+
+<section class="exercise with-self">
+<header><h3>Phase 1: Designing your Experiment</h3></header>
+
+<p>Plan the set of tests which you will use to deduce which sorting algorithm is used by each sort program. This is to ensure that by the time you begin investigating and experimenting with the actual sort programs you have thoroughly thought about what kind of behaviour to look for and what further experimentation might be necessary when analysing your findings.</p>
+
+<p>We expect this will involve coming up with numerous sequences of test data to use, and what differences (and why) you expect to be able to observe from different types of sorting algorithms. Typical properties to look for are execution time and output stability.</p>
+
+<p>Of course, when designing tests you cannot anticipate all possible results which might occur during your experiment. This is the nature of scientific experimentation. But by formalising what you expect to occur and how you will respond, you can better account for unexpected behavior and sensibly revise your design or create new tests once the experiment is under way.</p>
+
+<p>Your experimental design should detail the tests you have devised and explain, with clear reasons, how you will be able to distinguish each algorithm you might be given. You do not need to include all the input data you intend to use, only a description or small sample of it (you may put this in the appendix if you wish).</p>
+
+<p>Write up the experimental design as Part 1 of your report. You can produce the report using whatever tools you want (e.g., OpenOffice, Google Docs, raw HTML, etc.), but it must eventually be submitted as a PDF. Most document processing systems and Web browsers can produce PDF.</p>
+
+<p>There is no size requirement for the report; it is the quality of the report which matters. If you want to include detailed reporting of timing results, then put these in an appendix. Your report should be clear, scientific/systematic in approach, and all reasoning and assumptions should be explicit. Make sure you ask your tutor if you are unclear about what is expected.</p>
+
+<p>To help you get started, a <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week03/report-template.html">template</a> for the report is available. Note that a fault in many of the reports in the past is that they simply report observations without attempting to analyze them or explain why these results occurred. For this lab try to get beyond just stating observations and explain them.</p>
+
+</section>
+
+<section class="exercise with-self">
+<header><h3>Phase 2: Run Experiment and Analyse Results</h3></header>
+
+<p>The <code>setup</code> command has given you two sort programs to identify. As noted earlier, each sort program reads from standard input and writes to standard output, and assumes that each input line contains a numeric key (first field) and an arbitrary string following the key. The output should be in ascending order, based on the numeric ordering of the keys. All programs should produce the same output for a given input when the keys are unique.</p>
+
+<p>The following examples show some useful ways of running the sort programs, and auxiliary commands to help collect useful data on their behaviour:</p>
+
+<pre is="tty"><span class="comment"># generate some data, put in a file called "mydata"</span>
+<kbd is="sh"><b>./gen 100 R &gt; mydata</b></kbd>
+<span class="comment"># sort the data using sortA, put the result in "sortedA"</span>
+<kbd is="sh"><b>./sortA &lt; mydata &gt; sortedA</b></kbd>
+<span class="comment"># sort the data using sortB, put the result in "sortedB"</span>
+<kbd is="sh"><b>./sortB &lt; mydata &gt; sortedB</b></kbd>
+<span class="comment"># sort the data using Unix sort</span>
+<kbd is="sh"><b>sort -n &lt; mydata &gt; sorted</b></kbd>
+<span class="comment"># check that the sortA and sortB programs actaully sorted</span>
+<kbd is="sh"><b>diff sorted sortedA</b> <span class="comment"># should show no diffs</span></kbd>
+<kbd is="sh"><b>diff sorted sortedB</b> <span class="comment"># should show no diffs</span></kbd>
+<span class="comment"># run a large sort and throw away the result</span>
+<kbd is="sh"><b>./gen 100000 R | ./sortA &gt; /dev/null</b></kbd>
+<span class="comment"># repeat the above, but get timing data on sortA</span>
+<kbd is="sh"><b>./gen 100000 R | time ./sortA &gt; /dev/null</b></kbd>
+<span class="comment"># repeat the timing, but with better output format</span>
+<kbd is="sh"><b>./gen 100000 R | /usr/bin/time --format="%U seconds" ./sortA &gt; /dev/null</b></kbd>
+</pre>
+
+<p>You should now carry out the experiment you designed in Phase 1. Collect and record all of the data, and then summarize it in your report. You can use whatever tools you like to produce useful summaries (e.g. plot graphs of time vs data size). Then analyze the data, draw conclusions, and explain them.</p>
+
+<p>To help with the experiments, we have provided a shell script called <code>timeit</code> to collect timing data. As supplied, this script times the built-in sort program, which is not helpful for you, so you'll need to modify it to use one of your <code>sortA</code> or <code>sortB</code> programs. After you have modified it, you can run it like so:</p>
+
+<pre is="tty"><kbd is="sh">sh timeit</kbd>
+</pre>
+
+<p>Note that some tests will take a long time to run with large data. You can remove the large data sizes from the outer <code>for</code> loop if you can't wait, but you should probably add more smaller sizes to get more data points to try to determine execution cost trends.</p>
+
+<p>On the other hand, some tests will take a very short time to run, and you can add larger data sizes to the outer <code>for</code> loop. Remember that the sort programs can sort up to 100,000,000 items.</p>
+
+<p>Tips for measuring: the Unix <code>time</code> command works by sampling and will likely produce different results for the same program run multiple times (the <code>timeit</code> script will do this for you). Take an average over a number of timings to account for this. Also, beware of claiming too much accuracy. You can't really claim more than one or two significant digits on an average from the <code>time</code> command.</p>
+
+<p>The precise format of your report is up to you, but it must include:</p>
+
+<ul>
+	<li>a summary of the results for each program</li>
+	<li>an argument, based on the observed behaviour, for what sorting algorithm you think each program is using</li>
+</ul>
+
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Submission</h3></header>
+<p>Your submission for this lab is a report containing an experimental design and results/analysis from carrying out the experiment. It should be submitted as a PDF file called <code>report.pdf</code>. You can submit via the command line using the <code>give</code> command:</p>
+
+<pre is="tty"><kbd is="sh">give cs2521 lab03 report.pdf</kbd>
+</pre>
+
+<p>You can also submit via <a href="https://cgi.cse.unsw.edu.au/~give/Student/give.php" target="_blank">give's web interface</a>. You can submit multiple times. Only your last submission will be marked. You can check the files you have submitted <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">here</a>.</p>
+
+<aside class="warning">
+	<p>After you submit, you <b>must</b> check that your submission was successful by going to your <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">submissions page</a>. Check that the timestamp is correct. If your submission does not appear under Last Submission or the timestamp is not correct, then resubmit.</p>
+</aside>
+</section>
+
+<section class="exercise">
+<header><h3>Assessment</h3></header>
+<p>There is no automarking for this lab. To receive a mark, you <i>must</i> show your report to your tutor during your Week 3, 4 or 5 lab session. You will be marked based on the following criteria:</p>
+
+<dl>
+	<dt>Methodology (2 marks)</dt>
+	<dd>Your report should contain an easy-to-understand description and justification of your methodology. What experiments and tests did you run, how did you run them, and why?</dd>
+	
+	<dt>Results and Analysis (2 marks)</dt>
+	<dd>Your report should include the results you obtained from your experiments, including a table of timing results (and possibly some graphs) from your timing experiments, sample input and output from your stability tests, and results from any other experiments you ran. You should also include an analysis of these results: what did the results tell you about what the sorting algorithms could/couldn't be?</dd>
+	
+	<dt>Accuracy (1 mark)</dt>
+	<dd>This mark is for whether you were able to accurately identify the sorting algorithms used by your sort programs. <i>Your conclusions must logically follow from your results</i> - if they are inconsistent with your results or if multiple sorting algorithms were possible based on your results and you didn't properly narrow it down to one algorithm, you may be penalised. If you worked with someone else, make sure to let your tutor know which one of you ran the <code>setup</code> command at the start of the lab (and hence whose sort programs you used), since each student is given a different pair of sort programs.</dd>
+</dl>
+
+</section>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="mt-3 py-3 bg-dark text-center no-print" data-bs-theme="dark">
+      <p class="text-muted">
+        <small>
+          <strong>COMP2521 23T3: Data Structures and Algorithms</strong>
+          is brought to you by<br>
+          the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br>
+          at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br>
+          For all enquiries, please email the class account at
+          <a href="mailto:cs2521@cse.unsw.edu.au">cs2521@cse.unsw.edu.au</a><br>
+          
+          CRICOS Provider 00098G
+        </small>
+      </p>
+    </footer>
+    
+    <script src="./COMP2521 23T3 - Week 03 Lab Exercise_files/bootstrap.bundle.min.js.download" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- math -->
+    <script src="./COMP2521 23T3 - Week 03 Lab Exercise_files/latest.js.download" async=""></script>
+    
+    
+  
+</body></html>

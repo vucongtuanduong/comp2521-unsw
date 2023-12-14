@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css">
+
+    <link rel="stylesheet" href="/~cs2521/23T3/static/style.css">
+    
+    
+
+    <title>COMP2521 23T3 - 
+
+Week 07 Lab
+Exercise
+
+</title>
+  </head>
+  <body class="d-flex flex-column" style="min-height: 100vh;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right"
+                type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="https://www.cse.unsw.edu.au/~cs2521/23T3/">COMP2521 23T3</a>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mr-auto">
+            <!--
+            <li class="nav-item active"><a class="nav-link" href="#">Outline</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Forum</a></li>
+            <li class="navbar-text px-2">|</li>
+            -->
+
+            
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="week-selector"
+    href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Week 07 <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="week-selector">
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/1/questions">
+        Week 01
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/2/questions">
+        Week 02
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/3/questions">
+        Week 03
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/4/questions">
+        Week 04
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/5/questions">
+        Week 05
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/7/questions">
+        Week 07
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/8/questions">
+        Week 08
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/9/questions">
+        Week 09
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/10/questions">
+        Week 10
+        
+          (tutors only)
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/11/questions">
+        Week 11
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/12/questions">
+        Week 12
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/13/questions">
+        Week 13
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/14/questions">
+        Week 14
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/15/questions">
+        Week 15
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/16/questions">
+        Week 16
+        
+      </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/17/questions">
+        Week 17
+        
+      </a>
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="classtype-selector"
+    href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Lab <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="classtype-selector">
+    
+  	  
+  	    <a class="dropdown-item" href="/~cs2521/23T3/tut/7/questions">
+  	      Tutorial
+  	      
+  	    </a>
+  	  
+    
+  	  
+  	    <a class="dropdown-item" href="/~cs2521/23T3/lab/7/questions">
+  	      Lab
+  	      
+  	    </a>
+  	  
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="qa-selector"
+    href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+      Exercise
+    
+    
+    <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="qa-selector">
+    <a class="dropdown-item" href="/~cs2521/23T3/lab/7/questions">
+      Exercise
+      
+      
+    </a>
+    <a class="dropdown-item" href="/~cs2521/23T3/lab/7/answers">
+      Solution
+      
+      
+        (tutors only)
+      
+    </a>
+    
+      <a class="dropdown-item" href="/~cs2521/23T3/lab/7/notes">
+        Tutors' Notes (tutors only)
+      </a>
+    
+  </div>
+</li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <main class="container" aria-label="Content" style="flex: 1; padding-top: 4rem;">
+      <header>
+        <h1 class="text-center">
+Week 07 Lab
+Exercise
+</h1>
+        <h3 class="text-center">
+Graph Search Algorithms and Maze Solvers
+</h3>
+        
+      </header>
+      <div class="text-justify mt-4">
+        
+
+
+
+
+<section class="exercise">
+<header><h3>Objectives</h3></header>
+<ul>
+	<li>To explore an application of graphs</li>
+	<li>To get some practice implementing graph search algorithms</li>
+	<li>To perform complexity analysis on graph algorithms</li>
+	<li>To understand the difference between BFS and DFS</li>
+</ul>
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Admin</h3></header>
+
+
+
+<dl class="dl-horizontal">
+	<dt>Marks</dt>
+	<dd>5 (see the Assessment section for more details)</dd>
+	<dt>Demo</dt>
+	
+		<dd>in the Week 7, 8 or 9 lab session</dd>
+	
+	<dt>Submit</dt>
+	<dd>see the Submission section</dd>
+	<dt>Deadline to submit to give</dt>
+	<dd>9am Tuesday of Week 8</dd>
+	<dt>Late penalty</dt>
+	<dd>0.2% per hour or part thereof, submissions later than 5 days not accepted</dd>
+</dl>
+
+
+
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Background</h3></header>
+<p>In lectures, we learned about two basic graph search algorithms: breadth-first search (BFS) and depth-first search (DFS). BFS explores the vertices in order of distance from the starting vertex, and is guaranteed to find the shortest path to any vertex (in an unweighted graph). Meanwhile, DFS tries to explore as far as possible by following edges to unvisited vertices before backtracking. In this lab, we will explore the differences between these algorithms by implementing our own maze solvers!</p>
+
+<h4 class="mt-3">Mazes and Graphs</h4>
+<p>Almost everyone has seen a maze before - a maze is a collection of walls and paths, typically with a start and finish. But how can we represent a maze using a graph?</p>
+
+<p>Visually, it's quite easy - given a maze, we can treat each uninterrupted stretch (uninterrupted meaning no turns or intersections) as an edge, and create vertices at the ends of each edge. For example, here is a maze and its graph equivalent:</p>
+
+<table style="width: 100%;">
+	<tr>
+		<td><img class="center w-60 my-3" src="./images/maze-to-graph-1.png"></td>
+		<td><img class="center w-60 my-3" src="./images/maze-to-graph-2.png"></td>
+	</tr>
+	<tr>
+		<td class="text-center" colspan="2" style="color: grey;"><i>This maze was taken from <a href="https://www.youtube.com/watch?v=rop0W4QDOUI" target="_blank">this Computerphile video</a></i></td>
+	</tr>
+</table>
+
+<p>In this graph representation, each vertex would consist of an identifier, a set of coordinates and a list of neighbours (up to four). However, producing this graph representation is quite complex. For mazes that have a grid layout, it is simpler to treat each every cell of the grid as a potential vertex. Then, identifying neighbours for each vertex is easy - all we need to do is to check the four adjacent cells. If an adjacent cell is a wall cell, then it is not a vertex (and hence not a neighbour), otherwise it must be a neighbour.</p>
+
+<img class="center w-30 my-3" src="./images/maze-to-graph-3.png">
+
+<p>In this new representation, all we need is a 2D matrix (array) of booleans to indicate whether a cell is a wall or a path, and it is up to the user of the maze to determine where the vertices and edges are. This is the representation that we will be using in the lab.</p>
+
+</section>
+
+<section class="exercise">
+<header><h3>Setting Up</h3></header>
+
+<p>Create a directory for this lab, change into it, and run the following command:</p>
+
+<pre is="tty">
+<kbd is="sh">unzip <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/downloads/files.zip">/web/cs2521/23T3/labs/week07/downloads/files.zip</a></kbd>
+</pre>
+
+<!-- <p>If you're working at home, download <code>files.zip</code> by clicking on the above link and then run the <code>unzip</code> command on the downloaded file.</p> -->
+
+<p>If you've done the above correctly, you should now have the following files:</p>
+
+<dl class="dl-horizontal">
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/Makefile">Makefile</a></code></dt>
+	<dd>a set of dependencies used to control compilation</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/cell.h">cell.h</a></code></dt>
+	<dd>the definition of the cell data type used by the rest of the code</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/Maze.h">Maze.h</a></code></dt>
+	<dd>the interface to the Maze ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/Maze.c">Maze.c</a></code></dt>
+	<dd>a complete implementation of the Maze ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/Queue.h">Queue.h</a></code></dt>
+	<dd>the interface to the Queue ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/Queue.c">Queue.c</a></code></dt>
+	<dd>a complete implementation of the Queue ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/Stack.h">Stack.h</a></code></dt>
+	<dd>the interface to the Stack ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/Stack.c">Stack.c</a></code></dt>
+	<dd>a complete implementation of the Stack ADT</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/matrix.h">matrix.h</a></code></dt>
+	<dd>the interface to utility functions for creating matrices (2D arrays)</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/matrix.c">matrix.c</a></code></dt>
+	<dd>a complete implementation of the utility functions for matrices</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/solve.h">solve.h</a></code></dt>
+	<dd>the interface to the maze solver, used by <code>solver.c</code></dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/solveBfs.c">solveBfs.c</a></code></dt>
+	<dd>an implementation of the maze solver using breadth-first search</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/solveDfs.c">solveDfs.c</a></code></dt>
+	<dd>an implementation of the maze solver using depth-first search</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/solveDfsBacktrack.c">solveDfsBacktrack.c</a></code></dt>
+	<dd>an implementation of the maze solver using recursive depth-first search</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/solveKeepLeft.c">solveKeepLeft.c</a></code></dt>
+	<dd>an implementation of the maze solver using the "keep left" strategy</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/solver.c">solver.c</a></code></dt>
+	<dd>a driver program that creates a maze and runs a maze-solving algorithm on it</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/mazes/">mazes/</a></code></dt>
+	<dd>a directory containing example mazes</dd>
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week07/files/analysis.txt">analysis.txt</a></code></dt>
+	<dd>a template for you to fill in your answers for Task 3</dd>
+</dl>
+
+<p>Once you've got these files, the first thing to do is to run the command</p>
+
+<pre is="tty"><kbd is="sh">make</kbd></pre>
+
+<p>This will compile the initial version of the files, and produce four executables: <code>./solveBfs</code>, <code>./solveDfs</code>, <code>./solveDfsBacktrack</code> and <code>./solveKeepLeft</code>.</p>
+
+<h4>File Walkthrough</h4>
+<dl>
+    <dt><code>solver.c</code></dt>
+    <dd>
+        <p><code>solver.c</code> is the entry point of the program. Given the path to a maze file, it opens the file, creates a maze from it and then calls <code>solve()</code>, which should solve the maze.</p>
+    </dd>
+    
+    <dt><code>cell.h</code></dt>
+    <dd>
+        <p><code>cell.h</code> contains the definition of the cell data type used by the rest of the code. A cell is simply represented by two integers: a row number and a column number.</p>
+    </dd>
+
+    <aside class="note">
+        A <code>struct cell</code> is a struct, not a struct pointer, so you should access a <code>struct cell</code> using the dot operator rather than the arrow operator. You can also easily create new <code>struct cell</code> instances without using <code>malloc</code>. Here are some examples of its usage:
+<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">cell</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span><span class="w">               </span><span class="c1">// cell (1, 2)</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cell</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{.</span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">};</span><span class="w"> </span><span class="c1">// also cell (1, 2) but more explicit</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cell</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">x</span><span class="p">.</span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">col</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">};</span><span class="w">   </span><span class="c1">// this is the cell to the right of x</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">cell</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">                    </span><span class="c1">// this is a copy of x</span>
+<span class="n">z</span><span class="p">.</span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="p">.</span><span class="n">row</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                    </span><span class="c1">// this modifies z to be the cell under it</span>
+</pre></div>
+
+    </aside>    
+
+    <dt><code>Maze.h</code></dt>
+    <dd>
+        <p><code>Maze.h</code> defines the interface to the Maze ADT, which provides all the functionality required to access information about the maze. In addition to storing the structure of the maze, the Maze ADT also keeps track of the state of all of the cells during a traversal so it can display the maze and produce an animation. You should read <code>Maze.h</code>, as you will be using many of its interface functions.</p>
+    </dd>
+    
+    <dt><code>Queue.h</code> and <code>Stack.h</code></dt>
+    <dd>
+        <p><code>Queue.h</code> and <code>Stack.h</code> define the interfaces to the Queue and Stack ADTs respectively. You will need these ADTs to implement your solvers, so you should read the header files to find out how to use them.</p>
+    </dd>
+    
+    <dt><code>matrix.h</code></dt>
+    <dd>
+        <p><code>matrix.h</code> defines the interface to some useful functions involving matrices/2D arrays that you may want to use to implement your solvers.</p>
+    </dd>
+    
+    <dt><code>solveBfs.c</code>, <code>solveDfs.c</code>, <code>solveDfsBacktrack.c</code> and <code>solveKeepLeft.c</code></dt>
+    <dd>These files (will) contain the implementation of your maze solvers, each using a different algorithm. Only two of these are compulsory tasks - the others are there if you are looking for a challenge.</dd>
+    
+    <dt>Maze files</dt>
+    <dd>The <code>mazes/</code> directory contains some example mazes that you can use to test your maze solvers. You can create your own mazes, but to ensure that the mazes are read in correctly, you must follow the format specified in <code>Maze.h</code>.</dd>
+</dl>
+
+<p>Note that the implementations of the Queue and Stack ADTs in <code>Queue.c</code> and <code>Stack.c</code> have been <a href="https://en.wikipedia.org/wiki/Minification_(programming)" target="_blank">minified</a> and are intentionally hard to read. This is because users of an ADT can only access an ADT via its interface, so there is no need for users to read the implementation. We have therefore intentionally made <code>Queue.c</code> and <code>Stack.c</code> hard to read to discourage you from reading the ADT implementations. <code>Maze.c</code> has not been minified, but you should still avoid reading it, as the only way for you to interact with the Maze ADT is via its interface functions in <code>Maze.h</code>.</p>
+
+</section>
+
+<section class="exercise with-self">
+<header><h3>Task 1 - BFS Maze Solver</h3></header>
+<p>Implement the <code>solve()</code> function in <code>solveBfs.c</code> which takes in a maze and tries to find a path from start to finish using the breadth-first search algorithm. If there is a path, the function should mark the path on the maze using the <code>MazeMarkPath()</code> function and return <code>true</code>. Otherwise, the function should return <code>false</code>.</p>
+
+<p>While searching the maze, you should call <code>MazeVisit()</code> every time you visit a cell. This will cause the maze to be redisplayed with the most recently visited cell marked. <b>Important:</b> Additionally, <code>MazeVisit</code> will return <code>true</code> if the cell you passed it was the finishing cell.</p>
+
+<p>When you want to test your function, use the <code>make</code> command to recompile the program and then run <code>./solveBfs <i>maze-file</i></code>, where <code><i>maze-file</i></code> is one of the maze files in the <code>mazes/</code> directory.</p>
+
+<aside class="warning">
+	In order for the maze to display properly, you <b>must</b> ensure that your terminal window is large enough to fit the entire maze. Otherwise, you may observe strange behaviour, such as wall cells being visited. You may need to reduce your terminal's font size for the largest mazes.
+</aside>
+
+<p>For example, running <code>./solveBfs mazes/small-1.txt</code> should produce an animation like the following:</p>
+
+<img class="center w-25 my-3" src="./images/gifs/small-1/bfs1.gif">
+
+<p>Your code does not have to produce this exact animation - other animations are possible depending on the order in which you visit neighbours. Here is another possible animation produced from a different visit order:</p>
+
+<img class="center w-25 my-3" src="./images/gifs/small-1/bfs2.gif">
+
+<p>If there is no path from start to finish, then eventually, every cell that is reachable from the starting cell will be visited. Here is a possible animation for <code>small-2.txt</code>, which is not solveable:</p>
+
+<img class="center w-25 my-3" src="./images/gifs/small-2/bfs.gif">
+
+<p>You can adjust the speed of the animation by providing an additional command-line argument to the program - a number between 1 and 11, where 1 is the slowest and 11 is the fastest. The default speed is 3.</p>
+
+<aside class="hint">
+	<p>Here is the pseudocode for the BFS algorithm for general graphs:</p>
+
+<pre>
+bfs(g, src):
+	<b>Inputs:</b> graph g
+	        starting vertex src
+	
+	create visited and predecessor arrays
+	create queue and enqueue src
+
+	mark src as visited
+	<b>while</b> the queue is not empty:
+		dequeue v
+		
+		<b>for</b> all edges (v, w) where w has not been visited:
+			mark w as visited
+			set predecessor of w to v
+			enqueue w
+</pre>
+
+	<p>You can follow this pattern in this task, however note that you will need to adapt it for mazes and you should stop the search as soon as you have found the exit. You also need to mark the path after you have found the exit.</p>
+</aside>
+
+<aside class="hint">
+	You may find the <code>create<i>XYZ</i></code> functions in <code>matrix.h</code> useful for creating visited and predecessor arrays. If you do use these functions, make sure to free the arrays once you no longer need them with the corresponding <code>free</code> functions. Avoid memory leaks!
+</aside>
+
+</section>
+
+<section class="exercise with-self">
+<header><h3>Task 2 - DFS Maze Solver</h3></header>
+
+<p>Implement the <code>solve()</code> function in <code>solveDfs.c</code> which also tries to solve the given maze but instead uses the depth-first search algorithm. Use the iterative implementation of the algorithm (i.e., the version that uses a stack), <b>do not use recursion</b>. When you think you are done, use the <code>make</code> command to recompile the program and then run <code>./solveDfs <i>maze-file</i></code>.</p>
+
+<p>Here are some possible animations produced from <code>./solveDfs mazes/small-1.txt</code>:</p>
+
+<table style="width: 100%;">
+	<tr>
+		<td><img class="center w-50 my-3" src="./images/gifs/small-1/dfs1.gif"></td>
+		<td><img class="center w-50 my-3" src="./images/gifs/small-1/dfs2.gif"></td>
+	</tr>
+</table>
+
+<aside class="note">
+<p>You should avoid creating small offshoots that don't get explored like in the following animation:</p>
+
+<img class="center w-25 my-3" src="./images/gifs/small-1/bad-dfs.gif">
+
+<p>This is not proper DFS behaviour and you may be penalised slightly if your code produces an animation like this.</p>
+</aside>
+
+<aside class="hint">
+	<p>Here is the pseudocode for the DFS algorithm for general graphs:</p>
+
+<pre>
+dfs(g, src):
+	<b>Inputs:</b> graph g
+	        starting vertex src
+	
+	create visited and predecessor arrays
+	create stack and push src
+
+	<b>while</b> the stack is not empty:
+		pop v
+
+		<b>if</b> v has been visited:
+			<b>continue</b> (i.e., return to beginning of loop)
+
+		mark v as visited
+
+		<b>for</b> all edges (v, w) where w has not been visited:
+			set predecessor of w to v
+			push w
+</pre>
+</aside>
+
+</section>
+
+<section class="exercise with-self">
+<header><h3>Task 3 - Analysis</h3></header>
+
+<p>Congratulations for completing your maze solver! Now it's time to analyse the complexity of your algorithms. <b>Given a maze with \( n \) cells in total</b> (i.e., \( n = \text{width} \times \text{height} \)), what would be the time complexity of your BFS and DFS algorithms? Enter your answers into <code>analysis.txt</code>, along with an explanation for each answer. <b>Important:</b> you should ignore the maze-displaying code when analysing the time complexity, as that code only exists to produce an animation.</p>
+
+</section>
+
+<section class="exercise with-self">
+<header><h3>Optional Challenge Task 1</h3></header>
+
+<aside class="note">
+	<p>This task is <b>optional</b>. It is not worth any marks, and there is no submission for it.</p>
+</aside>
+
+<p>One slight advantage of depth-first search over breadth-first search is that it can be easily implemented recursively, and therefore does not require any additional data structures such as a queue or stack. Recursive depth-first search also induces backtracking behaviour, which occurs when there are no more new vertices to visit from a particular vertex (say B), and you backtrack to the previous vertex (say A) on your current path to continue searching. In the code, backtracking behaviour occurs when the function call where B was visited returns to the call where A was visited.</p>
+
+<p>The backtracking behaviour of recursive depth-first search allows us to produce more natural movement in our animations. Instead of immediately jumping to a new cell once we reach a dead end (like in iterative depth-first search), we show the backwards movement along the path until a new cell is found. Here are some examples of recursive depth-first search and backtracking in action:</p>
+
+<table style="width: 100%;">
+	<tr>
+		<td><img class="center w-50 my-3" src="./images/gifs/small-1/dfs-rec1.gif"></td>
+		<td><img class="center w-50 my-3" src="./images/gifs/small-1/dfs-rec2.gif"></td>
+	</tr>
+</table>
+
+<p>If there is no path from start to finish, then eventually, every cell that is reachable from the starting cell will be visited, and the algorithm will backtrack all the way back to the starting cell, like so:</p>
+
+<img class="center w-25 my-3" src="./images/gifs/small-2/dfs-rec.gif">
+
+<p>Implement this algorithm in <code>solveDfsBacktrack.c</code>. Once you are done, use the <code>make</code> command to recompile the program and then run <code>./solveDfsBacktrack <i>maze-file</i></code>.</p>
+
+<aside class="hint">
+	<p>To show the backtracking movement, you will need to call <code>MazeVisit</code> more than once on the same cell.</p>
+</aside>
+
+</section>
+
+<section class="exercise with-self">
+<header><h3>Optional Challenge Task 2</h3></header>
+
+<aside class="note">
+	<p>This task is <b>optional</b>. It is not worth any marks, and there is no submission for it.</p>
+</aside>
+
+<p>A nice trick to remember for maze solving is that if both the start and finish are on the edges of the maze, then it is possible to solve the maze by following the left or right wall all around the maze. If your goal is simply to find the finish, then this algorithm requires only constant \( O(1) \) memory (!), as all you need to keep track of is which cell you are at and what direction you are moving. (If you want to show a path that doesn't involve moving backwards over where you've already been, however, then you will still need a predecessor array.) Note that this is <i>not</i> a graph-search algorithm - it's just a simple algorithm that works for certain mazes. Here is the keep-left algorithm in action:</p>
+
+<img class="center w-25 my-3" src="./images/gifs/small-1/keep-left.gif">
+
+<p>If there is no path from start to finish, then eventually, you will loop back to the start and you can use this to deduce that there is no path.</p>
+
+<img class="center w-25 my-3" src="./images/gifs/small-2/keep-left.gif">
+
+<p>Notice that if there are cycles in the maze (like the one above), this algorithm may not visit all the cells in the maze - this is why it is only guaranteed to work if the start and finish are on the edges of the maze.</p>
+
+<p>Implement this algorithm in <code>solveKeepLeft.c</code>. Once you are done, use the <code>make</code> command to recompile the program and then run <code>./solveKeepLeft <i>maze-file</i></code>.</p>
+
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Submission</h3></header>
+<p>You need to submit three files: <code>solveBfs.c</code>, <code>solveDfs.c</code> and <code>analysis.txt</code>. <b>You must submit all of these files, even if you did not complete all of the tasks.</b> You can submit via the command line using the <code>give</code> command:</p>
+
+<pre is="tty">
+<kbd is="sh">give cs2521 lab07 solveBfs.c solveDfs.c analysis.txt</kbd>
+</pre>
+
+<p>You can also submit via <a href="https://cgi.cse.unsw.edu.au/~give/Student/give.php" target="_blank">give's web interface</a>. You can submit multiple times. Only your last submission will be marked. You can check the files you have submitted <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">here</a>.</p>
+
+<aside class="warning">
+	<p>After you submit, you must check that your submission was successful by going to your <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/view/main.cgi/" target="_blank">submissions page</a>. Check that the timestamp is correct. If your submission does not appear under Last Submission or the timestamp is not correct, then resubmit.</p>
+</aside>
+</section>
+
+<section class="exercise">
+<header><h3>Assessment</h3></header>
+<p>There is no automarking for this lab. To receive a mark, you must show your work to your tutor during your Week 7, 8 or 9 lab session. You will be marked based on the following criteria:</p>
+
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th>Aspect</th>
+			<th>Marks</th>
+			<th>Criteria</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Code correctness</td>
+			<td>3</td>
+			<td>Your tutor will assess the correctness of your code for Tasks 1 and 2 by running your submission on a few select mazes.</td>
+		</tr>
+		<tr>
+			<td>Complexity analysis</td>
+			<td>1</td>
+			<td>This mark is for how accurate you were with your time complexity analysis in Task 3 and the quality of your explanations in <code>analysis.txt</code>.</td>
+		</tr>
+		<tr>
+			<td>Code style</td>
+			<td>1</td>
+			<td>This mark is for your code style in Tasks 1 and 2. Code with good style should have these qualities: consistent indentation and spacing, no repetition of code, no overly complicated logic, no overly long functions, correct use of C constructs (such as <code>if</code> statements and <code>while</code> loops), and comments where appropriate. See the <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/resources/style_guide.html" target="_blank">style guide</a>.</td>
+		</tr>
+	</tbody>
+</table>
+
+</section>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="mt-3 py-3 bg-dark text-center no-print" data-bs-theme="dark">
+      <p class="text-muted">
+        <small>
+          <strong>COMP2521 23T3: Data Structures and Algorithms</strong>
+          is brought to you by<br/>
+          the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br/>
+          at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br/>
+          For all enquiries, please email the class account at
+          <a href="mailto:cs2521@cse.unsw.edu.au">cs2521@cse.unsw.edu.au</a><br/>
+          
+          CRICOS Provider 00098G
+        </small>
+      </p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- math -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+    
+    
+  </body>
+</html>

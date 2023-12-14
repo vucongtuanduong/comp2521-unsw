@@ -1,0 +1,40 @@
+
+NOTE:
+- Your time complexities should be expressed in big-O notation and be in
+  terms of either:
+  - n, where n is the number of nodes in the tree, or
+  - h, where h is the height of the tree
+
+=================
+  bstNumLeaves
+=================
+
+- Worst case time complexity: O(...)
+
+- Explanation: ...
+
+=================
+    bstRange
+=================
+
+- Worst case time complexity: O(...)
+
+- Explanation: ...
+
+=================
+ bstDeleteLeaves
+=================
+
+- Worst case time complexity: O(...)
+
+- Explanation: ...
+
+=================
+  bstLevelOrder
+=================
+
+- Worst case time complexity: O(...)
+
+- Explanation: ...
+
+

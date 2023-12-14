@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/questions -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="./COMP2521 23T3 - Extra Lab Exercise_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Extra Lab Exercise_files/bootstrap-toc.min.css">
+
+    <link rel="stylesheet" href="./COMP2521 23T3 - Extra Lab Exercise_files/style.css">
+    
+    
+
+    <title>COMP2521 23T3 - 
+
+Extra Lab
+Exercise
+
+</title>
+  <script type="text/javascript" async="" src="./COMP2521 23T3 - Extra Lab Exercise_files/MathJax.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-select__option{cursor:pointer}.ismanga .ismanga-select__control{cursor:pointer}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel-view-content__select-label{font-size:14px;font-weight:400;line-height:1.2;margin-bottom:4px;margin-top:4px}.ismanga .control-panel-view-content__btn-container{display:flex;flex-direction:column;margin-top:12px}.ismanga .control-panel-view-content__btn:first-child{margin-bottom:12px}.ismanga .control-panel-view-content__btn{border-radius:4px;padding:8px 16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .control-panel{background:#fff;border-bottom-right-radius:8px;border-top-right-radius:8px;box-shadow:0 0 5px #b4b4b4;color:#000;font-family:Helvetica;font-weight:normal;left:0;line-height:1.4;padding:16px;position:relative;transform:translateX(0);transition:transform .5s}.ismanga .control-panel--hidden{transform:translateX(-169px)}.ismanga .control-panel .control-panel__collapse-btn{background-color:#b4183d;border-top-left-radius:8px;border-top-right-radius:8px;color:#fff;cursor:pointer;font-family:"Bangers";font-size:20px;padding:8px 16px;position:absolute;right:-69px;top:56px;transform:rotate(90deg)}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-spinner{align-items:center;display:flex;flex-direction:column;position:absolute}.ismanga .ismanga-spinner__inner{animation:spin 2s linear infinite;border-color:rgba(0,0,0,.04);border-radius:50%;border-style:solid;border-top-color:#b4183d}.ismanga .ismanga-spinner__inner-text{background-color:rgba(255,255,255,.8);border-radius:4px;color:#b4183d;font-size:16px;margin-top:8px;text-align:center;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;word-break:break-word}.ismanga .ismanga-spinner__inner-text a{color:#b4183d;font-weight:bold;text-decoration:underline dotted #b4183d}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-button{border:0;box-sizing:border-box;cursor:pointer;font-size:14px;font-weight:600;line-height:normal;outline:none;width:100%}.ismanga .ismanga-button--primary{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--primary .ismanga-button__dots{background-color:#fff;border-radius:50%;color:#fff;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::before,.ismanga .ismanga-button--primary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#fff;border-radius:50%;color:#fff;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-active,.ismanga .ismanga-button--primary:hover,.ismanga .ismanga-button--primary:active,.ismanga .ismanga-button--primary:focus{background-color:#901330}.ismanga .ismanga-button--primary-outline{background-color:#fff;border:1px solid #b4183d;color:#b4183d}.ismanga .ismanga-button--primary-outline .ismanga-button__dots{background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;position:relative;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before,.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--primary-outline .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#b4183d;border-radius:50%;color:#b4183d;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--primary-outline-active,.ismanga .ismanga-button--primary-outline:hover,.ismanga .ismanga-button--primary-outline:active,.ismanga .ismanga-button--primary-outline:focus{background-color:#b4183d;color:#fff}.ismanga .ismanga-button--secondary{background-color:#e0e1e2;color:#000}.ismanga .ismanga-button--secondary .ismanga-button__dots{background-color:#000;border-radius:50%;color:#000;height:8px;position:relative;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::before,.ismanga .ismanga-button--secondary .ismanga-button__dots::after{content:"";display:inline-block;position:absolute;top:0}.ismanga .ismanga-button--secondary .ismanga-button__dots::before{animation:dotCollisionBefore 2s infinite ease-in;background-color:#000;border-radius:50%;color:#000;height:8px;left:-12px;width:8px}.ismanga .ismanga-button--secondary .ismanga-button__dots::after{animation:dotCollisionAfter 2s infinite ease-in;animation-delay:1s;background-color:#000;border-radius:50%;color:#000;height:8px;left:12px;width:8px}@keyframes dotCollisionBefore{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(-16px)}}@keyframes dotCollisionAfter{0%,50%,75%,100%{transform:translateX(0)}25%{transform:translateX(16px)}}.ismanga .ismanga-button--secondary-active,.ismanga .ismanga-button--secondary:hover,.ismanga .ismanga-button--secondary:active,.ismanga .ismanga-button--secondary:focus{background-color:#b3b4b4}.ismanga .ismanga-button__dots-stage{display:flex;justify-content:center;line-height:14px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-click-translate-overlay{background-color:rgba(0,0,0,.5);border:4px solid #b4183d;height:100%;width:100%}.ismanga .ismanga-click-translate-overlay__translate-btn{border-radius:4px;display:flex;font-size:20px;justify-content:center;left:16px;padding:12px 16px;position:absolute;top:16px;width:auto}.ismanga .ismanga-click-translate-overlay__disabled-text{color:#fff;font-size:20px;padding-top:16px}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-screenshot-translation-content{height:100%;position:absolute;width:100%}.ismanga .ismanga-screenshot-translation-content__warning{align-items:center;background-color:#6c0e24;box-sizing:border-box;color:#fff;display:flex;font-size:22px;height:80px;justify-content:center;left:0;position:fixed;top:0;width:100%;z-index:9999}.ismanga .ismanga-screenshot-translation-content__warning .ismanga-spinner__inner{border-top-color:#fff}.ismanga .ismanga-screenshot-translation-content__spinner-container{margin-left:12px;position:relative}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-text-bubble-content__bubble{align-items:center;box-sizing:border-box;display:flex;justify-content:center;position:absolute}.ismanga .ismanga-text-bubble-content__bubble p{color:#000;line-height:1.2;margin:0;padding:4px;text-shadow:-1px -1px 0 #fff,1px -1px 0 #fff,-1px 1px 0 #fff,1px 1px 0 #fff;white-space:normal}.ismanga .ismanga-text-bubble-content__bubble p:hover{background-color:#fff;border-radius:4px;box-shadow:0 0 0 2px #b4183d;cursor:pointer;z-index:9999}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga .ismanga-interaction-content__overlay{align-items:center;background-color:rgba(255,255,255,.7);color:#b4183d;display:flex;font-size:24px;justify-content:center;position:absolute;text-align:center;z-index:1}.ismanga .ismanga-interaction-content__translate-button{background-color:#b4183d;border:0;border-radius:2px;box-shadow:none;color:#fff;font-family:"Comic Neue";outline:none;padding:6px 10px}.ismanga .ismanga-interaction-content__translate-button:hover{background-color:#901330}</style><style>.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga{font-family:"Comic Neue"}.ismanga *,.ismanga *::before,.ismanga *::after{box-sizing:border-box}.ismanga ul[class],.ismanga ol[class]{padding:0}.ismanga body,.ismanga h1,.ismanga h2,.ismanga h3,.ismanga h4,.ismanga p,.ismanga ul[class],.ismanga ol[class],.ismanga li,.ismanga figure,.ismanga figcaption,.ismanga blockquote,.ismanga dl,.ismanga dd{margin:0}.ismanga body{line-height:1.5;min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed}.ismanga ul[class],.ismanga ol[class]{list-style:none}.ismanga a:not([class]){text-decoration-skip-ink:auto}.ismanga img{display:block;max-width:100%}.ismanga input,.ismanga button,.ismanga textarea,.ismanga select{font:inherit}@media(prefers-reduced-motion: reduce){.ismanga *{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}.ismanga.ismanga-preloader{background-color:rgba(0,0,0,.1);color:#b4183d;font-size:16px;overflow:hidden;position:absolute;text-align:left}.ismanga.ismanga-preloader div{padding:8px}.ismanga.ismanga-preloader span{animation:slowshow 2s ease 0s infinite;color:#b4183d;font-size:28px;opacity:0}@keyframes slowshow{100%{opacity:1}}.ismanga.ismanga-control-panel-container{left:0;position:fixed;top:40%;z-index:99999 !important}</style></head>
+  <body class="d-flex flex-column" style="min-height: 100vh;"><div id="MathJax_Message" style="display: none;"></div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light no-print" id="header-navbar">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="https://www.cse.unsw.edu.au/~cs2521/23T3/">COMP2521 23T3</a>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mr-auto">
+            <!--
+            <li class="nav-item active"><a class="nav-link" href="#">Outline</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#">Forum</a></li>
+            <li class="navbar-text px-2">|</li>
+            -->
+
+            
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="week-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Week 13 <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="week-selector">
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/1/questions">
+        Week 01
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/2/questions">
+        Week 02
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/3/questions">
+        Week 03
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/4/questions">
+        Week 04
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/5/questions">
+        Week 05
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/7/questions">
+        Week 07
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/8/questions">
+        Week 08
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/9/questions">
+        Week 09
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/10/questions">
+        Week 10
+        
+          (tutors only)
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/11/questions">
+        Week 11
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/12/questions">
+        Week 12
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/questions">
+        Week 13
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/14/questions">
+        Week 14
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/15/questions">
+        Week 15
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/16/questions">
+        Week 16
+        
+      </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/17/questions">
+        Week 17
+        
+      </a>
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="classtype-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Lab <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="classtype-selector">
+    
+  	  
+    
+  	  
+  	    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/questions">
+  	      Lab
+  	      
+  	    </a>
+  	  
+    
+  </div>
+</li>
+              <li class="nav-item active dropdown">
+  <a role="button" class="nav-link dropdown-toggle" id="qa-selector" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/questions#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    
+      Exercise
+    
+    
+    <span class="caret"></span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="qa-selector">
+    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/questions">
+      Exercise
+      
+      
+    </a>
+    <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/answers">
+      Solution
+      
+      
+        (tutors only)
+      
+    </a>
+    
+      <a class="dropdown-item" href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/lab/13/notes">
+        Tutors' Notes (tutors only)
+      </a>
+    
+  </div>
+</li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <main class="container" aria-label="Content" style="flex: 1; padding-top: 4rem;">
+      <header>
+        <h1 class="text-center">
+Extra Lab
+Exercise
+</h1>
+        <h3 class="text-center">
+Binary Search Trees and Student Records
+</h3>
+        
+      </header>
+      <div class="text-justify mt-4">
+        
+
+
+
+
+<section class="exercise">
+<header><h3>Objectives</h3></header>
+<ul>
+    <li>To learn how structs can be stored in binary search trees</li>
+    <li>To get some practice with binary search trees</li>
+    <li>To explore a use of function pointers</li>
+</ul>
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Admin</h3></header>
+
+
+
+<p>This lab is not marked and there is no submission for it.</p>
+
+
+
+</section>
+
+
+
+<section class="exercise">
+<header><h3>Background</h3></header>
+
+<h5 class="mt-3">Comparison Functions</h5>
+
+<p>So far, most of the examples you have seen of binary search trees have been of integers. But binary search trees don't have to contain integers - any data type whose values can be ordered from smallest to largest can be stored in a binary search tree. For example, here is an example of a binary search tree that contains strings:</p>
+
+<img class="center w-50" src="./COMP2521 23T3 - Extra Lab Exercise_files/string-bst.svg">
+
+<p>With integers, the &lt; and &gt; operators (which are available in virtually every programming language) can be used to easily determine the ordering of values. In higher-level programming languages (such as Python), the same operators can be used to compare strings, but in C, string comparison is usually performed using the <code>strcmp</code> function. This function takes in the two strings to be compared and returns:</p>
+<ul>
+	<li>a negative integer if the first string is lexicographically (alphabetically) less than the second string</li>
+	<li>zero if the two strings are equal (i.e., they contain the exact same sequence of characters)</li>
+	<li>a positive integer if the first string is lexicographically greater than the second string</li>
+</ul>
+
+<p>This kind of function that takes in two values of the same data type and "compares" them by returning a negative, zero or positive integer is typically called a <i>comparison function</i> or comparator. <code>strcmp</code>, mentioned above, is a comparison function for strings.</p>
+
+<p>In the context of binary search trees, the return value of a comparison function is very useful, as it determines how we should proceed when inserting into or searching a binary search tree. Suppose we have a binary search tree of strings. If we call <code>strcmp(s, n-&gt;value)</code>, where <code>s</code> is the string being inserted/searched for and <code>n-&gt;value</code> is the string value in the current node, a negative return value indicates that we should go left (as <code>s</code> is "less than" the string in the current node), a positive return value indicates that we should go right, and a return value of zero indicates that <code>s</code> is already in the tree. Here is what a search function for a tree of strings might look like:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">doTreeSearch</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="c1">// not found</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">cmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strcmp</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmp</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">doTreeSearch</span><span class="p">(</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">doTreeSearch</span><span class="p">(</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// (cmp == 0)</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>We can write comparison functions for any data type. We can even write one for integers, even though integers can already be easily compared with the &lt; and &gt; operators.</p>
+
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">compareInts</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w">  </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w">  </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p class="text-right"><small>Why not just return <code>a - b</code>? Because <code>a - b</code> is susceptible to integer overflow/underflows!</small></p>
+
+<p>Comparison functions are especially useful when we have defined our own data type (by defining our own struct), because they allow us to isolate the logic for comparisons (which could be complex) into a separate function, which improves readability. It also allows us to take advantage of function pointers if we have defined multiple comparison functions for the same data type, which we will see later.</p>
+
+<h5 class="mt-3">A Custom Data Type - The Student Record</h5>
+
+<p>Suppose we have defined our own student record data type that consists of a zid and name. Its definition looks like:</p>
+
+<div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w">  </span><span class="n">zid</span><span class="p">;</span><span class="w">      </span><span class="c1">// must be between 1 and 9999999</span>
+<span class="w">	</span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="w"> </span><span class="c1">// must be at most 15 chars in length</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<p>Suppose we now want to implement a binary search tree of records, ordered on zid, for efficient searching. How do we define the comparison function for this tree? Firstly, since the binary search tree is ordered on zid and zids are unique (we'll never have two students with the same zid), the comparison function will never need to be concerned with names. Furthermore, since zids are integers, our comparison function should be similar to a comparison function for integers, except that it takes in records, rather than integers. Here is one possible implementation, based on the <code>compareInts</code> function above:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">compareByZid</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">zid</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">zid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">zid</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">zid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w">  </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w">  </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Since zids are restricted to be between 1 and 9999999, there is no risk of an integer overflow/underflow, and so we can simplify the function down to the following:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">compareByZid</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">zid</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">zid</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>With this comparison function, we can now easily implement the search, insertion and deletion algorithms for our tree.</p>
+
+<img class="center w-35" src="./COMP2521 23T3 - Extra Lab Exercise_files/compare-by-id-bst-1.svg">
+
+<p>We can now search efficiently by zid. But what if we want to be able to search by name? The first tree won't be able to help us, as it is ordered on zid. We would need another tree ordered on the name field, which means we need another comparison function! Think about how you would implement this function. It should have the same interface as <code>compareByZid</code>:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">compareByName</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+</pre></div>
+
+
+<p>If you thought of this comparison function:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">compareByName</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">strcmp</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>You're on the right track, but there is a problem. Zids are unique, so if <code>compareByZid</code> returns 0, then we <i>know</i> we have found the right record, as there can't be another record with the same zid. On the other hand, names are <i>not</i> unique, so it is possible for <code>compareByName</code> to return 0 for two records that have the same name, but different zids. Suppose we had the following binary search tree, which uses <code>compareByName</code> as its comparison function:</p>
+
+<img class="center w-50" src="./COMP2521 23T3 - Extra Lab Exercise_files/compare-by-name-bst-1.svg">
+
+<p>If we wanted to insert the record of another student named "Tom", our insertion function (which uses <code>compareByName</code>) would not insert the record, as <code>compareByName</code> would say that the new record is equivalent to the existing record with the name "Tom".</p>
+
+<img class="center w-20" src="./COMP2521 23T3 - Extra Lab Exercise_files/single-record.svg">
+
+<p>Thus, any comparison function must use a combination of fields/attributes that is guaranteed to be unique. <code>compareByZid</code>, which we implemented above, only needs to use the zid field, as zids are unique. For <code>compareByName</code>, this means also comparing the records' zids in case the names happened to match. Here is the improved <code>compareByName</code>:</p>
+
+<div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">compareByName</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">cmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strcmp</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+<span class="w">	</span>
+<span class="w">	</span><span class="c1">// if names are not the same, return the result of strcmp</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmp</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">cmp</span><span class="p">;</span>
+<span class="w">	</span>
+<span class="w">	</span><span class="c1">// names are the same, so compare zids</span>
+<span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">compareByZid</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Now that we have comparison functions for zid and name, we can implement two binary search trees - one ordered on zid and another ordered on name.</p>
+
+<img class="center w-75" src="./COMP2521 23T3 - Extra Lab Exercise_files/multiple-bst-1.svg">
+
+<p>Since we now have two trees containing the same data, it is important to note that any operation that modifies one of the trees must be performed on both trees, otherwise there would be inconsistencies. For example, if a record is inserted into the zid-ordered tree, it must also be inserted into the name-ordered tree. The same goes for deletion.</p>
+
+<h5 class="mt-3">Function Pointers</h5>
+
+<p>We can now search records efficiently by zid and by name, but let's have a closer look at the implementation of these trees. Here are the insertion functions:</p>
+
+<table style="width: 100%">
+	<tbody><tr>
+		<td style="width: 50%">
+<div class="highlight"><pre><span></span><span class="n">Node</span><span class="w"> </span><span class="nf">doTreeZidInsert</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">newNode</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">cmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compareByZid</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmp</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doTreeZidInsert</span><span class="p">(</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doTreeZidInsert</span><span class="p">(</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+		</td>
+		<td style="width: 50%">
+<div class="highlight"><pre><span></span><span class="n">Node</span><span class="w"> </span><span class="nf">doTreeNameInsert</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">newNode</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">cmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compareByName</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmp</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doTreeNameInsert</span><span class="p">(</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doTreeNameInsert</span><span class="p">(</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+		</td>
+	</tr>
+</tbody></table>
+
+<p>Can you see a problem with the above code? If you guessed code duplication, you'd be right! Other than the comparison function used, these functions are virtually identical. This problem only becomes worse when we consider that we also need functions for search and deletion.</p>
+
+<p>This is where function pointers come in! Instead of hard-coding calls to the various comparison functions (which would require multiple tree implementations and lots of code duplication), we can let the user decide what comparison function to use by passing in a pointer to the function when they create the tree. To create a tree ordered on zid, the user can pass in a pointer to <code>compareByZid</code>, and to create a tree ordered on name, the user can pass in a pointer to <code>compareByName</code>.</p>
+
+<p>In this new implementation, each tree struct now contains a pointer to the root node, as well as a pointer to the comparison function that should be used in that tree.</p>
+
+<div class="highlight"><pre><span></span><span class="c1">// the tree struct</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">tree</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">Node</span><span class="w"> </span><span class="n">root</span><span class="p">;</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">compare</span><span class="p">)(</span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="n">Tree</span><span class="w"> </span><span class="nf">TreeNew</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">compare</span><span class="p">)(</span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">Tree</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">));</span>
+<span class="w">	</span><span class="c1">// malloc error checking here</span>
+<span class="w">	</span>
+<span class="w">	</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">	</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">compare</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compare</span><span class="p">;</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Now that each tree has a configurable comparison function, both of our trees can use the same tree implementation. Here is the new insertion function. Take notice of how the comparison function is called.</p>
+
+<div class="highlight"><pre><span></span><span class="n">Node</span><span class="w"> </span><span class="nf">doTreeInsert</span><span class="p">(</span><span class="n">Tree</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">record</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="k">return</span><span class="w"> </span><span class="n">newNode</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span>
+<span class="w">	</span><span class="kt">int</span><span class="w"> </span><span class="n">cmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">compare</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">);</span>
+<span class="w">	</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmp</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doTreeInsert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cmp</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">		</span><span class="n">n</span><span class="o">-&gt;</span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doTreeInsert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<span class="w">	</span><span class="p">}</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h5 class="mt-3">Saving Space</h5>
+
+<p>Above, we assumed that each tree node contains a record struct. This means if we create multiple search trees (ordered on different fields or attributes), there will be multiple copies of each record, which will consume a lot of space.</p>
+
+<img class="center w-75" src="./COMP2521 23T3 - Extra Lab Exercise_files/multiple-bst-1.svg">
+
+<p>To save space, we can let each tree node store a pointer to a record rather than the full record itself. That way, only one copy of each record needs to exist.</p>
+
+<img class="center w-70" src="./COMP2521 23T3 - Extra Lab Exercise_files/multiple-bst-2.svg">
+
+</section>
+
+<section class="exercise">
+<header><h3>Setting Up</h3></header>
+
+<p>Create a directory for this lab, change into it, and run the following command:</p>
+
+<pre is="tty"><kbd is="sh">unzip <a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/downloads/files.zip">/web/cs2521/23T3/labs/week13/downloads/files.zip</a></kbd>
+</pre>
+
+<p>If you're working at home, download <code>files.zip</code> by clicking on the above link and then run the <code>unzip</code> command on the downloaded file.</p>
+
+<p>If you've done the above correctly, you should now have the following files:</p>
+
+<dl class="dl-horizontal">
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/Makefile">Makefile</a></code></dt>
+	<dd>a set of dependencies used to control compilation</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/runDb.c">runDb.c</a></code></dt>
+	<dd>a program that provides a command-line interface to the StudentDb ADT</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/runTest.c">runTest.c</a></code></dt>
+	<dd>a program that produces output for a few tests</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/List.c">List.c</a></code></dt>
+	<dd>implementation of the <code>List</code> ADT (complete)</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/List.h">List.h</a></code></dt>
+	<dd>interface to the <code>List</code> ADT</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/Record.c">Record.c</a></code></dt>
+	<dd>implementation of the <code>Record</code> ADT (complete)</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/Record.h">Record.h</a></code></dt>
+	<dd>interface to the <code>Record</code> ADT</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/StudentDb.c">StudentDb.c</a></code></dt>
+	<dd>implementation of the <code>StudentDb</code> ADT (incomplete)</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/StudentDb.h">StudentDb.h</a></code></dt>
+	<dd>interface to the <code>StudentDb</code> ADT</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/Tree.c">Tree.c</a></code></dt>
+	<dd>implementation of the <code>Tree</code> ADT (incomplete)</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/Tree.h">Tree.h</a></code></dt>
+	<dd>interface to the <code>Tree</code> ADT</dd>
+
+	<dt><code><a href="https://cgi.cse.unsw.edu.au/~cs2521/23T3/labs/week13/files/tests/">tests/</a></code></dt>
+	<dd>a sub-directory containing expected output for some tests</dd>
+</dl>
+
+<p>Once you've got these files, the first thing to do is to run the command</p>
+
+<pre is="tty"><kbd is="sh">make</kbd></pre>
+
+<p>This will compile the initial version of the files, and produce two executables: <code>./runDb</code> and <code>./runTest</code>.
+
+</p><h5 class="mt-3">File Walkthrough</h5>
+<dl>
+	<dt><code>runDb.c</code></dt>
+	<dd>
+		<p><code>runDb.c</code> provides a command-line interface to the StudentDb ADT. It creates a StudentDb object, and then accepts commands to interact with it, including inserting student records into the database, searching for records, and deleting records. Here is an example session with the program:</p>
+        
+<pre is="tty"><kbd is="sh">./runDb</kbd>
+StudentDB v1.0
+Enter ? to see the list of commands.
+&gt; <kbd>?</kbd>
+Commands:
+    + &lt;zid&gt; &lt;family name&gt; &lt;given name&gt;     add a student record
+   lz                                      list all records in order of zid
+   ln                                      list all records in order of name
+    d &lt;zid&gt;                                delete a student record
+   fz &lt;zid&gt;                                find a student record by zid
+   fn &lt;family name&gt; &lt;given name&gt;           find student records by name
+    ?                                      show this message
+    q                                      quit
+
+&gt; <kbd>+ 1 Stark Tony</kbd>
+Successfully inserted record!
+&gt; <kbd>+ 2 Banner Bruce</kbd>
+Successfully inserted record!
+&gt; <kbd>+ 6 Rogers Steve</kbd>
+Successfully inserted record!
+&gt; <kbd>+ 4 Pym Hank</kbd>
+Successfully inserted record!
+&gt; <kbd>+ 3 Romanoff Natasha</kbd>
+Successfully inserted record!
+&gt; <kbd>lz</kbd>
+1|Stark|Tony
+2|Banner|Bruce
+3|Romanoff|Natasha
+4|Pym|Hank
+6|Rogers|Steve
+&gt; <kbd>ln</kbd>
+&gt; <kbd>fz 1</kbd>
+Found a record:
+1|Stark|Tony
+&gt; <kbd>fz 3</kbd>
+Found a record:
+3|Romanoff|Natasha
+&gt; <kbd>fn Rogers Steve</kbd>
+No records found
+&gt; <kbd>d 1</kbd>
+Successfully deleted record!
+&gt; <kbd>lz</kbd>
+2|Banner|Bruce
+3|Romanoff|Natasha
+4|Pym|Hank
+6|Rogers|Steve
+&gt; <kbd>fz 1</kbd>
+No records with zid '1'
+&gt; <kbd>q</kbd>
+<kbd is="sh"></kbd>
+</pre>
+
+        <p>Note that the program doesn't correctly perform operations involving names. We will add code to fix this later.</p>
+    </dd>
+    
+    <dt><code>StudentDb.c</code></dt>
+    <dd>
+        <p><code>StudentDb.c</code> implements the StudentDb ADT, which handles student records. A user can attempt to insert a student record by calling the <code>DbInsert()</code> function, and the StudentDb ADT will insert the record if there is not already a record with the same zid. The StudentDb ADT also provides other useful operations, such as deleting a record with a given zid, finding a record with a given zid or name, and listing all the records in order of zid or name.</p>
+        
+        <p>You should have a read of the functions in <code>StudentDb.c</code> to understand how they use the Tree and Record ADTs. Note that at the moment, only the operations involving insertion and zid work.</p>
+    </dd>
+    
+    <dt><code>Tree.c</code></dt>
+    <dd>
+        <p><code>Tree.c</code> implements the Tree ADT, which is used to enable efficient searching of records. Notice that the <code>TreeNew</code> function (which creates a new tree) takes in a function pointer to a comparison function which determines how the records should be ordered. You should read the <code>DbNew</code> function in <code>StudentDb.c</code> to see how it passes the comparison functions to <code>TreeNew</code>. You should also have a quick read of the search, insertion and deletion algorithms in <code>Tree.c</code> to see how they access and call the comparison function.</p>
+    </dd>
+    
+    <dt><code>List.c</code></dt>
+    <dd>
+    	<p><code>List.c</code> implements the List ADT, which is used to create a list of records. Note that the list has no sorting capabilities, so if you want the records to be ordered in a particular way, you must ensure they are appended in that order.</p>
+    </dd>
+    
+    <dt><code>Record.c</code></dt>
+    <dd>
+        <p><code>Record.c</code> implements the Record ADT. You should read the definition of <code>struct record</code> to see what a student record consists of, but since this is an ADT, you won't be able to access the fields directly - you'll need to use the <code>RecordGet<i>XYZ</i></code> functions listed in <code>Record.h</code> to access them. This ADT is fully implemented, so you do not need to modify it.</p>
+    </dd>
+    
+    <dt>Header files</dt>
+    <dd>StudentDb, Tree, List and Record are ADTs, and their associated header files contain extensive descriptions of their interface functions. If you are unsure about what a certain ADT function does or is supposed to do, you should read its description in the relevant header file.</dd>
+</dl>
+</section>
+
+<section class="exercise">
+<header><h3>Additional Notes</h3></header>
+
+<h5>Dummy Records</h5>
+<p>If you have read through the functions in <code>StudentDb.c</code>, you would have noticed the use of so-called "dummy records" in <code>DbFindByZid</code> and <code>DbDeleteByZid</code>. What are they and why do we need them?</p>
+
+<p>Suppose that the StudentDb contains a number of records and we want to find a record with a given zid. We should search the tree that is ordered on zid, but <code>TreeSearch</code> takes in a record, not a zid. So what should we pass into <code>TreeSearch</code>?</p>
+
+<p>That is where the dummy record comes in! Because the comparison function used by the zid-ordered tree only inspects the zid of each record (see <code>compareByZid</code>), two records that have the same zid will be considered equal, no matter what names they contain. Hence, we can create a dummy record that contains the zid we are searching for, along with some dummy names (an empty string is fine), and pass this into <code>TreeSearch</code>. If the tree does contain a record with that zid, it will consider this record as being equal to the dummy record, and return the real record.</p>
+
+<p>This is why it is important that <code>compareByZid</code> only compares the zids of the records, and not any other fields. If <code>compareByZid</code> also compared the names of the records, this wouldn't work.</p>
+</section>
+
+<section class="exercise with-self">
+<header><h3>Task 1</h3></header>
+<p>Implement the <code>compareByName()</code> comparison function in <code>StudentDb.c</code>. The function should compare the two given records by name (family name first, then given name) and then by zid if the names are equal. Name comparison should be case-sensitive, which means you should use <code>strcmp</code>.</p>
+
+<p>When you think you're done, run the following command to test your code:</p>
+
+<pre is="tty"><kbd is="sh">./runTest 1</kbd>
+</pre>
+
+<p>This command runs some tests for the <code>compareByName</code> function and prints the results to <code>stdout</code>. You should compare the results to the expected output in <code>tests/1.exp</code>.</p>
+
+<p>Once your program is producing the correct output for <code>compareByName</code>, modify the <code>DbNew</code> function in <code>StudentDb.c</code> so that the <code>db-&gt;byName</code> tree actually uses the new comparison function.</p>
+
+</section>
+
+<section class="exercise with-self">
+<header><h3>Task 2</h3></header>
+<p>First, make sure you have modified the <code>DbNew</code> function in <code>StudentDb.c</code> so that the <code>db-&gt;byName</code> tree uses the new comparison function.</p>
+
+<p>Now implement the <code>TreeSearchBetween()</code> function in <code>Tree.c</code>. This function should search the tree for all records that are considered (by the tree's comparison function) to be between the records <code>lower</code> and <code>upper</code> (inclusive), and return them all in a list in order. In order for the search to be as efficient as possible, the function should visit as few nodes as possible.</p>
+
+<p>When you think you're done, run the following command to test your code:</p>
+
+<pre is="tty"><kbd is="sh">./runTest 2</kbd>
+</pre>
+
+<p>This command runs some tests for the <code>TreeSearchBetween</code> function and prints the results to <code>stdout</code>. You should compare the results to the expected output in <code>tests/2.exp</code>.</p>
+
+<aside class="hint">
+	<p>We have provided a stub helper function, <code>doTreeSearchBetween()</code>, to help you get started. It is recommended that you implement and use this function, but you can write your own helper function if you want. If you want to use the function, you should uncomment it and also uncomment the function prototype at the top of the file.</p>
+</aside>
+
+<aside class="note">
+	<p>What does "visit as few nodes as possible" mean? Essentially, it means that you shouldn't visit nodes unnecessarily. A basic in-order traversal that adds the requested records to the list would be extremely easy to implement, but also very inefficient, as it would need to visit all nodes in the tree.</p>
+</aside>
+</section>
+
+<section class="exercise with-self">
+<header><h3>Task 3</h3></header>
+<p>Implement the <code>DbFindByName()</code> function in <code>StudentDb.c</code>. This function should find all the records that have the same family name <i>and</i> given name as the provided family name and given name, and return them in a list in increasing order of zid.</p>
+
+<p>Also implement the <code>DbListByName()</code> function in <code>StudentDb.c</code>. This function should display all the records in the database in order of name (family name first). It should print the records in the same format as the format produced by the list-by-zid command, for example:</p>
+
+<pre>2|Banner|Bruce
+4|Pym|Hank
+6|Rogers|Steve
+3|Romanoff|Natasha
+1|Stark|Tony
+</pre>
+
+<aside class="hint">
+	<p>Use the <code>TreeSearchBetween</code> function that you implemented in Task 2. If you're trying to use <code>TreeSearchBetween</code> but you are unsure about what <code>lower</code> and <code>upper</code> should be, think about how you could use dummy records to extract just the range of records that you need (see the Additional Notes section above).</p>
+</aside>
+
+<p>Once you are done, recompile the <code>runDb</code> program with the <code>make</code> command and run it. Use commands to insert records, search for records (by zid and by name), and list records (by zid and by name). Does your <code>DbFindByName</code> function work when there are multiple records with the same name? Do the records get returned in the correct order (i.e., in increasing order of zid)? What if there are no records with the given name? Test thoroughly.</p>
+
+<aside class="note">
+	It is possible to speed up testing by entering your commands into a file and making the <code>runDb</code> program read in commands from the file. Here's an example command file that tests a very simple case:
+
+<pre>+ 1 Stark Tony
+fn Stark Tony
+</pre>
+
+	Suppose the file is called <code>commands.txt</code>. Then, the following command will run the <code>runDb</code> program using the commands from the file and echo the commands to the terminal to make it easy to see which operations are being performed.
+
+<pre is="tty"><kbd is="sh">./runDb -e &lt; commands.txt</kbd>
+</pre>
+</aside>
+
+</section>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="mt-3 py-3 bg-dark text-center no-print" data-bs-theme="dark">
+      <p class="text-muted">
+        <small>
+          <strong>COMP2521 23T3: Data Structures and Algorithms</strong>
+          is brought to you by<br>
+          the <a href="https://www.cse.unsw.edu.au/">School of Computer Science and Engineering</a><br>
+          at the <a href="https://www.unsw.edu.au/">University of New South Wales</a>, Sydney.<br>
+          For all enquiries, please email the class account at
+          <a href="mailto:cs2521@cse.unsw.edu.au">cs2521@cse.unsw.edu.au</a><br>
+          
+          CRICOS Provider 00098G
+        </small>
+      </p>
+    </footer>
+    
+    <script src="./COMP2521 23T3 - Extra Lab Exercise_files/bootstrap.bundle.min.js.download" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- math -->
+    <script src="./COMP2521 23T3 - Extra Lab Exercise_files/latest.js.download" async=""></script>
+    
+    
+  
+</body></html>
